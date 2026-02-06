@@ -1,0 +1,221 @@
+---
+title:
+  ru: "Теория полезности потребителя"
+  en: "Consumer Utility Theory"
+  cz: "Teorie užitku spotřebitele"
+slug: "consumer-theory"
+author: "kopecky"
+keywords:
+  ru: ["полезность", "кривые безразличия", "бюджетное ограничение", "оптимум потребителя", "предельная полезность"]
+  en: ["utility", "indifference curves", "budget constraint", "consumer optimum", "marginal utility"]
+  cz: ["užitek", "indiferenční křivky", "rozpočtové omezení", "optimum spotřebitele", "mezní užitek"]
+created: "2025-02-01"
+updated: "2025-08-25"
+difficulty: "intermediate"
+estimatedReadTime: 20
+prerequisites:
+  - "introduction"
+  - "demand-supply-market"
+---
+
+# Consumer Utility Theory
+
+Consumer theory explains **how and why** individuals make purchasing decisions. At its core is the concept of **utility** — the satisfaction or benefit a consumer derives from consuming goods and services. A rational consumer seeks to **maximize utility** subject to their limited income.
+
+<Callout type="info">
+This article builds on the demand concepts from the previous chapter. Here we go deeper into *why* the demand curve slopes downward — it's rooted in how consumers derive satisfaction from goods.
+</Callout>
+
+## Total and Marginal Utility
+
+**Total utility (TU)** is the overall satisfaction a consumer gets from consuming a certain quantity of a good. **Marginal utility (MU)** is the additional satisfaction from consuming one more unit.
+
+$$
+MU = \frac{\partial TU}{\partial q}
+$$
+
+### Law of Diminishing Marginal Utility
+
+As consumption of a good increases (other things being equal), the marginal utility of each additional unit **decreases**. The first glass of water on a hot day is extremely satisfying; the fifth one, much less so.
+
+| Quantity ($q$) | Total Utility ($TU$) | Marginal Utility ($MU$) |
+|---|---|---|
+| 0 | 0 | — |
+| 1 | 10 | 10 |
+| 2 | 18 | 8 |
+| 3 | 24 | 6 |
+| 4 | 28 | 4 |
+| 5 | 30 | 2 |
+| 6 | 30 | 0 |
+
+<Callout type="warning">
+When $MU = 0$, total utility is at its maximum. Beyond this point, consuming more actually *reduces* total utility — the consumer is oversaturated.
+</Callout>
+
+### Consumer Equilibrium with One Good
+
+A rational consumer purchases a quantity of a good where the marginal utility equals the price:
+
+$$
+MU = P
+$$
+
+If $MU > P$, the consumer gains more satisfaction than the cost and should buy more. If $MU < P$, the last unit costs more than the satisfaction it provides.
+
+## Two-Good Model
+
+In reality, consumers choose between multiple goods. Consider a consumer allocating income between good 1 (quantity $q_1$) and good 2 (quantity $q_2$).
+
+The condition for optimal allocation is that the **marginal utility per monetary unit** must be equal across all goods:
+
+$$
+\frac{MU_1}{P_1} = \frac{MU_2}{P_2}
+$$
+
+If this condition is violated — say $\frac{MU_1}{P_1} > \frac{MU_2}{P_2}$ — the consumer should shift spending from good 2 to good 1, since each crown spent on good 1 yields more satisfaction.
+
+## Indifference Curves
+
+An **indifference curve** represents all combinations of two goods that yield the **same level of utility** to the consumer. The consumer is indifferent between any two points on the same curve.
+
+### Properties of Indifference Curves
+
+1. **Downward sloping** — to maintain the same utility, consuming more of one good requires consuming less of the other
+2. **Do not intersect** — if they did, the same bundle would yield two different utility levels (contradiction)
+3. **Convex to the origin** — reflects diminishing marginal rate of substitution
+4. **Higher curves = higher utility** — curves farther from the origin represent greater satisfaction
+
+### Marginal Rate of Substitution (MRS)
+
+The **MRS** measures how much of good 2 the consumer is willing to give up to get one more unit of good 1, while maintaining the same utility level:
+
+$$
+MRS = -\frac{\Delta q_2}{\Delta q_1} = \frac{MU_1}{MU_2}
+$$
+
+The MRS **decreases** along the indifference curve (from left to right) — reflecting the convex shape and diminishing marginal utility.
+
+### Special Cases of Indifference Curves
+
+<Tabs>
+<Tab label="Perfect Substitutes">
+When goods are perfectly interchangeable (e.g., red pens vs. blue pens for someone who doesn't care about color), indifference curves are **straight lines** with a constant slope.
+
+The MRS is constant — the consumer is always willing to trade the same amount of one good for the other.
+</Tab>
+
+<Tab label="Perfect Complements">
+When goods must be consumed in fixed proportions (e.g., left and right shoes), indifference curves are **L-shaped**.
+
+Having extra units of only one good provides no additional utility. The consumer always wants them in a fixed ratio.
+</Tab>
+
+<Tab label="Standard Goods">
+Most goods produce the typical **convex indifference curves**. The consumer is willing to substitute between goods, but at a diminishing rate.
+
+This is the standard case used in most economic analysis.
+</Tab>
+
+<Tab label="Desirable + Undesirable">
+If good 2 is undesirable (e.g., pollution), the consumer needs more of the desirable good 1 to compensate for additional units of the bad. Indifference curves **slope upward**.
+</Tab>
+</Tabs>
+
+## Budget Constraint
+
+The consumer's choices are limited by their **income (Y)** and the **prices** of goods. The budget constraint is:
+
+$$
+P_1 \cdot q_1 + P_2 \cdot q_2 = Y
+$$
+
+This defines the **budget line (BL)** — all combinations of $q_1$ and $q_2$ that exactly exhaust the consumer's income.
+
+| Property | Value |
+|---|---|
+| Maximum $q_1$ (all income on good 1) | $Y / P_1$ |
+| Maximum $q_2$ (all income on good 2) | $Y / P_2$ |
+| Slope of the budget line | $-P_1 / P_2$ |
+
+### Effect of Price Changes
+
+When the price of good 1 changes:
+- **Price increase** → maximum $q_1$ decreases → budget line becomes steeper (rotates around the $q_2$ intercept)
+- **Price decrease** → maximum $q_1$ increases → budget line becomes flatter
+
+### Effect of Income Changes
+
+When income changes:
+- **Income increase** → budget line shifts **parallel to the right** (both intercepts increase proportionally)
+- **Income decrease** → budget line shifts **parallel to the left**
+
+<Callout type="info">
+The slope of the budget line depends only on the **ratio of prices** $P_1/P_2$, not on income. A change in income shifts the line but doesn't change its slope.
+</Callout>
+
+## Consumer Optimum
+
+The consumer maximizes utility by choosing the combination of goods where the **indifference curve is tangent to the budget line**. At this point:
+
+$$
+MRS = \frac{P_1}{P_2}
+$$
+
+This means the marginal rate of substitution in consumption equals the **marginal rate of substitution in exchange** (the price ratio). Simultaneously, the consumer spends all their income:
+
+$$
+P_1 \cdot q_1 + P_2 \cdot q_2 = Y
+$$
+
+<Collapse title="Why tangency is optimal">
+
+At the tangency point E:
+- Any other affordable combination (on the budget line) lies on a **lower** indifference curve → less utility
+- Any combination on a higher indifference curve is **unaffordable** → lies beyond the budget line
+- The slopes are equal: the rate at which the consumer is *willing* to trade goods equals the rate at which the market *allows* them to trade
+
+Therefore, point E gives the **maximum achievable utility** given the budget constraint.
+</Collapse>
+
+## Income and Substitution Effects
+
+When the price of a good changes, the consumer adjusts their behavior through two channels:
+
+<Tabs>
+<Tab label="Substitution Effect">
+When good 1 becomes more expensive, it becomes **relatively more costly** compared to good 2. The consumer substitutes away from the now-expensive good toward the relatively cheaper one.
+
+The substitution effect **always** works in the opposite direction to the price change — higher price → less consumption.
+</Tab>
+
+<Tab label="Income Effect">
+When good 1 becomes more expensive, the consumer's **real purchasing power decreases** (even though nominal income hasn't changed). They can afford less of everything.
+
+For **normal goods**, the income effect reinforces the substitution effect (less real income → less consumption). For **inferior goods**, the income effect works in the opposite direction.
+</Tab>
+</Tabs>
+
+These two effects together explain why the **demand curve slopes downward**:
+- The substitution effect always pushes quantity demanded in the opposite direction of the price change
+- For normal goods, the income effect reinforces this
+- Only for very unusual inferior goods (Giffen goods) could the income effect be strong enough to override the substitution effect
+
+<Callout type="warning">
+**Giffen goods** are a theoretical curiosity where the demand curve slopes *upward*. The income effect is so strong that a price increase actually leads to higher consumption (e.g., staple foods for very poor households where a price increase forces them to consume *more* of the cheap staple and less of expensive alternatives).
+</Callout>
+
+## Summary
+
+| Concept | Key Formula/Condition |
+|---|---|
+| Marginal utility | $MU = \frac{\partial TU}{\partial q}$ |
+| Optimal allocation (two goods) | $\frac{MU_1}{P_1} = \frac{MU_2}{P_2}$ |
+| Budget constraint | $P_1 q_1 + P_2 q_2 = Y$ |
+| Consumer optimum | $MRS = \frac{P_1}{P_2}$ and full income spent |
+| MRS definition | $MRS = \frac{MU_1}{MU_2}$ |
+
+Consumer theory provides the microeconomic foundation for understanding demand. The next step is to examine the **supply side** — how firms make production decisions and manage costs.
+
+<Callout type="info">
+**Recommended next**: [Production and Costs](/general-economics/production-costs) — explores how firms transform inputs into outputs and the cost structures that underpin supply decisions.
+</Callout>

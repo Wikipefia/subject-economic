@@ -1,9 +1,9 @@
 {
-  "name": "subject-discrete-mathematics",
+  "name": "subject-general-economics",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Wikipefia subject content repository: Discrete Mathematics",
+  "description": "Wikipefia subject content repository: General Economics",
   "scripts": {
     "validate": "wikipefia-mdx validate . --type subject",
     "typecheck": "tsc --noEmit"

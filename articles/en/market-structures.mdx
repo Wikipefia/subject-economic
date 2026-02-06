@@ -1,0 +1,439 @@
+---
+title:
+  ru: "Рыночные структуры"
+  en: "Market Structures"
+  cz: "Tržní struktury"
+slug: "market-structures"
+author: "kopecky"
+keywords:
+  ru: ["конкуренция", "монополия", "олигополия", "рыночная структура", "эффективность"]
+  en: ["competition", "monopoly", "oligopoly", "market structure", "efficiency"]
+  cz: ["konkurence", "monopol", "oligopol", "tržní struktura", "efektivnost"]
+created: "2025-03-01"
+updated: "2025-09-10"
+difficulty: "intermediate"
+estimatedReadTime: 24
+prerequisites:
+  - "introduction"
+  - "demand-supply-market"
+  - "production-costs"
+---
+
+# Market Structures
+
+The way firms behave — how they set prices, how much they produce, whether they innovate — depends critically on the **market structure** in which they operate. Market structure describes the competitive environment: how many firms exist, how easy it is to enter the industry, and how much control any single firm has over price.
+
+<Callout type="info">
+Market structure analysis bridges microeconomic theory with real-world industry analysis. Understanding these models helps explain why gasoline prices move in lockstep while restaurant menus vary wildly.
+</Callout>
+
+## Overview of Market Structures
+
+The four canonical market structures differ along several key dimensions:
+
+| Feature | Perfect Competition | Monopolistic Competition | Oligopoly | Monopoly |
+|---|---|---|---|---|
+| **Number of firms** | Very many | Many | Few | One |
+| **Product type** | Homogeneous (identical) | Differentiated (close substitutes) | Homogeneous or differentiated | Unique (no close substitutes) |
+| **Entry barriers** | None | Low | High | Very high |
+| **Price influence** | None (price taker) | Slight | Significant (interdependence) | Full (price maker) |
+| **Demand curve** | Horizontal (perfectly elastic) | Downward-sloping (elastic) | Kinked or depends on model | Downward-sloping (= market demand) |
+| **Long-run profit** | Zero economic profit | Zero economic profit | Positive possible | Positive possible |
+| **Examples** | Agricultural commodities, forex | Restaurants, clothing brands | Telecom, airlines, auto | Local utilities, patented drugs |
+
+---
+
+## Perfect Competition
+
+Perfect competition is the benchmark model — an idealized market structure that serves as a reference point for evaluating all others.
+
+### Assumptions
+
+1. **Many small firms** — each too small to influence market price
+2. **Homogeneous product** — buyers see all firms' output as identical
+3. **Free entry and exit** — no barriers to entering or leaving the industry
+4. **Perfect information** — all buyers and sellers know all prices and product qualities
+5. **No transaction costs** — costless to buy and sell
+
+### The Firm's Demand Curve
+
+Because the firm is a **price taker**, it faces a perfectly elastic (horizontal) demand curve at the market price $P^*$. It can sell any quantity at $P^*$ but nothing above it.
+
+This means:
+
+$$
+AR = MR = P^*
+$$
+
+where $AR$ is average revenue and $MR$ is marginal revenue.
+
+### Profit Maximization
+
+The firm maximizes profit where $MR = MC$, which in perfect competition simplifies to:
+
+$$
+P = MC
+$$
+
+<Collapse title="Derivation: Profit Maximization Condition">
+
+Profit is defined as:
+
+$$
+\pi = TR - TC = P \cdot Q - TC(Q)
+$$
+
+Taking the first-order condition:
+
+$$
+\frac{d\pi}{dQ} = \frac{d(TR)}{dQ} - \frac{d(TC)}{dQ} = MR - MC = 0
+$$
+
+Therefore $MR = MC$. Since $MR = P$ in perfect competition, we get $P = MC$.
+
+The second-order condition requires $MC$ to be rising at the optimum (i.e., the MC curve cuts MR from below).
+</Collapse>
+
+### Short-Run Outcomes
+
+In the short run, a perfectly competitive firm can earn:
+
+- **Positive economic profit** when $P > ATC$ at the profit-maximizing output
+- **Zero economic profit** (normal profit) when $P = ATC$
+- **Negative economic profit** (loss) when $P < ATC$
+
+**Shutdown condition**: The firm should shut down if $P < AVC$ (price falls below average variable cost). At this point, the firm cannot even cover its variable costs and loses more by producing than by shutting down.
+
+$$
+\text{Shutdown if } P < AVC_{\min}
+$$
+
+### Long-Run Equilibrium
+
+In the long run, free entry and exit drive economic profit to zero:
+
+- If $\pi > 0$: new firms enter → supply increases → price falls → profit shrinks
+- If $\pi < 0$: firms exit → supply decreases → price rises → losses diminish
+
+**Long-run equilibrium condition:**
+
+$$
+P = MC = AC_{\min}
+$$
+
+<Callout type="info">
+**Efficiency in perfect competition**: At long-run equilibrium, perfect competition achieves both **allocative efficiency** ($P = MC$, resources go where consumers value them most) and **productive efficiency** ($P = AC_{\min}$, production at lowest possible cost).
+</Callout>
+
+---
+
+## Monopolistic Competition
+
+Monopolistic competition combines features of both perfect competition and monopoly. Firms compete, but each offers a slightly different product.
+
+### Characteristics
+
+1. **Many firms** in the market
+2. **Differentiated products** — each firm's product is a close but not perfect substitute
+3. **Low barriers to entry** — relatively easy to enter and exit
+4. **Some price-setting power** — because products are differentiated, firms face downward-sloping demand
+
+### Short-Run Analysis
+
+The firm faces a downward-sloping demand curve, so $P > MR$. Profit maximization occurs at $MR = MC$, with the price read from the demand curve.
+
+In the short run, firms can earn positive or negative economic profit.
+
+### Long-Run Equilibrium
+
+Just as in perfect competition, free entry/exit drives long-run economic profit to zero. New firms enter when profits are positive, stealing market share. The firm's demand curve shifts left until profit is zero:
+
+$$
+P = ATC \quad \text{(at the profit-maximizing quantity)}
+$$
+
+However, unlike perfect competition, the tangency occurs to the **left** of the minimum of $ATC$.
+
+<Callout type="warning">
+**Key inefficiency**: Monopolistic competition is neither productively efficient ($P > AC_{\min}$, excess capacity) nor allocatively efficient ($P > MC$). Consumers pay more and firms produce less than the socially optimal level.
+</Callout>
+
+### Comparison with Perfect Competition
+
+| Criterion | Perfect Competition | Monopolistic Competition |
+|---|---|---|
+| Long-run profit | Zero | Zero |
+| $P$ vs $MC$ | $P = MC$ | $P > MC$ |
+| Production at $AC_{\min}$? | Yes | No (excess capacity) |
+| Allocative efficiency | Yes | No |
+| Productive efficiency | Yes | No |
+| Product variety | None | High |
+
+The trade-off: monopolistic competition sacrifices some efficiency but provides **product diversity** that consumers value.
+
+---
+
+## Oligopoly
+
+An oligopoly is a market dominated by a **few large firms** whose decisions are strategically interdependent — each firm must consider how rivals will react to its choices.
+
+### Key Features
+
+1. **Few firms** dominate the market
+2. **Significant barriers to entry** — economies of scale, capital requirements, patents, branding
+3. **Strategic interdependence** — each firm's optimal strategy depends on what others do
+4. **Products may be homogeneous or differentiated**
+
+<Tabs>
+<Tab label="Homogeneous Oligopoly">
+Firms sell identical products (e.g., steel, cement, crude oil). Competition focuses mainly on price and quantity.
+</Tab>
+
+<Tab label="Differentiated Oligopoly">
+Firms sell differentiated products (e.g., automobiles, smartphones, airlines). Competition includes branding, features, advertising, and service alongside price.
+</Tab>
+</Tabs>
+
+### Collusive Oligopoly (Cartel)
+
+Firms may **collude** — explicitly or tacitly — to restrict output and raise prices, behaving collectively like a monopolist. A **cartel** is a formal collusive agreement.
+
+- **Joint profit maximization**: The cartel sets total output where industry $MR = MC$
+- **Problem**: Each member has an incentive to **cheat** by producing more than its quota (prisoner's dilemma)
+- **Cartels are typically illegal** in most countries (OPEC is a notable exception as a sovereign cartel)
+
+### Dominant Firm Model
+
+One large firm (the **dominant firm**) has a significant cost advantage or brand recognition, coexisting with a **competitive fringe** of smaller firms. The dominant firm sets the price; the fringe firms are price takers.
+
+### The Kinked Demand Curve Model
+
+This model explains **price rigidity** in oligopolies:
+
+- If a firm **raises** its price, rivals do **not** follow → the firm loses many customers (elastic demand above the kink)
+- If a firm **lowers** its price, rivals **match** the cut → the firm gains few new customers (inelastic demand below the kink)
+
+The result is a **kink** in the demand curve at the prevailing price, producing a discontinuity in the $MR$ curve. The $MC$ curve can shift within this gap without changing the optimal price — explaining why oligopoly prices tend to be **sticky**.
+
+### Duopoly Models
+
+<Collapse title="Cournot, Bertrand, and Stackelberg Models">
+
+**Cournot Model (Quantity Competition)**
+- Firms simultaneously choose quantities
+- Each firm assumes the other's quantity is fixed (best-response functions)
+- Equilibrium: each firm produces more than the monopoly share but less than the competitive level
+- Total output: between monopoly and perfect competition
+
+**Bertrand Model (Price Competition)**
+- Firms simultaneously choose prices
+- With homogeneous products, the equilibrium is $P = MC$ (competitive outcome!) even with just two firms
+- This "Bertrand paradox" shows that price competition can be extremely fierce
+
+**Stackelberg Model (Sequential Quantity Leadership)**
+- One firm (the leader) moves first, choosing quantity
+- The follower observes and responds optimally
+- The leader gains a **first-mover advantage**, producing more and earning higher profit than the follower
+</Collapse>
+
+---
+
+## Monopoly
+
+A monopoly exists when a **single firm** is the sole producer in the market with no close substitutes.
+
+### Sources of Monopoly Power
+
+- **Legal barriers**: patents, copyrights, government licenses, franchises
+- **Natural monopoly**: economies of scale so large that one firm can serve the entire market at lower cost than two or more firms (e.g., electricity distribution)
+- **Control of essential resources**: exclusive ownership of a key input
+- **Network effects**: value of a product increases with the number of users
+
+### Demand and Revenue
+
+The monopolist faces the **entire market demand curve**, which is downward-sloping. To sell more, it must lower the price on **all** units:
+
+$$
+MR = P + Q \cdot \frac{dP}{dQ} < P
+$$
+
+Since $\frac{dP}{dQ} < 0$, marginal revenue is always less than price.
+
+<Collapse title="MR and Elasticity Relationship">
+
+Marginal revenue can be expressed in terms of price elasticity of demand $E_d$:
+
+$$
+MR = P\left(1 + \frac{1}{E_d}\right) = P\left(1 - \frac{1}{|E_d|}\right)
+$$
+
+Since the monopolist produces where $MR > 0$, it always operates in the **elastic** portion of the demand curve ($|E_d| > 1$).
+
+For a linear demand curve $P = a - bQ$:
+
+$$
+TR = aQ - bQ^2 \implies MR = a - 2bQ
+$$
+
+The MR curve has the same intercept but **twice the slope** of the demand curve.
+</Collapse>
+
+### Profit Maximization
+
+The monopolist maximizes profit where:
+
+$$
+MR = MC
+$$
+
+The price is then read off the **demand curve** at the profit-maximizing quantity $Q^*$:
+
+$$
+P^* = D(Q^*) > MR = MC
+$$
+
+This means the monopolist charges a price **above** marginal cost, creating a markup.
+
+### Efficiency and Deadweight Loss
+
+<Callout type="error">
+**Monopoly is inefficient**: Because $P > MC$, the monopolist produces less than the socially optimal quantity. This creates a **deadweight loss** — a net loss of total surplus that neither the producer nor consumers capture. Some consumer surplus is also transferred to the monopolist as economic profit.
+</Callout>
+
+Compared to perfect competition:
+- **Output is lower**: $Q_m < Q_c$
+- **Price is higher**: $P_m > P_c$
+- **No allocative efficiency**: $P > MC$
+- **No productive efficiency**: not necessarily at $AC_{\min}$
+
+---
+
+## Price Discrimination
+
+Price discrimination occurs when a firm charges **different prices** to different consumers (or for different units) for the **same product**, where the price differences are not justified by cost differences.
+
+### Conditions for Price Discrimination
+
+1. The firm must have **market power** (downward-sloping demand)
+2. The firm must be able to **identify** consumers with different willingness to pay
+3. **Resale must be prevented** (arbitrage must be impossible)
+
+<Tabs>
+<Tab label="1st Degree (Perfect)">
+The firm charges each consumer their **maximum willingness to pay** for each unit. This captures **all** consumer surplus as producer surplus.
+
+- **Result**: No deadweight loss! Output equals the competitive level.
+- **In practice**: Nearly impossible; approximated by haggling, auctions, or personalized pricing algorithms.
+</Tab>
+
+<Tab label="2nd Degree (Quantity)">
+The firm charges different prices per unit based on the **quantity purchased** (quantity discounts, block pricing, bundling).
+
+- **Examples**: Electricity tiered pricing, "buy 2, get 1 free," software licensing tiers
+- Consumers **self-select** into pricing tiers based on their own demand
+</Tab>
+
+<Tab label="3rd Degree (Segmentation)">
+The firm charges different prices to different **identifiable market segments** based on observable characteristics.
+
+- **Examples**: Student discounts, senior pricing, geographic pricing, peak vs off-peak
+- The firm sets $MR_1 = MR_2 = MC$ across segments
+- Higher price for the segment with **less elastic** demand
+
+$$
+\frac{P_1}{P_2} = \frac{1 - 1/|E_2|}{1 - 1/|E_1|}
+$$
+</Tab>
+</Tabs>
+
+---
+
+## Monopsony
+
+A **monopsony** is a market with a **single buyer**. It is the mirror image of monopoly.
+
+| Feature | Monopoly (single seller) | Monopsony (single buyer) |
+|---|---|---|
+| Market power on | Supply side | Demand side |
+| Faces | Downward-sloping demand | Upward-sloping supply |
+| Key distortion | $P > MC$ (too little sold) | $W < MRP$ (too little bought) |
+| Example | Patented drug maker | Company town employer, large retailer |
+
+The monopsonist faces an upward-sloping supply curve. To hire more labor (or buy more input), it must raise the wage (price) for **all** units, making the marginal factor cost ($MFC$) exceed the supply price:
+
+$$
+MFC > W \quad \text{(supply price)}
+$$
+
+The monopsonist hires where $MFC = MRP$ (marginal revenue product), resulting in **lower wages and less employment** than in a competitive labor market.
+
+<Callout type="info">
+When a monopsony employer faces a monopoly union (bilateral monopoly), the outcome is **indeterminate** by theory alone — it depends on bargaining power.
+</Callout>
+
+---
+
+## Summary
+
+<Tabs>
+<Tab label="Efficiency Comparison">
+
+| Market Structure | Allocative Efficiency ($P = MC$) | Productive Efficiency ($AC_{\min}$) | Long-Run Economic Profit |
+|---|---|---|---|
+| Perfect Competition | ✅ Yes | ✅ Yes | Zero |
+| Monopolistic Competition | ❌ No ($P > MC$) | ❌ No (excess capacity) | Zero |
+| Oligopoly | ❌ No | ❌ No | Possible (positive) |
+| Monopoly | ❌ No ($P > MC$) | ❌ No | Possible (positive) |
+
+</Tab>
+
+<Tab label="Key Equations">
+
+**Perfect Competition:**
+$P = MR = AR$, profit max at $P = MC$
+
+**Monopolistic Competition:**
+$P > MR$, profit max at $MR = MC$, long-run $P = ATC$
+
+**Monopoly:**
+$MR = P(1 - 1/|E_d|)$, profit max at $MR = MC$
+
+**Monopsony:**
+Hires where $MFC = MRP$, pays $W < MRP$
+
+</Tab>
+</Tabs>
+
+---
+
+## Test Your Knowledge
+
+<Quiz>
+  <Question text="In perfect competition, what is the long-run equilibrium condition?">
+    <Option value="a">P = MC only</Option>
+    <Option value="b" correct>P = MC = AC at minimum AC</Option>
+    <Option value="c">MR = MC with positive profit</Option>
+    <Option value="d">P > MC = AC</Option>
+  </Question>
+
+  <Question text="Why does a monopolist always operate on the elastic portion of the demand curve?">
+    <Option value="a">Because inelastic demand means zero revenue</Option>
+    <Option value="b" correct>Because MR is negative in the inelastic region, so profit cannot be maximized there</Option>
+    <Option value="c">Because the government prohibits inelastic pricing</Option>
+    <Option value="d">Because marginal cost is always positive in the elastic region</Option>
+  </Question>
+
+  <Question text="In the kinked demand curve model, what explains price rigidity?">
+    <Option value="a">Firms collude to fix prices</Option>
+    <Option value="b">Government price controls</Option>
+    <Option value="c" correct>A gap in the MR curve means MC can shift without changing optimal price</Option>
+    <Option value="d">Firms face perfectly elastic demand</Option>
+  </Question>
+
+  <Question text="Which type of price discrimination captures ALL consumer surplus?">
+    <Option value="a" correct>First degree (perfect price discrimination)</Option>
+    <Option value="b">Second degree (quantity discounts)</Option>
+    <Option value="c">Third degree (market segmentation)</Option>
+    <Option value="d">None — price discrimination always leaves some consumer surplus</Option>
+  </Question>
+</Quiz>

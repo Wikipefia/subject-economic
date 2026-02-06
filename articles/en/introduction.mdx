@@ -1,221 +1,338 @@
 ---
 title:
-  ru: "Введение в дискретную математику"
-  en: "Introduction to Discrete Mathematics"
-  cz: "Úvod do diskrétní matematiky"
+  ru: "Введение в экономику"
+  en: "Introduction to Economics"
+  cz: "Úvod do ekonomie"
 slug: "introduction"
-author: "ivan-petrov"
+author: "kopecky"
 keywords:
-  ru: ["логика", "множества", "доказательства", "основы"]
-  en: ["logic", "sets", "proofs", "foundations"]
-  cz: ["logika", "množiny", "důkazy", "základy"]
+  ru: ["экономика", "микроэкономика", "макроэкономика", "факторы производства", "экономические субъекты"]
+  en: ["economics", "microeconomics", "macroeconomics", "production factors", "economic subjects"]
+  cz: ["ekonomie", "mikroekonomie", "makroekonomie", "výrobní faktory", "ekonomické subjekty"]
 created: "2025-01-15"
 updated: "2025-08-20"
 difficulty: "beginner"
-estimatedReadTime: 12
+estimatedReadTime: 15
 ---
 
-# Introduction to Discrete Mathematics
+# Introduction to Economics
 
-Discrete mathematics studies mathematical structures that are fundamentally **discrete** — not continuous. Where calculus deals with smooth curves and infinitesimal changes, discrete math works with distinct, separated values: integers, graphs, logical statements.
+Economics is a **social science** that studies the behavior of economic subjects and the allocation of **scarce resources** to satisfy unlimited human wants. Before diving deeper, it is essential to distinguish between two closely related but distinct concepts.
 
 <Callout type="info">
-This is a foundational article. No prerequisites are needed — start here if you're new to the course.
+This is a foundational article. No prerequisites are needed — start here if you are new to the course.
 </Callout>
 
-## Propositional Logic
+## Economics vs. Economy
 
-A **proposition** is a declarative statement that is either true or false, but not both.
+These two terms are often confused, but they refer to very different things:
 
-| Proposition | Truth Value |
-|---|---|
-| "2 + 2 = 4" | True |
-| "The Earth is flat" | False |
-| "Is it raining?" | Not a proposition (question) |
-| "x + 1 = 5" | Not a proposition (depends on x) |
+| Term | Meaning | Example |
+|---|---|---|
+| **Economics** (ekonomie) | The *science* — a systematic body of knowledge studying how societies allocate scarce resources | "She studies economics at university." |
+| **Economy** (ekonomika) | The *system* — the actual set of production, distribution, and consumption activities in a given territory | "The Czech economy grew by 2.5% last year." |
 
-### Logical Connectives
+Economics is the discipline that *studies* the economy. The economy is the *object* being studied.
 
-Propositions can be combined using logical connectives:
+<Callout type="warning">
+Do not confuse these two! On exams, mixing up "economics" (the science) with "economy" (the real system) is a common mistake.
+</Callout>
+
+## Microeconomics vs. Macroeconomics
+
+Modern economics is divided into two broad branches:
 
 <Tabs>
-<Tab label="AND (∧)">
-The conjunction $p \land q$ is true only when **both** $p$ and $q$ are true.
+<Tab label="Microeconomics">
 
-| $p$ | $q$ | $p \land q$ |
-|---|---|---|
-| T | T | T |
-| T | F | F |
-| F | T | F |
-| F | F | F |
+**Microeconomics** studies the behavior of **individual economic subjects** — consumers, firms, and specific markets.
+
+Key topics include:
+- **Demand and supply** on individual markets
+- **Consumer choice** and utility maximization
+- **Firm behavior** — production, costs, profit maximization
+- **Market structures** — perfect competition, monopoly, oligopoly
+- **Price formation** on goods and factor markets
+
+Microeconomics asks: *How does a single consumer decide what to buy? How does a firm set its price?*
+
 </Tab>
+<Tab label="Macroeconomics">
 
-<Tab label="OR (∨)">
-The disjunction $p \lor q$ is true when **at least one** of $p$ or $q$ is true.
+**Macroeconomics** studies the economy **as a whole** — aggregate output, price levels, and national economic policy.
 
-| $p$ | $q$ | $p \lor q$ |
-|---|---|---|
-| T | T | T |
-| T | F | T |
-| F | T | T |
-| F | F | F |
-</Tab>
+Key topics include:
+- **Gross Domestic Product (GDP)** and economic growth
+- **Inflation** and the general price level
+- **Unemployment** and the labor market in aggregate
+- **Monetary policy** — central bank, interest rates, money supply
+- **Fiscal policy** — government spending, taxation, budget deficits
 
-<Tab label="NOT (¬)">
-The negation $\lnot p$ flips the truth value.
+Macroeconomics asks: *Why do recessions happen? How can the government stimulate the economy?*
 
-| $p$ | $\lnot p$ |
-|---|---|
-| T | F |
-| F | T |
-</Tab>
-
-<Tab label="IMPLIES (→)">
-The implication $p \to q$ is false **only** when $p$ is true and $q$ is false.
-
-| $p$ | $q$ | $p \to q$ |
-|---|---|---|
-| T | T | T |
-| T | F | F |
-| F | T | T |
-| F | F | T |
-
-> The "vacuously true" cases (when $p$ is false) are often counterintuitive at first!
 </Tab>
 </Tabs>
 
-### De Morgan's Laws
+## Positive vs. Normative Economics
 
-Two fundamental equivalences for negating compound statements:
+Economics can be approached in two fundamentally different ways:
 
-$$
-\lnot(p \land q) \equiv (\lnot p) \lor (\lnot q)
-$$
+<Tabs>
+<Tab label="Positive Economics">
 
-$$
-\lnot(p \lor q) \equiv (\lnot p) \land (\lnot q)
-$$
+**Positive economics** is concerned with **objective description** — what the economy *is* and how it *works*. It makes statements that can be tested, verified, or refuted with data.
 
-<Callout type="warning">
-De Morgan's Laws are used **everywhere** in programming. When you negate a compound `if` condition, you're applying De Morgan's. Getting this wrong is one of the most common sources of logic bugs.
-</Callout>
+Examples of positive statements:
+- "If the minimum wage increases by 10%, youth unemployment rises by 2%."
+- "Inflation in the Czech Republic was 2.8% in 2024."
+- "A decrease in interest rates leads to increased investment spending."
 
-## Set Theory Basics
+Positive economics does not make value judgments — it describes reality as it is.
 
-A **set** is an unordered collection of distinct objects called **elements** or **members**.
+</Tab>
+<Tab label="Normative Economics">
 
-### Notation
+**Normative economics** involves **value judgments** — what the economy *should be* or what policies *ought to be* pursued. These statements cannot be proven true or false by data alone.
 
-```python
-# Python sets mirror mathematical set notation
-A = {1, 2, 3, 4, 5}
-B = {3, 4, 5, 6, 7}
+Examples of normative statements:
+- "The government should raise the minimum wage to reduce poverty."
+- "Taxes on the wealthy should be higher."
+- "Free trade is better than protectionism."
 
-# Membership
-print(3 in A)       # True  (3 ∈ A)
-print(6 in A)       # False (6 ∉ A)
+Normative economics reflects personal, political, or ethical preferences.
 
-# Set operations
-union = A | B        # {1, 2, 3, 4, 5, 6, 7}  (A ∪ B)
-intersection = A & B # {3, 4, 5}               (A ∩ B)
-difference = A - B   # {1, 2}                  (A \ B)
-sym_diff = A ^ B     # {1, 2, 6, 7}           (A △ B)
-
-print(f"A ∪ B = {union}")
-print(f"A ∩ B = {intersection}")
-print(f"A \\ B = {difference}")
-```
-
-### Cardinality
-
-The **cardinality** of a set $A$, written $|A|$, is the number of elements it contains.
-
-For finite sets $A$ and $B$, the **inclusion-exclusion principle** states:
-
-$$
-|A \cup B| = |A| + |B| - |A \cap B|
-$$
-
-<Collapse title="Proof of Inclusion-Exclusion for Two Sets">
-
-**Proof.** Partition $A \cup B$ into three disjoint regions:
-1. Elements in $A$ only: $A \setminus B$
-2. Elements in $B$ only: $B \setminus A$
-3. Elements in both: $A \cap B$
-
-Then:
-$$|A \cup B| = |A \setminus B| + |B \setminus A| + |A \cap B|$$
-
-Since $|A| = |A \setminus B| + |A \cap B|$, we get $|A \setminus B| = |A| - |A \cap B|$.
-
-Similarly, we have $|B \setminus A| = |B| - |A \cap B|$.
-
-Substituting:
-$$|A \cup B| = (|A| - |A \cap B|) + (|B| - |A \cap B|) + |A \cap B| = |A| + |B| - |A \cap B|$$
-
-$\blacksquare$
-</Collapse>
-
-## Proof Techniques
-
-Mathematical proofs are the currency of discrete mathematics. Here are the main techniques:
-
-### Direct Proof
-
-To prove $p \to q$: assume $p$ is true, then show $q$ follows.
-
-$$
-\text{Theorem: If } n \text{ is even, then } n^2 \text{ is even.}
-$$
-
-**Proof.** Let $n$ be even. Then $n = 2k$ for some integer $k$. Therefore $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$, which is even. $\blacksquare$
-
-### Proof by Contradiction
-
-To prove $p$: assume $\lnot p$, then derive a contradiction.
-
-<Collapse title="Example: √2 is irrational (classic proof by contradiction)">
-
-**Proof.** Suppose, for contradiction, that $\sqrt{2}$ is rational. Then $\sqrt{2} = \frac{a}{b}$ where $a, b$ are integers with no common factors.
-
-Squaring both sides: $2 = \frac{a^2}{b^2}$, so $a^2 = 2b^2$.
-
-This means $a^2$ is even, so $a$ must be even. Write $a = 2c$.
-
-Then $(2c)^2 = 2b^2$, giving $4c^2 = 2b^2$, so $b^2 = 2c^2$.
-
-This means $b$ is also even — contradicting our assumption that $a$ and $b$ share no common factors. $\blacksquare$
-</Collapse>
-
-### Proof by Induction
-
-To prove a statement $P(n)$ holds for all $n \geq n_0$:
-1. **Base case**: Show $P(n_0)$ is true
-2. **Inductive step**: Show that $P(k) \to P(k+1)$ for all $k \geq n_0$
+</Tab>
+</Tabs>
 
 <Callout type="info">
-Mathematical induction is like dominoes: knock the first one over (base case), and show that each domino knocks over the next (inductive step). All dominoes fall.
+**How to tell them apart**: If a statement contains words like "should," "ought to," or "better," it is likely normative. If it describes a measurable relationship, it is positive.
 </Callout>
 
-**Example**: Prove that $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$ for all $n \geq 1$.
+## Economic Subjects
 
-```python
-def sum_formula(n: int) -> int:
-    """Closed-form sum: 1 + 2 + ... + n"""
-    return n * (n + 1) // 2
+An **economic subject** is any entity that makes economic decisions. The four main types are:
 
-# Verify for several values
-for n in range(1, 11):
-    brute_force = sum(range(1, n + 1))
-    formula = sum_formula(n)
-    assert brute_force == formula, f"Mismatch at n={n}"
-    print(f"n={n:2d}: sum = {formula}")
-```
+### 1. Households (Consumers)
+
+Households are the fundamental consuming units of the economy:
+- They **own production factors** (labor, land, capital) and supply them to firms
+- They **receive income** — wages for labor, rent for land, interest/dividends for capital
+- They may receive **government transfers** (pensions, social benefits)
+- They **pay taxes** to the state
+- They **consume** goods and services to maximize utility
+
+### 2. Firms (Producers)
+
+Firms transform inputs into outputs:
+- They **hire production factors** from households
+- They **produce goods and services** for the market
+- They **earn revenue** from selling their output
+- They **pay costs** — wages, rent, interest, raw materials
+- Their goal is typically to **maximize profit**
+
+### 3. State / Government
+
+The state plays multiple roles in the economy:
+- **Provides public goods** (national defense, infrastructure, public education)
+- **Creates the legislative framework** — laws, regulations, property rights
+- **Conducts fiscal policy** — taxation and government spending
+- **Redistributes income** through transfers and progressive taxation
+- **Corrects market failures** — externalities, monopoly regulation
+
+### 4. Foreign Sector
+
+The foreign sector captures international economic interactions:
+
+| Concept | Description |
+|---|---|
+| **Closed economy** | No trade with other countries (theoretical) |
+| **Open economy** | Engages in international trade — exports and imports |
+| **Exports** | Goods and services sold to foreign buyers |
+| **Imports** | Goods and services purchased from abroad |
+| **Net exports** | Exports minus imports ($NX = X - M$) |
+
+<Callout type="info">
+In practice, all modern economies are **open economies**. The closed-economy model is useful only as a theoretical simplification.
+</Callout>
+
+## Basic Production Factors
+
+Production factors are the inputs used to create goods and services. There are three primary factors:
+
+<Tabs>
+<Tab label="Labor">
+
+**Labor** is the purposeful human activity directed at producing goods and services.
+
+- It is a **primary factor** — it exists independently of prior production
+- The **price of labor** is the **wage** (mzda)
+- Labor quality depends on education, skills, experience, and health
+- The labor market is where supply of labor (from households) meets demand for labor (from firms)
+
+</Tab>
+<Tab label="Land">
+
+**Land** encompasses all **natural resources** used in production.
+
+- Includes agricultural land, forests, minerals, water, air
+- It is a **primary factor** — provided by nature, not produced
+- The **price of land** is **rent** (renta)
+- Land is typically characterized by a fixed or very limited supply
+
+</Tab>
+<Tab label="Capital">
+
+**Capital** refers to produced means of production — tools, machinery, buildings, technology.
+
+- It is a **secondary (derived) factor** — the result of prior production processes
+- The **price of capital** is **interest** or **rent** (úrok, renta)
+- Capital must be accumulated through investment (saving and producing capital goods)
+- Physical capital (machines) is distinct from financial capital (money, stocks)
+
+</Tab>
+</Tabs>
+
+<Collapse title="Additional detail: Human capital and entrepreneurship">
+
+Some economists identify additional factors:
+
+- **Human capital** — the knowledge, skills, and abilities embodied in workers. It is built through education and training and increases labor productivity.
+- **Entrepreneurship** — the ability to organize the other factors, take risks, and innovate. The entrepreneur's reward is **profit**.
+
+These are sometimes considered extensions of labor and capital rather than fully separate factors.
+
+</Collapse>
+
+## The Market
+
+A **market** is any arrangement where buyers and sellers interact to exchange goods, services, or production factors. It is the central mechanism through which economic questions are answered in market economies.
+
+### Types of Markets
+
+| Market Type | What is traded | Demanders | Suppliers |
+|---|---|---|---|
+| **Goods and services market** | Final products | Households | Firms |
+| **Factor market (labor)** | Labor services | Firms | Households |
+| **Factor market (capital)** | Financial capital, machinery | Firms | Households / other firms |
+| **Factor market (land)** | Land and natural resources | Firms | Landowners |
+
+### The Role of Money
+
+Money serves as a **medium of exchange**, eliminating the inefficiency of barter. It fulfills three functions:
+
+1. **Medium of exchange** — accepted in payment for goods and services
+2. **Unit of account** — provides a common measure of value
+3. **Store of value** — allows purchasing power to be saved for the future
+
+<Callout type="info">
+Markets can exist without money (barter), but money dramatically reduces **transaction costs** and enables complex economic exchange.
+</Callout>
+
+## Basic Economic Questions
+
+Every society must answer three fundamental questions:
+
+1. **What to produce?** — Which goods and services, in what quantities?
+2. **How to produce?** — With which technologies, combinations of factors?
+3. **For whom to produce?** — How is output distributed among members of society?
+
+Different economic systems answer these questions in different ways:
+
+<Tabs>
+<Tab label="Market Economy">
+
+Decisions are made by **individual agents** through the price mechanism. Supply and demand determine what is produced, how, and for whom.
+
+- **Advantages**: efficiency, innovation, consumer choice
+- **Disadvantages**: inequality, market failures, instability
+- **Key thinker**: Adam Smith — the "invisible hand"
+
+</Tab>
+<Tab label="Centrally Planned Economy">
+
+A **central authority** (typically the state) makes all production and distribution decisions.
+
+- **Advantages**: can address inequality, mobilize resources for national goals
+- **Disadvantages**: inefficiency, lack of incentives, information problems
+- **Historical examples**: Soviet Union, pre-reform China
+
+</Tab>
+<Tab label="Customary Economy">
+
+Economic decisions follow **tradition and custom**, passed down through generations.
+
+- Found in subsistence communities and indigenous societies
+- Production methods, roles, and distribution are determined by cultural norms
+- Very limited in the modern world
+
+</Tab>
+<Tab label="Mixed Economy">
+
+Most real-world economies are **mixed** — combining market mechanisms with government intervention.
+
+- The private sector operates through markets
+- The government regulates, taxes, provides public goods, and redistributes
+- **Examples**: most European countries, USA, Japan, Czech Republic
+
+</Tab>
+</Tabs>
+
+## The Circular Flow of the Economy
+
+The interactions between economic subjects can be visualized as a **circular flow**:
+
+1. **Households** supply production factors (labor, land, capital) to **firms** through factor markets
+2. **Firms** pay income to households (wages, rent, interest, profit)
+3. **Households** spend income on goods and services from firms through product markets
+4. **Firms** receive revenue from these sales
+5. The **government** collects taxes, provides public goods, and makes transfers
+6. The **foreign sector** participates via exports and imports
+
+$$
+\text{Total Income} = \text{Total Expenditure} = \text{Total Output (GDP)}
+$$
+
+<Callout type="info">
+This identity — that total income equals total spending equals total output — is one of the most fundamental ideas in macroeconomics and forms the basis of national accounts.
+</Callout>
+
+## Summary
+
+| Concept | Key Point |
+|---|---|
+| Economics vs. Economy | Science vs. real system |
+| Micro vs. Macro | Individual agents vs. aggregate economy |
+| Positive vs. Normative | What *is* vs. what *should be* |
+| Economic subjects | Households, firms, government, foreign sector |
+| Production factors | Labor (wage), Land (rent), Capital (interest) |
+| The Market | Where supply meets demand; goods and factor markets |
+| Economic questions | What, how, for whom? → market, planned, customary, mixed |
+
+<Quiz>
+  <Question text="Which of the following is a positive economic statement?">
+    <Option value="a">The government should reduce taxes on small businesses.</Option>
+    <Option value="b" correct>An increase in interest rates reduces consumer borrowing.</Option>
+    <Option value="c">Free healthcare is a fundamental human right.</Option>
+    <Option value="d">Income inequality is the biggest problem in the economy.</Option>
+  </Question>
+  <Question text="Which production factor is considered secondary (derived)?">
+    <Option value="a">Labor</Option>
+    <Option value="b">Land</Option>
+    <Option value="c" correct>Capital</Option>
+    <Option value="d">Natural resources</Option>
+  </Question>
+  <Question text="In a market economy, the three basic economic questions are primarily answered by:">
+    <Option value="a">The central government</Option>
+    <Option value="b">Cultural traditions</Option>
+    <Option value="c" correct>The price mechanism and individual agents</Option>
+    <Option value="d">International organizations</Option>
+  </Question>
+</Quiz>
 
 ## What's Next
 
-With logic, sets, and proof techniques in your toolkit, you're ready to move on to **Core Concepts** — where we'll explore relations, functions, and combinatorics in depth.
+With these foundational concepts in place, you are ready to explore how individual markets work in detail. The next article covers **demand, supply, and market equilibrium** — the core building blocks of microeconomic analysis.
 
 <Callout type="info">
-**Recommended next**: [Core Concepts](/discrete-mathematics/core-concepts) — builds directly on the foundations covered here.
+**Recommended next**: [Demand, Supply, and the Market](/general-economics/demand-supply-market) — builds directly on the foundations covered here.
 </Callout>

@@ -1,0 +1,415 @@
+---
+title:
+  ru: "Безработица и инфляция"
+  en: "Unemployment and Inflation"
+  cz: "Nezaměstnanost a inflace"
+slug: "unemployment-inflation"
+author: "kopecky"
+keywords:
+  ru: ["безработица", "инфляция", "ИПЦ", "кривая Филлипса", "ценовая стабильность"]
+  en: ["unemployment", "inflation", "CPI", "Phillips curve", "price stability"]
+  cz: ["nezaměstnanost", "inflace", "CPI", "Phillipsova křivka", "cenová stabilita"]
+created: "2025-04-01"
+updated: "2025-09-15"
+difficulty: "intermediate"
+estimatedReadTime: 24
+prerequisites:
+  - "introduction"
+  - "economic-indicators"
+---
+
+# Unemployment and Inflation
+
+Unemployment and inflation are two of the most closely watched macroeconomic indicators. They affect the everyday lives of millions and lie at the heart of economic policy debates. This article explores how they are defined, measured, and interconnected — including the famous Phillips curve tradeoff.
+
+<Callout type="info">
+This article builds on the concepts covered in **Introduction to Economics** and **Economic Indicators**. Make sure you are comfortable with GDP and the circular flow model before proceeding.
+</Callout>
+
+---
+
+## Part I: Unemployment
+
+### Labor Market Categories
+
+The working-age population can be divided into three mutually exclusive groups:
+
+| Category | Definition | Example |
+|---|---|---|
+| **Employed** | Persons who have a paid job (full-time or part-time) | A factory worker, a freelance designer |
+| **Unemployed** | Persons without a job who are actively seeking work and available to start | A graduate sending out résumés |
+| **Economically inactive** | Persons who neither work nor actively seek work | Students, retirees, stay-at-home parents |
+
+The **labor force** is the sum of employed and unemployed persons:
+
+$$
+L = E + U
+$$
+
+where $L$ is the labor force, $E$ is the number of employed, and $U$ is the number of unemployed.
+
+The **unemployment rate** is the share of the labor force that is unemployed:
+
+$$
+u = \frac{U}{L} \times 100\%
+$$
+
+<Callout type="warning">
+The unemployment rate does **not** count discouraged workers — people who have stopped searching for a job. This means the official rate can underestimate the true extent of joblessness.
+</Callout>
+
+### Types of Unemployment
+
+<Tabs>
+<Tab label="Frictional">
+
+**Frictional unemployment** occurs when workers are temporarily between jobs. It is:
+
+- **Short-term** and generally **voluntary**
+- Caused by the normal process of job search — workers quitting to find a better match, graduates entering the labor market
+- Unavoidable in any dynamic economy
+- Reduced by better information (job portals, employment agencies)
+
+Frictional unemployment is considered healthy — it reflects mobility and matching in the labor market.
+
+</Tab>
+<Tab label="Structural">
+
+**Structural unemployment** arises from a **mismatch** between the skills workers possess and the skills employers demand. Common causes include:
+
+- **Technological change** — automation replaces certain jobs (e.g., manufacturing robots)
+- **Industry decline** — entire sectors shrink (e.g., coal mining in Europe)
+- **Geographic mismatch** — jobs are in different regions than the workers
+- **Regulatory barriers** — high minimum wages or strict labor laws
+
+Structural unemployment is typically **long-term** and requires retraining, education, or relocation to resolve.
+
+</Tab>
+<Tab label="Cyclical">
+
+**Cyclical unemployment** is caused by **downturns in the business cycle**. When the economy contracts:
+
+- Aggregate demand falls → firms reduce output → layoffs increase
+- It rises during recessions and falls during expansions
+- It is the type of unemployment that macroeconomic policy most directly targets
+
+Cyclical unemployment is the gap between the actual unemployment rate and the natural rate.
+
+</Tab>
+<Tab label="Seasonal">
+
+**Seasonal unemployment** results from predictable, recurring fluctuations in demand:
+
+- Tourism workers in winter (or summer, depending on the region)
+- Agricultural laborers after harvest season
+- Retail workers after the holiday shopping period
+
+Statistical offices often report **seasonally adjusted** unemployment figures to filter out this effect.
+
+</Tab>
+</Tabs>
+
+### Natural Rate of Unemployment
+
+The **natural rate of unemployment** ($u^*$) is the unemployment rate that prevails when the economy is producing at its **potential output**. It includes:
+
+- Frictional unemployment
+- Structural unemployment
+- **No** cyclical unemployment
+
+This concept is closely linked to the **NAIRU** — the *Non-Accelerating Inflation Rate of Unemployment*. When the actual unemployment rate equals NAIRU, there is no upward or downward pressure on inflation.
+
+$$
+u^* = u_{\text{frictional}} + u_{\text{structural}}
+$$
+
+<Callout type="info">
+The natural rate is not fixed — it changes over time due to demographics, labor market institutions, technology, and government policies. In the Czech Republic, it is typically estimated at around 4–5%.
+</Callout>
+
+### Consequences of Unemployment
+
+Unemployment imposes significant costs on individuals and society:
+
+**Economic costs:**
+
+- **Loss of output** — the economy produces below its potential. **Okun's Law** provides a rule of thumb: for every 1 percentage point the unemployment rate exceeds the natural rate, real GDP is approximately **2% below** potential GDP.
+
+$$
+\frac{Y - Y^*}{Y^*} \approx -2 \times (u - u^*)
+$$
+
+- Reduced tax revenue and increased government spending on benefits → larger budget deficits
+
+**Social and personal costs:**
+
+- Loss of skills and work experience (hysteresis effect)
+- Psychological impact — depression, anxiety, loss of self-esteem
+- Higher rates of poverty, crime, family breakdown
+- Regional decline in areas with concentrated unemployment
+
+<Collapse title="Czech Republic unemployment trends">
+
+The Czech Republic has consistently had one of the lowest unemployment rates in the EU:
+
+- Post-transition period (1990s): unemployment rose as state enterprises restructured
+- 2004–2008: steady decline after EU accession, reaching around 4–5%
+- 2009–2010: spike due to the Global Financial Crisis (peaked near 7%)
+- 2015–2019: dramatic fall to under 2%, driven by strong manufacturing demand
+- 2020: slight increase during COVID-19, but relatively contained (3–4%)
+- 2022–2024: returned to very low levels, near 2.5–3.5%
+
+Regional disparities remain notable — Moravia-Silesia and Ústí regions typically have higher unemployment than Prague or South Moravia.
+
+</Collapse>
+
+---
+
+## Part II: Inflation
+
+### Definition and Key Concepts
+
+**Inflation** is a sustained rise in the **general price level** over time. It is important to distinguish:
+
+| Concept | Definition |
+|---|---|
+| **Inflation** | Sustained increase in the general price level |
+| **Deflation** | Sustained decrease in the general price level |
+| **Disinflation** | A decrease in the *rate* of inflation (prices still rising, but more slowly) |
+
+<Callout type="warning">
+Inflation is **not** the same as an increase in the price of a single good. If bread becomes more expensive but other prices fall, that is a relative price change, not inflation. Inflation means the overall price level is rising.
+</Callout>
+
+### Types of Inflation by Rate
+
+<Tabs>
+<Tab label="Mild / Creeping">
+
+**Mild (creeping) inflation** — single-digit annual rate (1–9%).
+
+- Generally considered manageable and even beneficial
+- Central banks typically target around 2%
+- Encourages spending over hoarding cash
+- Compatible with stable economic growth
+
+</Tab>
+<Tab label="Galloping">
+
+**Galloping inflation** — double- or triple-digit annual rate (10–999%).
+
+- Erodes the value of money rapidly
+- Contracts become difficult to enforce in nominal terms
+- Interest rates soar as lenders demand compensation for expected inflation
+- Economic planning becomes extremely difficult
+
+</Tab>
+<Tab label="Hyperinflation">
+
+**Hyperinflation** — inflation exceeding approximately **1,000% per year** (sometimes defined as >50% per month).
+
+- Money loses its basic functions — people resort to barter or foreign currencies
+- Requires radical monetary reform (new currency, currency board, etc.)
+
+**Historical examples:**
+- **Germany (1921–1923)**: prices doubled every few days; people carried money in wheelbarrows
+- **Zimbabwe (2007–2009)**: annual inflation peaked at an estimated $2.3 \times 10^{10}\%$; 100-trillion-dollar banknotes were printed
+- **Venezuela (2016–present)**: ongoing crisis with inflation exceeding 1,000,000% in 2018
+
+</Tab>
+</Tabs>
+
+### Causes of Inflation
+
+<Tabs>
+<Tab label="Demand-Pull">
+
+**Demand-pull inflation** occurs when **aggregate demand exceeds aggregate supply** at the current price level.
+
+- "Too much money chasing too few goods"
+- Caused by: expansionary fiscal policy, monetary expansion, consumer/business confidence, export booms
+- The AD curve shifts right while AS cannot keep up
+
+$$
+AD \uparrow \quad \Rightarrow \quad P \uparrow, \quad Y \uparrow \text{ (short run)}
+$$
+
+</Tab>
+<Tab label="Cost-Push">
+
+**Cost-push inflation** arises from increases in **production costs** that reduce aggregate supply.
+
+- Rising input prices: energy, raw materials, wages
+- The AS curve shifts left → prices rise, output falls
+- Often triggered by **supply shocks**
+
+**Example**: The **2022 European energy crisis** — following the Russian invasion of Ukraine, natural gas and oil prices surged dramatically. Energy-intensive industries passed costs to consumers, driving inflation across the eurozone and Czech Republic above 15%.
+
+$$
+AS \downarrow \quad \Rightarrow \quad P \uparrow, \quad Y \downarrow \text{ (stagflation risk)}
+$$
+
+</Tab>
+</Tabs>
+
+### Special Forms of Inflation
+
+| Form | Description |
+|---|---|
+| **Anticipated inflation** | Inflation that economic agents expect and can prepare for (adjusting contracts, wages) |
+| **Unanticipated inflation** | Inflation that comes as a surprise — causes redistribution and distortions |
+| **Hidden (repressed) inflation** | Price controls mask inflationary pressures; shortages appear instead |
+| **Suppressed inflation** | Similar to hidden — prices are held artificially below equilibrium by the state |
+| **Stagflation** | Simultaneous occurrence of stagnation (low/negative growth) and high inflation — particularly dangerous because standard policy tools work against each other |
+
+<Callout type="error">
+**Stagflation** is one of the most challenging macroeconomic situations. Stimulating the economy worsens inflation; fighting inflation worsens unemployment. The 1970s oil crises produced the most famous episodes of stagflation.
+</Callout>
+
+### Consequences of Inflation
+
+Inflation, especially when unanticipated, has far-reaching effects:
+
+1. **Erodes purchasing power** — the same amount of money buys fewer goods
+2. **Hurts creditors and savers** — the real value of savings and fixed-income assets declines
+3. **Benefits debtors** — the real burden of debt decreases
+4. **Reduces real wages** — if nominal wages do not keep pace with prices
+5. **Creates uncertainty** — makes business planning and long-term contracts difficult
+6. **Distorts investment decisions** — resources flow into inflation hedges (real estate, gold) instead of productive investment
+7. **Changes consumption patterns** — people rush to buy goods before prices rise further
+
+### Measuring Inflation
+
+#### Consumer Price Index (CPI)
+
+The **CPI** is the most commonly used measure of inflation. It tracks the cost of a fixed **consumer basket** of goods and services over time.
+
+$$
+CPI = \frac{\sum p_{1i} \cdot w_i}{\sum w_i} \times 100
+$$
+
+where $p_{1i}$ represents the current price of item $i$ and $w_i$ represents its weight in the basket.
+
+The **inflation rate** is the percentage change in CPI:
+
+$$
+\pi = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \times 100\%
+$$
+
+#### Other Price Indices
+
+| Index | What it measures |
+|---|---|
+| **GDP Deflator** | Price change of all domestically produced goods and services |
+| **Producer Price Index (PPI)** | Prices received by domestic producers — a leading indicator of consumer inflation |
+| **Harmonized Index (HICP)** | EU-standardized CPI for cross-country comparison |
+
+<Collapse title="Consumer basket methodology (Czech Statistical Office)">
+
+The Czech Statistical Office (**ČSÚ** — Český statistický úřad) constructs the consumer basket based on household expenditure surveys. The basket includes:
+
+- **Food and non-alcoholic beverages** — bread, meat, dairy, fruits, vegetables
+- **Non-food goods** — clothing, electronics, household supplies, fuel
+- **Services** — housing, healthcare, education, transport, communications
+
+The weights reflect the share of each category in average household spending and are updated periodically (typically every 1–2 years). As of recent revisions, housing costs (including energy) carry the largest weight.
+
+CPI is reported monthly, with base year indices published for comparison. The ČSÚ also computes core inflation (excluding regulated prices and indirect taxes).
+
+</Collapse>
+
+---
+
+## Part III: The Phillips Curve
+
+### Short-Run Phillips Curve
+
+In 1958, economist A.W. Phillips observed an empirical **inverse relationship** between the unemployment rate and the rate of wage inflation in the UK. This was generalized to the relationship between unemployment and price inflation:
+
+$$
+\pi = \pi^e - \beta(u - u^*) + \varepsilon
+$$
+
+where $\pi$ is the actual inflation rate, $\pi^e$ is expected inflation, $u$ is the actual unemployment rate, $u^*$ is the natural rate, $\beta > 0$ is a parameter, and $\varepsilon$ captures supply shocks.
+
+In the **short run**, there is a tradeoff:
+
+- Lower unemployment → higher inflation
+- Higher unemployment → lower inflation
+- Policymakers can "move along" the short-run Phillips curve
+
+### Long-Run Phillips Curve
+
+Milton Friedman and Edmund Phelps argued that the short-run tradeoff **disappears in the long run**:
+
+- Workers and firms adjust their **inflation expectations**
+- If the government tries to keep unemployment below the natural rate, expected inflation rises
+- The short-run curve **shifts upward** — the economy ends up with higher inflation but the same unemployment
+
+The **long-run Phillips curve (LRPC)** is **vertical** at the natural rate of unemployment:
+
+$$
+u = u^* \quad \text{(in the long run, regardless of } \pi \text{)}
+$$
+
+<Callout type="info">
+**Key insight**: In the long run, there is no tradeoff between inflation and unemployment. Attempts to permanently reduce unemployment below its natural rate only produce ever-accelerating inflation — hence the term **NAIRU**.
+</Callout>
+
+| Feature | Short-Run Phillips Curve | Long-Run Phillips Curve |
+|---|---|---|
+| Shape | Downward sloping | Vertical |
+| Tradeoff | Yes — lower $u$ → higher $\pi$ | No tradeoff |
+| Position | Depends on $\pi^e$ | Fixed at $u^*$ |
+| Policy implication | Short-term stabilization possible | Only structural reforms can reduce $u^*$ |
+
+---
+
+## Summary
+
+| Concept | Key Point |
+|---|---|
+| Unemployment rate | $u = U / L \times 100\%$ — share of labor force without a job |
+| Types of unemployment | Frictional, structural, cyclical, seasonal |
+| Natural rate | $u^* =$ frictional + structural; no cyclical component |
+| Okun's Law | 1% above natural rate ≈ 2% GDP loss |
+| Inflation | Sustained rise in the general price level |
+| CPI | Weighted index of consumer basket prices |
+| Demand-pull vs. cost-push | Excess demand vs. rising production costs |
+| Phillips curve (SR) | Inverse relationship: lower $u$ → higher $\pi$ |
+| Phillips curve (LR) | Vertical at $u^*$ — no permanent tradeoff |
+
+<Quiz>
+  <Question text="What is included in the natural rate of unemployment?">
+    <Option value="a">Only frictional unemployment</Option>
+    <Option value="b" correct>Frictional and structural unemployment</Option>
+    <Option value="c">Only cyclical unemployment</Option>
+    <Option value="d">All types including cyclical</Option>
+  </Question>
+  <Question text="According to Okun's Law, if unemployment is 2 percentage points above the natural rate, real GDP is approximately:">
+    <Option value="a">2% below potential</Option>
+    <Option value="b">1% below potential</Option>
+    <Option value="c" correct>4% below potential</Option>
+    <Option value="d">6% below potential</Option>
+  </Question>
+  <Question text="What does the long-run Phillips curve imply?">
+    <Option value="a">Lower unemployment always means higher inflation</Option>
+    <Option value="b">Inflation and unemployment are positively correlated</Option>
+    <Option value="c" correct>There is no permanent tradeoff between inflation and unemployment</Option>
+    <Option value="d">The natural rate of unemployment is zero</Option>
+  </Question>
+  <Question text="The 2022 European energy crisis is primarily an example of:">
+    <Option value="a">Demand-pull inflation</Option>
+    <Option value="b" correct>Cost-push inflation</Option>
+    <Option value="c">Hyperinflation</Option>
+    <Option value="d">Disinflation</Option>
+  </Question>
+</Quiz>
+
+## What's Next
+
+Understanding unemployment and inflation prepares you for the next topic: **Business Cycle and Economic Policy** — where we examine how governments and central banks use fiscal and monetary tools to stabilize the economy.
+
+<Callout type="info">
+**Recommended next**: [Business Cycle and Economic Policy](/general-economics/business-cycle-policy) — explores how policymakers respond to unemployment and inflation through fiscal and monetary instruments.
+</Callout>

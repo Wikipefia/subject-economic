@@ -1,0 +1,523 @@
+---
+title:
+  ru: "Показатели экономической эффективности"
+  en: "Economic Performance Indicators"
+  cz: "Ukazatele výkonu ekonomiky"
+slug: "economic-indicators"
+author: "kopecky"
+keywords:
+  ru: ["ВВП", "ВНП", "экономический рост", "агрегатный спрос", "макроэкономика"]
+  en: ["GDP", "GNP", "economic growth", "aggregate demand", "macroeconomics"]
+  cz: ["HDP", "HNP", "ekonomický růst", "agregátní poptávka", "makroekonomie"]
+created: "2025-03-15"
+updated: "2025-09-15"
+difficulty: "intermediate"
+estimatedReadTime: 20
+prerequisites:
+  - "introduction"
+---
+
+# Ukazatele výkonu ekonomiky
+
+Jak měříme zdraví celé ekonomiky? Na rozdíl od rozvahy jednotlivé firmy vyžaduje hodnocení výkonnosti národního hospodářství agregátní ukazatele, které zachycují celkovou produkci, příjmy a výdaje milionů ekonomických subjektů. Nejdůležitějším z nich je **hrubý domácí produkt (HDP)**.
+
+<Callout type="info">
+Makroekonomie začíná měřením. Než můžeme analyzovat hospodářské cykly, navrhovat politiku nebo srovnávat země, potřebujeme spolehlivé ukazatele ekonomické výkonnosti. Tento článek pokrývá klíčové míry a modely.
+</Callout>
+
+---
+
+## Hrubý domácí produkt (HDP)
+
+**HDP** (Hrubý domácí produkt, anglicky GDP — Gross Domestic Product) je celková tržní hodnota všech **finálních statků a služeb** vyprodukovaných na území dané země za určité časové období (obvykle rok nebo čtvrtletí).
+
+Klíčové body definice:
+
+- **Tržní hodnota**: statky a služby jsou oceněny tržními cenami
+- **Finální**: pouze hotové výrobky, nikoli mezistatky (aby nedošlo k dvojímu započítání)
+- **Na území země**: teritoriální princip (domácí), bez ohledu na to, kdo vlastní výrobní faktory
+- **Za časové období**: HDP je toková veličina, nikoli stavová
+
+<Callout type="info">
+**Co HDP nezahrnuje**: mezistatky (suroviny zpracované v dalším výrobním procesu), finanční transfery (sociální dávky, dary), prodej použitého zboží (to již bylo započítáno v roce výroby), nelegální aktivity a domácí práce.
+</Callout>
+
+### Nominální vs reálný HDP
+
+- **Nominální HDP**: měřený v **běžných** (aktuálních) cenách daného roku
+
+$$
+\text{Nominální HDP}_t = \sum_{i} P_{i,t} \cdot Q_{i,t}
+$$
+
+- **Reálný HDP**: měřený ve **stálých** cenách (ceny základního roku), čímž eliminuje vliv inflace
+
+$$
+\text{Reálný HDP}_t = \sum_{i} P_{i,\text{základ}} \cdot Q_{i,t}
+$$
+
+<Callout type="warning">
+Při srovnávání ekonomické výkonnosti v čase vždy používejte **reálný HDP**. Nominální HDP může růst jednoduše proto, že rostou ceny (inflace), i když se skutečná produkce nemění.
+</Callout>
+
+### Deflátor HDP
+
+**Deflátor HDP** měří celkovou cenovou hladinu domácí produkce:
+
+$$
+\text{Deflátor HDP} = \frac{\text{Nominální HDP}}{\text{Reálný HDP}} \times 100
+$$
+
+Na rozdíl od CPI (indexu spotřebitelských cen):
+- Deflátor HDP pokrývá **všechny** domácí produkty (nejen spotřební koš)
+- Používá **aktuální** váhy množství (Paaschův index)
+- Nezahrnuje importované zboží
+
+<Collapse title="Deflátor HDP vs CPI — podrobné srovnání">
+
+| Charakteristika | Deflátor HDP | CPI (Index spotřebitelských cen) |
+|---|---|---|
+| **Rozsah** | Všechny domácí finální statky a služby | Spotřební koš typické domácnosti |
+| **Importy** | Nezahrnuje | Zahrnuje |
+| **Investice, vládní výdaje** | Zahrnuje | Nezahrnuje |
+| **Typ indexu** | Paaschův (aktuální váhy) | Laspeyresův (fixní váhy) |
+| **Substituční zkreslení** | Menší | Větší |
+| **Periodicita** | Čtvrtletní | Měsíční |
+| **Vydává v ČR** | ČSÚ | ČSÚ |
+
+V praxi se oba ukazatele pohybují podobně, ale mohou se lišit, když se výrazně mění struktura spotřeby nebo relativní ceny.
+</Collapse>
+
+---
+
+## Tři metody měření HDP
+
+HDP lze měřit ze tří ekvivalentních pohledů. Teoreticky všechny tři dávají stejný výsledek.
+
+<Tabs>
+<Tab label="Produkční (výrobní) metoda">
+
+Sčítá **přidanou hodnotu** na každém stupni výroby ve všech sektorech ekonomiky.
+
+$$
+\text{HDP} = \sum_{\text{sektory}} (\text{Produkce} - \text{Mezispotřeba})
+$$
+
+**Přidaná hodnota** = hodnota, kterou firma přidá ke vstupům svým výrobním procesem.
+
+**Příklad**: Zemědělec vypěstuje pšenici (hodnota: 10 Kč), mlynář vyrobí mouku (hodnota: 25 Kč), pekař upeče chleba (hodnota: 40 Kč).
+
+| Stupeň | Produkce | Mezispotřeba | Přidaná hodnota |
+|---|---|---|---|
+| Zemědělství | 10 Kč | 0 Kč | 10 Kč |
+| Mlýn | 25 Kč | 10 Kč | 15 Kč |
+| Pekárna | 40 Kč | 25 Kč | 15 Kč |
+| **Celkem** | | | **40 Kč** |
+
+Celková přidaná hodnota (40 Kč) se rovná ceně finálního statku — žádné dvojí započítání.
+
+**Sektorové členění v ČR** (přibližné podíly na HDP):
+
+| Sektor | Podíl na HDP |
+|---|---|
+| Průmysl (zejména automobilový) | ~30% |
+| Služby | ~60% |
+| Zemědělství | ~2% |
+| Stavebnictví | ~5% |
+| Ostatní | ~3% |
+
+<Callout type="info">
+Česká republika má jednu z nejvyšších podílů průmyslu na HDP v EU, což odráží silnou tradici výroby a export automobilového průmyslu (Škoda Auto, TPCA/Toyota).
+</Callout>
+</Tab>
+
+<Tab label="Výdajová metoda">
+
+Sčítá všechny výdaje na finální statky a služby:
+
+$$
+\text{HDP} = C + I + G + NX
+$$
+
+kde:
+- $C$ = **Spotřeba** (consumption) — výdaje domácností na statky a služby
+- $I$ = **Investice** (investment) — výdaje firem na kapitálové statky, bytová výstavba, změna zásob
+- $G$ = **Vládní výdaje** (government) — veřejné výdaje na statky a služby (bez transferových plateb)
+- $NX$ = **Čistý export** (net exports) = Export $-$ Import
+
+| Složka | Podíl na HDP ČR (přibližně) | Popis |
+|---|---|---|
+| $C$ | ~47% | Konečná spotřeba domácností |
+| $I$ | ~26% | Hrubá tvorba fixního kapitálu + změna zásob |
+| $G$ | ~20% | Konečná spotřeba vlády |
+| $NX$ | ~+7% | Kladný čistý export (ČR je čistý exportér) |
+
+<Callout type="info">
+Česká republika trvale vykazuje **kladný čistý export** — export převyšuje import. To je dáno silným výrobním sektorem, zejména automobilovým průmyslem (Škoda Auto je největší český exportér). V roce 2023 tvořily automobily a autodíly přibližně 25% celkového exportu.
+</Callout>
+
+**Důležité detaily:**
+- **Investice** nezahrnují finanční investice (nákup akcií, dluhopisů); zahrnují pouze **reálné investice** (stroje, budovy, zásoby)
+- **Vládní výdaje** nezahrnují **transfery** (důchody, sociální dávky) — ty jsou pouze přerozdělovací, nevytvářejí novou produkci
+- **Import se odečítá**, protože je zahrnut v $C$, $I$ a $G$ (kupujeme i importované zboží)
+</Tab>
+
+<Tab label="Důchodová (příjmová) metoda">
+
+Sčítá všechny příjmy vzniklé při výrobě HDP:
+
+$$
+\text{HDP} = W + R + i + \Pi + D + T_{\text{nepř}}
+$$
+
+kde:
+- $W$ = **Mzdy a platy** (náhrady zaměstnancům)
+- $R$ = **Renty** (příjem z pozemků a nemovitostí)
+- $i$ = **Úroky** (příjem z kapitálu)
+- $\Pi$ = **Zisky** (firemní a podnikatelský příjem)
+- $D$ = **Odpisy** (opotřebení kapitálu)
+- $T_{\text{nepř}}$ = **Nepřímé daně** minus subvence (čisté daně z produkce)
+
+Tato metoda odráží skutečnost, že každá koruna vynaložená na produkt se musí stát něčím příjmem.
+
+**Rozložení v ČR:**
+
+| Příjmová složka | Přibližný podíl |
+|---|---|
+| Náhrady zaměstnancům | ~43% |
+| Hrubý provozní přebytek a smíšený důchod | ~45% |
+| Čisté daně z produkce | ~12% |
+</Tab>
+</Tabs>
+
+---
+
+## Související ukazatele národního důchodu
+
+HDP je jen jedním z několika agregátních měr. Zde je přehled, jak spolu souvisejí:
+
+| Ukazatel | Vzorec |
+|---|---|
+| **HNP** (Hrubý národní produkt) | $\text{HDP} + \text{Čistý důchod z faktorů ze zahraničí}$ |
+| **ČDP** (Čistý domácí produkt) | $\text{HDP} - \text{Odpisy}$ |
+| **ČNP** (Čistý národní produkt) | $\text{HNP} - \text{Odpisy}$ |
+| **Národní důchod (ND)** | $\text{ČNP} - \text{Nepřímé daně} + \text{Subvence}$ |
+| **Osobní důchod (OD)** | $\text{ND} - \text{Nerozdělené zisky} - \text{Pojistné} + \text{Transfery}$ |
+| **Disponibilní důchod (DD)** | $\text{OD} - \text{Osobní daně}$ |
+
+<Collapse title="HNP vs HDP: Jaký je rozdíl?">
+
+**HDP** měří produkci podle zeměpisné polohy (na území dané země).
+
+**HNP** měří produkci podle národnosti faktorů (rezidenty dané země, ať jsou kdekoliv).
+
+$$
+\text{HNP} = \text{HDP} + \text{Čistý důchod z faktorů ze zahraničí}
+$$
+
+**Čistý důchod z faktorů ze zahraničí** = příjmy domácích rezidentů v zahraničí minus příjmy zahraničních rezidentů v tuzemsku.
+
+**Příklad**: Český pracovník v Německu vydělává mzdu, která se započítává do českého **HNP**, ale do německého **HDP**. Německá továrna v ČR generuje zisky, které se započítávají do českého **HDP**, ale do německého **HNP**.
+
+Pro většinu zemí je rozdíl mezi HDP a HNP malý. Pro země s velkými toky remitencí (např. Filipíny) nebo významným zahraničním investováním (např. Irsko) může být rozdíl značný.
+
+**ČR**: HNP je mírně nižší než HDP, protože zahraniční firmy (automobilky, banky) odesílají zisky do zahraničí.
+</Collapse>
+
+---
+
+## Tempo růstu HDP
+
+**Tempo růstu reálného HDP** je hlavním ukazatelem ekonomické expanze nebo kontrakce:
+
+$$
+g = \frac{\text{HDP}_t - \text{HDP}_{t-1}}{\text{HDP}_{t-1}} \times 100\%
+$$
+
+### Vývoj HDP České republiky
+
+| Rok | Růst reálného HDP (%) | Klíčové události |
+|---|---|---|
+| 2004 | +4,9 | Vstup do EU |
+| 2005 | +6,4 | Silný růst po vstupu do EU |
+| 2006 | +6,9 | Předkrizový boom |
+| 2007 | +5,6 | Pokračující expanze |
+| 2008 | +2,7 | Začátek světové finanční krize |
+| **2009** | **−4,7** | **Velká recese — nejhlubší pokles od roku 1989** |
+| 2010 | +2,0 | Postupné oživení |
+| 2011 | +1,8 | Zpomalení |
+| 2012 | −0,8 | Domácí fiskální konsolidace |
+| 2013 | −0,5 | Pokračování recese |
+| 2014 | +2,3 | Obnovení růstu |
+| 2015 | +5,4 | Silný růst (EU fondy, uvolněná měnová politika ČNB) |
+| 2016 | +2,5 | Stabilní růst |
+| 2017 | +5,2 | Boom (měnový kurz, nízké úrokové sazby) |
+| 2018 | +3,2 | Pokračující expanze |
+| 2019 | +3,0 | Předpandemický vrchol |
+| **2020** | **−5,5** | **Pandemie COVID-19** |
+| 2021 | +3,6 | Postpandemické oživení |
+| 2022 | +2,4 | Energetická krize, inflační tlaky |
+| 2023 | −0,2 | Stagnace v důsledku restriktivní měnové politiky |
+
+<Callout type="warning">
+Dva nejprudší poklesy HDP ČR od vzniku samostatného státu (1993): **finanční krize 2009** ($-4{,}7\%$) a **pandemie COVID-19 v roce 2020** ($-5{,}5\%$). Oba byly způsobeny vnějšími šoky — globální finanční nákaza a celosvětová zdravotní krize.
+</Callout>
+
+<Collapse title="HDP České republiky v kontextu EU">
+
+Česká republika patří mezi středně velké ekonomiky EU. Její HDP na obyvatele (v paritě kupní síly) dosahuje přibližně **91% průměru EU** (2023), což ji řadí nad Portugalsko, ale pod Slovinsko.
+
+Klíčové charakteristiky české ekonomiky:
+- **Otevřená ekonomika**: Export tvoří přes 70% HDP
+- **Závislost na automobilovém průmyslu**: Škoda Auto a její dodavatelský řetězec
+- **Silné vazby na Německo**: Německo je hlavní obchodní partner (~30% exportu)
+- **Členství v EU, ale mimo eurozónu**: ČR používá českou korunu (CZK)
+</Collapse>
+
+---
+
+## Omezení HDP
+
+HDP je mocný, ale nedokonalý ukazatel. Nepostihuje několik důležitých rozměrů ekonomického blahobytu:
+
+| Omezení | Vysvětlení |
+|---|---|
+| **Stínová ekonomika** | Černý trh, nehlášená práce za hotové — nezachyceno |
+| **Domácí produkce** | Péče o děti, vaření, opravy v domácnosti — vyloučena |
+| **Poškození životního prostředí** | Znečištění, vyčerpávání zdrojů — neodečítá se; výdaje na sanace HDP paradoxně *zvyšují* |
+| **Kvalita života** | Volný čas, zdraví, osobní bezpečnost — neodráží se |
+| **Nerovnost** | HDP na hlavu neříká nic o distribuci příjmů |
+| **Netržní aktivity** | Dobrovolnická práce, open-source software — vyloučeny |
+
+<Callout type="warning">
+**Paradox HDP**: Přírodní katastrofa, která zničí infrastrukturu, může krátkodobě *zvýšit* HDP prostřednictvím výdajů na obnovu. Podobně vysoká kriminalita zvyšuje HDP (výdaje na bezpečnostní služby, pojištění, opravy). To jasně ukazuje limity HDP jako měřítka blahobytu.
+</Callout>
+
+### Alternativní ukazatele
+
+<Tabs>
+<Tab label="HDI (Index lidského rozvoje)">
+
+**HDI** (Human Development Index), vyvinutý OSN (UNDP), kombinuje tři dimenze:
+
+1. **Zdraví**: Střední délka života při narození
+2. **Vzdělání**: Průměrná a očekávaná délka školní docházky
+3. **Životní úroveň**: HND na obyvatele (PPP)
+
+HDI se pohybuje od 0 do 1. Česká republika dosahuje přibližně **0,889** (2023), což ji řadí do kategorie „velmi vysoký lidský rozvoj" (27. místo na světě).
+
+| Země | HDI (2023) | Pořadí |
+|---|---|---|
+| Švýcarsko | 0,967 | 1 |
+| Norsko | 0,966 | 2 |
+| Německo | 0,950 | 7 |
+| **Česko** | **0,889** | **27** |
+| Slovensko | 0,855 | 45 |
+| Polsko | 0,881 | 34 |
+</Tab>
+
+<Tab label="Další alternativy">
+
+- **HNŠ** (Hrubé národní štěstí, Gross National Happiness) — holistické měřítko z Bhútánu zahrnující psychologické blaho, zdraví, využití času, životní úroveň, kvalitu správy, ekologickou odolnost, vitalitu komunity, kulturní odolnost, vzdělání
+- **GPI** (Genuine Progress Indicator) — upravuje HDP o nerovnost, environmentální náklady a netržní přínosy
+- **OECD Better Life Index** — kompozitní index zahrnující bydlení, příjmy, zaměstnanost, komunitu, vzdělání, životní prostředí, občanskou angažovanost, zdraví, životní spokojenost, bezpečnost, rovnováhu práce a života
+- **Zelený HDP** (Green GDP) — odečítá environmentální škody od standardního HDP
+</Tab>
+</Tabs>
+
+---
+
+## Agregátní poptávka a agregátní nabídka
+
+Model **AD-AS** (Aggregate Demand — Aggregate Supply) je základním rámcem pro analýzu makroekonomických výkyvů a hospodářské politiky.
+
+### Agregátní poptávka (AD)
+
+Křivka AD ukazuje celkové množství statků a služeb poptávaných při každé cenové hladině. V prostoru cenová hladina ($P$) — reálný produkt ($Y$) je **klesající**.
+
+**Proč AD klesá:**
+
+1. **Efekt bohatství (Pigouův efekt)**: Vyšší $P$ → nižší reálné bohatství → méně spotřeby ($C \downarrow$)
+2. **Efekt úrokové sazby (Keynesův efekt)**: Vyšší $P$ → vyšší poptávka po penězích → vyšší úrokové sazby → méně investic ($I \downarrow$)
+3. **Efekt směnného kurzu (Mundell-Flemingův efekt)**: Vyšší $P$ → domácí zboží dražší → méně exportu, více importu → nižší $NX$
+
+**Posuny AD**: Změny v jakékoliv složce $C + I + G + NX$, které nejsou způsobeny cenovou hladinou:
+
+| Posun AD doprava (expanze) | Posun AD doleva (kontrakce) |
+|---|---|
+| Růst spotřebitelské důvěry | Pokles spotřebitelské důvěry |
+| Zvýšení vládních výdajů | Snížení vládních výdajů |
+| Snížení daní | Zvýšení daní |
+| Expanzivní měnová politika ČNB | Restriktivní měnová politika ČNB |
+| Oslabení koruny (zvýší export) | Posílení koruny (sníží export) |
+
+### Agregátní nabídka (AS)
+
+<Tabs>
+<Tab label="Krátkodobá AS (SRAS)">
+
+Krátkodobá křivka AS je **rostoucí**: s rostoucí cenovou hladinou jsou firmy ochotny nabídnout více produkce, protože některé vstupní ceny (zejména mzdy) jsou v krátkém období **strnulé** (sticky) — přizpůsobují se pomalu.
+
+$$
+Y = Y^* + \alpha(P - P^e)
+$$
+
+kde $Y^*$ je potenciální produkt, $P$ je skutečná cenová hladina, $P^e$ je očekávaná cenová hladina a $\alpha > 0$.
+
+**Proč jsou mzdy strnulé?**
+- Pracovní smlouvy jsou uzavřeny na delší dobu
+- Odbory vyjednávají kolektivní smlouvy (v ČR např. tripartita)
+- Firmy se obávají demotivace zaměstnanců při snížení mezd
+
+**Posuny SRAS:**
+- Růst vstupních nákladů (např. ropný šok) → SRAS se posune doleva
+- Technologický pokrok → SRAS se posune doprava
+- Pokles mezd → SRAS se posune doprava
+</Tab>
+
+<Tab label="Dlouhodobá AS (LRAS)">
+
+Dlouhodobá křivka AS je **vertikální** na úrovni **potenciálního produktu** $Y^*$. V dlouhém období se všechny ceny a mzdy plně přizpůsobí, takže cenová hladina neovlivňuje reálný produkt.
+
+$$
+Y = Y^* \quad \text{(nezávisle na } P \text{)}
+$$
+
+Potenciální produkt je určen produkční kapacitou ekonomiky:
+- **Práce**: velikost a kvalita pracovní síly
+- **Kapitál**: množství a kvalita strojů, budov, infrastruktury
+- **Technologie**: úroveň technologického know-how
+- **Instituce**: právní systém, regulace, efektivita vlády
+
+**Posuny LRAS:** Ekonomický růst (akumulace kapitálu, technologický pokrok, růst pracovní síly, zlepšení institucí) posouvá LRAS doprava.
+</Tab>
+</Tabs>
+
+### Rovnováha modelu AD-AS
+
+**Krátkodobá rovnováha** nastává v průsečíku křivek $AD$ a $SRAS$.
+
+**Dlouhodobá rovnováha** navíc vyžaduje, aby tento průsečík ležel na křivce $LRAS$ (při potenciálním produktu).
+
+<Collapse title="Podrobný popis přizpůsobovacích mechanismů">
+
+**Inflační mezera** ($Y > Y^*$): AD protíná SRAS napravo od LRAS
+1. Ekonomika vyrábí nad potenciálem
+2. Trh práce je napjatý → mzdy začnou růst
+3. Rostoucí mzdy zvyšují náklady firem → SRAS se posune doleva
+4. Ekonomika se vrací k $Y^*$ při vyšší cenové hladině
+
+**Recesní mezera** ($Y < Y^*$): AD protíná SRAS nalevo od LRAS
+1. Ekonomika vyrábí pod potenciálem
+2. Nezaměstnanost je vysoká → tlak na pokles mezd
+3. Klesající mzdy snižují náklady firem → SRAS se posune doprava
+4. Ekonomika se vrací k $Y^*$ při nižší cenové hladině
+
+**Důležitý poznatek**: V neoklasickém pojetí se ekonomika v dlouhém období **sama vrací** k potenciálnímu produktu. Keynesiánci namítají, že tento proces může být příliš pomalý a bolestivý — odtud potřeba aktivní hospodářské politiky.
+</Collapse>
+
+---
+
+## Potenciální produkt a mezera výstupu
+
+### Potenciální produkt
+
+**Potenciální HDP** ($Y^*$) je úroveň produkce, kterou ekonomika dokáže vytvořit, když jsou všechny zdroje využívány při svých **normálních** (udržitelných) mírách — plná zaměstnanost práce a kapitálu, bez vzniku inflačního nebo deflačního tlaku.
+
+<Callout type="info">
+Potenciální produkt **neznamená** maximální produkt. Je to úroveň slučitelná se stabilní inflací — dlouhodobá udržitelná kapacita ekonomiky. I při „plné zaměstnanosti" existuje přirozená míra nezaměstnanosti (frikční a strukturální).
+</Callout>
+
+### Mezera výstupu (Output Gap)
+
+**Mezera výstupu** měří rozdíl mezi skutečným a potenciálním HDP:
+
+$$
+\text{Mezera výstupu} = Y - Y^* = \text{Skutečný HDP} - \text{Potenciální HDP}
+$$
+
+Často se vyjadřuje jako procento potenciálního HDP:
+
+$$
+\text{Mezera výstupu (\%)} = \frac{Y - Y^*}{Y^*} \times 100\%
+$$
+
+| Mezera výstupu | Znaménko | Název | Důsledky |
+|---|---|---|---|
+| $Y > Y^*$ | Kladná | **Inflační (expanzní) mezera** | Přehřívání ekonomiky, rostoucí inflace, nízká nezaměstnanost |
+| $Y = Y^*$ | Nula | **Na potenciálu** | Stabilní inflace, přirozená míra nezaměstnanosti |
+| $Y < Y^*$ | Záporná | **Recesní (deflační) mezera** | Nevyužité zdroje, vysoká nezaměstnanost, tlak na pokles cen |
+
+<Collapse title="Odhad potenciálního produktu v praxi">
+
+Potenciální produkt není přímo pozorovatelný — musí se odhadovat. Běžné metody zahrnují:
+
+1. **Přístup produkční funkce**: Odhad Cobb-Douglasovy produkční funkce $Y^* = A \cdot K^\alpha \cdot L^{1-\alpha}$ s využitím trendových hodnot produktivity ($A$), kapitálu ($K$) a práce ($L$).
+
+2. **HP filtr (Hodrick-Prescott)**: Statistická technika, která extrahuje hladký trend z dat skutečného HDP. Používá parametr vyhlazení $\lambda$ (pro čtvrtletní data obvykle $\lambda = 1600$).
+
+3. **Na bázi NAIRU**: Odhad úrovně produkce konzistentní s neakcelerující mírou nezaměstnanosti (míra, při které se inflace nezrychluje ani nezpomaluje).
+
+**Česká národní banka (ČNB)** a **Evropská komise** pravidelně publikují odhady mezery výstupu ČR. Podle odhadů ČNB se česká ekonomika v roce 2023 nacházela mírně pod potenciálem (záporná mezera výstupu přibližně $-1\%$).
+</Collapse>
+
+---
+
+## Shrnutí
+
+| Ukazatel | Co měří | Klíčový vzorec |
+|---|---|---|
+| **Nominální HDP** | Celkový výstup v běžných cenách | $\sum P_{i,t} \cdot Q_{i,t}$ |
+| **Reálný HDP** | Celkový výstup ve stálých cenách | $\sum P_{i,\text{základ}} \cdot Q_{i,t}$ |
+| **Deflátor HDP** | Celková cenová hladina | $\frac{\text{Nominální HDP}}{\text{Reálný HDP}} \times 100$ |
+| **Tempo růstu HDP** | Míra ekonomické expanze | $g = \frac{HDP_t - HDP_{t-1}}{HDP_{t-1}} \times 100\%$ |
+| **HNP** | Výstup podle národnosti | $\text{HDP} + \text{Čistý důchod z faktorů ze zahraničí}$ |
+| **Mezera výstupu** | Cyklická pozice ekonomiky | $Y - Y^*$ |
+
+---
+
+## Otestujte své znalosti
+
+<Quiz>
+  <Question text="Která metoda měření HDP sčítá přidanou hodnotu napříč sektory?">
+    <Option value="a" correct>Produkční (výrobní) metoda</Option>
+    <Option value="b">Výdajová metoda</Option>
+    <Option value="c">Důchodová (příjmová) metoda</Option>
+    <Option value="d">Metoda deflátoru</Option>
+  </Question>
+
+  <Question text="Ve výdajové metodě, co představuje NX?">
+    <Option value="a">Národní výdaje</Option>
+    <Option value="b">Čisté zdanění</Option>
+    <Option value="c" correct>Čistý export (Export minus Import)</Option>
+    <Option value="d">Netržní transakce</Option>
+  </Question>
+
+  <Question text="Pokud roste nominální HDP, ale reálný HDP zůstává konstantní, co se stalo?">
+    <Option value="a">Nastal reálný ekonomický růst</Option>
+    <Option value="b" correct>Vzrostly ceny (inflace) bez reálné změny výstupu</Option>
+    <Option value="c">Deflátor HDP poklesl</Option>
+    <Option value="d">Export vzrostl</Option>
+  </Question>
+
+  <Question text="Záporná mezera výstupu znamená:">
+    <Option value="a">Ekonomika se přehřívá</Option>
+    <Option value="b" correct>Skutečný HDP je pod potenciálem — existují nevyužité zdroje</Option>
+    <Option value="c">Inflace se zrychluje</Option>
+    <Option value="d">Deflátor HDP je záporný</Option>
+  </Question>
+
+  <Question text="Proč je dlouhodobá křivka agregátní nabídky (LRAS) vertikální?">
+    <Option value="a">Protože firmy nemohou zvýšit výstup</Option>
+    <Option value="b">Protože vláda kontroluje nabídku</Option>
+    <Option value="c" correct>Protože se v dlouhém období všechny ceny plně přizpůsobí, takže cenová hladina neovlivňuje reálný výstup</Option>
+    <Option value="d">Protože agregátní poptávka je konstantní</Option>
+  </Question>
+
+  <Question text="Jaký je přibližný podíl spotřeby domácností (C) na HDP ČR?">
+    <Option value="a">~30%</Option>
+    <Option value="b" correct>~47%</Option>
+    <Option value="c">~60%</Option>
+    <Option value="d">~75%</Option>
+  </Question>
+</Quiz>

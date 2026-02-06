@@ -1,0 +1,541 @@
+---
+title:
+  ru: "Спрос, предложение и рынок"
+  en: "Demand, Supply, and the Market"
+  cz: "Poptávka, nabídka a trh"
+slug: "demand-supply-market"
+author: "kopecky"
+keywords:
+  ru: ["спрос", "предложение", "эластичность", "равновесие", "рыночная цена"]
+  en: ["demand", "supply", "elasticity", "equilibrium", "market price"]
+  cz: ["poptávka", "nabídka", "elasticita", "rovnováha", "tržní cena"]
+created: "2025-01-20"
+updated: "2025-08-25"
+difficulty: "beginner"
+estimatedReadTime: 22
+prerequisites:
+  - "introduction"
+---
+
+# Demand, Supply, and the Market
+
+The interaction of demand and supply is the central mechanism through which market economies allocate resources, determine prices, and distribute goods and services. This article builds the analytical framework for understanding how markets work.
+
+<Callout type="info">
+**Prerequisite**: Make sure you have read the [Introduction to Economics](/general-economics/introduction) before proceeding. Familiarity with basic economic concepts (economic subjects, production factors, market types) is assumed.
+</Callout>
+
+## Demand
+
+**Demand** expresses the relationship between the price of a good and the quantity that consumers are willing and able to purchase during a given time period, *ceteris paribus* (all other factors held constant).
+
+### Types of Demand
+
+| Type | Definition |
+|---|---|
+| **Individual demand** | Demand of a single consumer for a single good |
+| **Market demand** | Horizontal summation of all individual demands on a given market |
+| **Aggregate demand** | Total demand for all goods and services in an economy (macroeconomic concept) |
+
+### The Demand Function
+
+For a **linear demand function**, the relationship between price ($P$) and quantity demanded ($Q_D$) is:
+
+$$
+P = a - bQ_D
+$$
+
+where:
+- $a > 0$ is the **vertical intercept** (price at which quantity demanded falls to zero)
+- $b > 0$ is the **slope** (rate at which price falls as quantity increases)
+
+Alternatively, expressed as quantity as a function of price:
+
+$$
+Q_D = \frac{a - P}{b} = \frac{a}{b} - \frac{1}{b}P
+$$
+
+<Callout type="info">
+The demand curve is **downward sloping** — as price increases, quantity demanded decreases. This is known as the **Law of Demand** (law of diminishing demand).
+</Callout>
+
+### Why Does the Demand Curve Slope Downward?
+
+Two effects explain the inverse relationship between price and quantity demanded:
+
+1. **Substitution effect**: When a good's price rises, consumers switch to cheaper substitutes
+2. **Income effect**: When a good's price rises, consumers' real purchasing power falls, so they buy less
+
+### Demand Determinants (Shift Factors)
+
+A change in price causes a movement *along* the demand curve. Changes in other factors cause the entire curve to **shift**:
+
+| Determinant | Effect of Increase on Demand |
+|---|---|
+| Number of consumers | Demand increases (shifts right) |
+| Consumer income (normal goods) | Demand increases (shifts right) |
+| Consumer income (inferior goods) | Demand decreases (shifts left) |
+| Price of substitutes | Demand increases (shifts right) |
+| Price of complements | Demand decreases (shifts left) |
+| Positive expectations (future price rise) | Demand increases (shifts right) |
+| Favorable change in preferences/fashion | Demand increases (shifts right) |
+
+<Callout type="warning">
+**Key distinction**: A change in the good's *own price* causes a **movement along** the demand curve (change in quantity demanded). A change in any *other* determinant causes a **shift** of the entire demand curve (change in demand).
+</Callout>
+
+## Elasticity of Demand
+
+Elasticity measures the **responsiveness** of one variable to a change in another. It is a dimensionless ratio, allowing comparison across different goods and markets.
+
+<Tabs>
+<Tab label="Price Elasticity">
+
+### Price Elasticity of Demand ($E_{PD}$)
+
+Measures how responsive quantity demanded is to a change in the good's own price:
+
+$$
+E_{PD} = \frac{\%\Delta Q_D}{\%\Delta P} = \frac{\Delta Q_D / Q_D}{\Delta P / P}
+$$
+
+Since price and quantity move in opposite directions along the demand curve, $E_{PD}$ is typically **negative**. We often use the absolute value $|E_{PD}|$ for classification:
+
+| Absolute Value | Type | Description | Example |
+|---|---|---|---|
+| $\|E_{PD}\| = 0$ | Perfectly inelastic | Quantity does not respond at all | Insulin for diabetics |
+| $0 < \|E_{PD}\| < 1$ | Inelastic | Quantity responds less than proportionally | Gasoline, bread |
+| $\|E_{PD}\| = 1$ | Unit elastic | Quantity responds proportionally | — |
+| $1 < \|E_{PD}\| < \infty$ | Elastic | Quantity responds more than proportionally | Luxury goods, vacations |
+| $\|E_{PD}\| \to \infty$ | Perfectly elastic | Any price increase → quantity drops to zero | Perfect competition |
+
+<Collapse title="Factors affecting price elasticity of demand">
+
+Several factors determine how elastic demand is:
+
+1. **Availability of substitutes**: More substitutes → more elastic (consumers can switch easily)
+2. **Necessity vs. luxury**: Necessities → inelastic; luxuries → elastic
+3. **Share of income**: Larger share of budget → more elastic
+4. **Time horizon**: Long run → more elastic (consumers have time to adjust)
+5. **Market definition**: Narrower definition → more elastic (e.g., "Coca-Cola" is more elastic than "soft drinks")
+
+</Collapse>
+
+**Relationship between elasticity and total revenue** ($TR = P \times Q$):
+
+| If demand is... | Price increase → TR | Price decrease → TR |
+|---|---|---|
+| Elastic ($\|E\| > 1$) | Decreases | Increases |
+| Unit elastic ($\|E\| = 1$) | Unchanged | Unchanged |
+| Inelastic ($\|E\| < 1$) | Increases | Decreases |
+
+</Tab>
+<Tab label="Income Elasticity">
+
+### Income Elasticity of Demand ($E_{YD}$)
+
+Measures how quantity demanded responds to a change in consumer income ($Y$):
+
+$$
+E_{YD} = \frac{\%\Delta Q_D}{\%\Delta Y} = \frac{\Delta Q_D / Q_D}{\Delta Y / Y}
+$$
+
+| Value | Classification | Example |
+|---|---|---|
+| $E_{YD} < 0$ | **Inferior good** — demand falls as income rises | Instant noodles, public transport |
+| $0 < E_{YD} < 1$ | **Normal good (necessity)** — demand rises, but less than proportionally | Bread, milk, basic clothing |
+| $E_{YD} > 1$ | **Normal good (luxury)** — demand rises more than proportionally | Fine dining, sports cars, jewelry |
+
+<Callout type="info">
+Engel's Law: As income rises, the proportion spent on food decreases, even though absolute food spending may increase. Food has income elasticity between 0 and 1 (a necessity).
+</Callout>
+
+</Tab>
+<Tab label="Cross-Price Elasticity">
+
+### Cross-Price Elasticity of Demand ($E_{CD}$)
+
+Measures how the quantity demanded of good $X$ responds to a change in the price of good $Y$:
+
+$$
+E_{CD} = \frac{\%\Delta Q_X}{\%\Delta P_Y} = \frac{\Delta Q_X / Q_X}{\Delta P_Y / P_Y}
+$$
+
+| Value | Relationship | Example |
+|---|---|---|
+| $E_{CD} > 0$ | **Substitutes** — goods that replace each other | Butter & margarine, Coca-Cola & Pepsi |
+| $E_{CD} < 0$ | **Complements** — goods consumed together | Cars & gasoline, printers & ink |
+| $E_{CD} = 0$ | **Independent goods** — no relationship | Bread & bicycles |
+
+</Tab>
+</Tabs>
+
+<Collapse title="Derivation: Point elasticity on a linear demand curve">
+
+For a linear demand curve $Q_D = \alpha - \beta P$ (where $\alpha = a/b$ and $\beta = 1/b$), the point elasticity at any point $(P, Q)$ is:
+
+$$
+E_{PD} = \frac{dQ_D}{dP} \cdot \frac{P}{Q_D} = -\beta \cdot \frac{P}{Q_D}
+$$
+
+At the midpoint of the demand curve, $|E_{PD}| = 1$ (unit elastic). Above the midpoint, demand is elastic; below it, demand is inelastic. At the vertical intercept ($Q = 0$), elasticity approaches infinity; at the horizontal intercept ($P = 0$), elasticity equals zero.
+
+This means that **a straight-line demand curve has different elasticities at every point** — the slope is constant, but elasticity varies.
+
+</Collapse>
+
+## Supply
+
+**Supply** expresses the relationship between the price of a good and the quantity that producers are willing and able to sell during a given time period, *ceteris paribus*.
+
+### The Supply Function
+
+For a **linear supply function**:
+
+$$
+P = c + dQ_S
+$$
+
+where:
+- $c$ is the **vertical intercept** (minimum price at which production begins; may be negative)
+- $d > 0$ is the **slope** (rate at which price rises as quantity increases)
+
+Alternatively:
+
+$$
+Q_S = \frac{P - c}{d}
+$$
+
+<Callout type="info">
+The supply curve is typically **upward sloping** — as price increases, quantity supplied increases. This reflects the **Law of Supply**: higher prices make production more profitable, encouraging firms to produce more.
+</Callout>
+
+### Supply Determinants (Shift Factors)
+
+| Determinant | Effect of Increase on Supply |
+|---|---|
+| Input prices (wages, raw materials) | Supply decreases (shifts left) |
+| Technology improvement | Supply increases (shifts right) |
+| Number of producers | Supply increases (shifts right) |
+| Favorable expectations | Supply increases (shifts right) |
+| Subsidies | Supply increases (shifts right) |
+| Taxes on production | Supply decreases (shifts left) |
+
+## Market Equilibrium
+
+**Market equilibrium** occurs where the quantity demanded equals the quantity supplied. At this point, there is no tendency for the price to change.
+
+### Finding Equilibrium
+
+Setting demand equal to supply:
+
+$$
+Q_D = Q_S
+$$
+
+For linear functions $P = a - bQ$ (demand) and $P = c + dQ$ (supply):
+
+$$
+a - bQ = c + dQ
+$$
+
+$$
+Q^* = \frac{a - c}{b + d}
+$$
+
+$$
+P^* = a - bQ^* = \frac{ad + bc}{b + d}
+$$
+
+where $P^*$ is the **equilibrium price** and $Q^*$ is the **equilibrium quantity**.
+
+<Callout type="info">
+At equilibrium, the market **clears** — every unit produced is purchased, and every willing buyer finds a seller at the prevailing price.
+</Callout>
+
+### Disequilibrium
+
+| Situation | Condition | Result |
+|---|---|---|
+| **Excess supply** (surplus) | $P > P^*$ → $Q_S > Q_D$ | Price falls toward equilibrium |
+| **Excess demand** (shortage) | $P < P^*$ → $Q_D > Q_S$ | Price rises toward equilibrium |
+
+### The Cobweb Model
+
+The **cobweb model** describes how markets may adjust toward equilibrium over time when there is a **production lag** (e.g., agricultural markets where planting decisions are made a season in advance).
+
+<Tabs>
+<Tab label="Dampened Oscillations">
+
+When the supply curve is **steeper** than the demand curve, the market **converges** to equilibrium through diminishing price oscillations.
+
+Each cycle, the deviation from equilibrium becomes smaller. This is the **stable** cobweb.
+
+$$
+|d| > |b| \implies \text{convergence (stable equilibrium)}
+$$
+
+</Tab>
+<Tab label="Explosive Oscillations">
+
+When the demand curve is **steeper** than the supply curve, the market **diverges** from equilibrium with increasing oscillations.
+
+Each cycle, the deviation grows larger. This is the **unstable** cobweb.
+
+$$
+|b| > |d| \implies \text{divergence (unstable equilibrium)}
+$$
+
+</Tab>
+<Tab label="Uniform Oscillations">
+
+When the demand and supply curves have **equal slopes** (in absolute value), the market oscillates around equilibrium with constant amplitude.
+
+$$
+|b| = |d| \implies \text{constant oscillation}
+$$
+
+</Tab>
+</Tabs>
+
+## Changes in Equilibrium
+
+### Shift in Demand (Supply Unchanged)
+
+When demand **increases** (shifts right) while supply remains constant:
+- Equilibrium price **rises**: $P^* \uparrow$
+- Equilibrium quantity **rises**: $Q^* \uparrow$
+
+When demand **decreases** (shifts left) while supply remains constant:
+- Equilibrium price **falls**: $P^* \downarrow$
+- Equilibrium quantity **falls**: $Q^* \downarrow$
+
+### Shift in Supply (Demand Unchanged)
+
+When supply **increases** (shifts right) while demand remains constant:
+- Equilibrium price **falls**: $P^* \downarrow$
+- Equilibrium quantity **rises**: $Q^* \uparrow$
+
+When supply **decreases** (shifts left) while demand remains constant:
+- Equilibrium price **rises**: $P^* \uparrow$
+- Equilibrium quantity **falls**: $Q^* \downarrow$
+
+### Special Cases
+
+<Collapse title="Perfectly elastic and perfectly inelastic curves">
+
+**Perfectly inelastic demand** ($E_{PD} = 0$): Demand curve is a vertical line. Quantity demanded does not change regardless of price.
+- A shift in supply changes only the price, not the quantity.
+
+**Perfectly elastic demand** ($E_{PD} \to \infty$): Demand curve is a horizontal line. Any price above the given level results in zero demand.
+- A shift in supply changes only the quantity, not the price.
+
+**Perfectly inelastic supply**: Supply curve is a vertical line (fixed quantity, e.g., land).
+- A shift in demand changes only the price, not the quantity.
+
+**Perfectly elastic supply**: Supply curve is a horizontal line (firms supply any quantity at a given price).
+- A shift in demand changes only the quantity, not the price.
+
+</Collapse>
+
+## Government Interventions
+
+Governments frequently intervene in markets. While these interventions are often well-intentioned, they create predictable economic effects.
+
+<Tabs>
+<Tab label="Price Ceiling">
+
+### Price Ceiling (Maximum Price)
+
+A **price ceiling** is a legally mandated maximum price, set **below** the equilibrium price.
+
+$$
+P_{\text{ceiling}} < P^* \implies Q_D > Q_S \implies \text{shortage}
+$$
+
+**Effects**:
+- Creates **excess demand** (shortage)
+- Reduces producer surplus
+- May lead to black markets, rationing, quality deterioration
+- Creates **deadweight loss** — some mutually beneficial trades do not occur
+
+**Example**: Rent control in housing markets.
+
+<Callout type="warning">
+A price ceiling set *above* the equilibrium price has **no effect** — the market already produces a price below the ceiling.
+</Callout>
+
+</Tab>
+<Tab label="Price Floor">
+
+### Price Floor (Minimum Price)
+
+A **price floor** is a legally mandated minimum price, set **above** the equilibrium price.
+
+$$
+P_{\text{floor}} > P^* \implies Q_S > Q_D \implies \text{surplus}
+$$
+
+**Effects**:
+- Creates **excess supply** (surplus)
+- Reduces consumer surplus
+- May require government purchases of the surplus
+- Creates **deadweight loss**
+
+**Example**: Minimum wage in labor markets, agricultural price supports.
+
+<Callout type="warning">
+A price floor set *below* the equilibrium price has **no effect** — the market already produces a price above the floor.
+</Callout>
+
+</Tab>
+<Tab label="Taxes">
+
+### Excise Tax
+
+A **per-unit tax** ($t$) on producers shifts the supply curve upward by the amount of the tax:
+
+$$
+P_{\text{new supply}} = (c + t) + dQ_S
+$$
+
+**Effects**:
+- Equilibrium price paid by consumers **rises** (but by less than the full tax)
+- Price received by producers **falls** (net of tax)
+- Equilibrium quantity **decreases**
+- **Tax burden** is shared between consumers and producers
+- Creates **deadweight loss**
+
+**Tax incidence** depends on relative elasticities:
+
+$$
+\frac{\text{Consumer burden}}{\text{Producer burden}} = \frac{E_S}{|E_D|}
+$$
+
+The more **inelastic** side of the market bears the greater burden.
+
+</Tab>
+<Tab label="Subsidies">
+
+### Subsidy
+
+A **per-unit subsidy** ($s$) on producers shifts the supply curve downward:
+
+$$
+P_{\text{new supply}} = (c - s) + dQ_S
+$$
+
+**Effects**:
+- Equilibrium price paid by consumers **falls**
+- Price received by producers **rises** (including subsidy)
+- Equilibrium quantity **increases**
+- Creates **deadweight loss** (the subsidy costs more than the gain in surplus)
+- The benefit is shared between consumers and producers based on relative elasticities
+
+</Tab>
+</Tabs>
+
+### Consumer and Producer Surplus
+
+**Consumer surplus** ($CS$) is the difference between what consumers are willing to pay and what they actually pay — the area between the demand curve and the market price:
+
+$$
+CS = \int_0^{Q^*} D(Q)\,dQ - P^* \cdot Q^*
+$$
+
+**Producer surplus** ($PS$) is the difference between the market price and the minimum price at which producers are willing to sell — the area between the market price and the supply curve:
+
+$$
+PS = P^* \cdot Q^* - \int_0^{Q^*} S(Q)\,dQ
+$$
+
+**Total surplus** ($TS = CS + PS$) is maximized at the competitive equilibrium. Any intervention that moves the market away from equilibrium creates a **deadweight loss** (DWL) — a net reduction in total surplus.
+
+<Callout type="info">
+Deadweight loss represents the value of trades that *would have occurred* in a free market but *do not occur* due to the intervention. It is a pure loss to society — nobody receives it.
+</Callout>
+
+## Worked Example
+
+<Collapse title="Numerical example: Finding equilibrium and the effect of a tax">
+
+**Given**:
+- Demand: $Q_D = 100 - 2P$
+- Supply: $Q_S = -20 + 3P$
+
+**Step 1: Find equilibrium**
+
+Set $Q_D = Q_S$:
+
+$$100 - 2P = -20 + 3P$$
+$$120 = 5P$$
+$$P^* = 24$$
+$$Q^* = 100 - 2(24) = 52$$
+
+**Step 2: A tax of $t = 5$ per unit is imposed on producers**
+
+New supply: $Q_S = -20 + 3(P - 5) = -35 + 3P$
+
+New equilibrium: $100 - 2P = -35 + 3P$
+
+$$135 = 5P$$
+$$P_{\text{consumer}} = 27 \quad (\text{price consumers pay})$$
+$$P_{\text{producer}} = 27 - 5 = 22 \quad (\text{price producers receive})$$
+$$Q_{\text{new}} = 100 - 2(27) = 46$$
+
+**Results**:
+- Consumer price rises from 24 to 27 (+3): consumers bear 3/5 of the tax
+- Producer price falls from 24 to 22 (−2): producers bear 2/5 of the tax
+- Quantity falls from 52 to 46
+- Tax revenue = $5 \times 46 = 230$
+- Deadweight loss = $\frac{1}{2} \times 5 \times (52 - 46) = 15$
+
+</Collapse>
+
+## Summary
+
+| Concept | Key Point |
+|---|---|
+| Demand | Downward-sloping: $P = a - bQ$ |
+| Supply | Upward-sloping: $P = c + dQ$ |
+| Equilibrium | $Q_D = Q_S$ determines $P^*$ and $Q^*$ |
+| Price elasticity | $E_{PD} = \frac{\%\Delta Q}{\%\Delta P}$; elastic > 1, inelastic < 1 |
+| Income elasticity | Normal goods (+), inferior goods (−) |
+| Cross-price elasticity | Substitutes (+), complements (−) |
+| Cobweb model | Convergent, divergent, or uniform oscillations |
+| Government interventions | Price ceilings → shortages; price floors → surpluses; taxes → DWL |
+
+<Quiz>
+  <Question text="If the price elasticity of demand for a good is -0.5, what type of demand does this represent?">
+    <Option value="a">Elastic demand</Option>
+    <Option value="b" correct>Inelastic demand</Option>
+    <Option value="c">Unit elastic demand</Option>
+    <Option value="d">Perfectly elastic demand</Option>
+  </Question>
+  <Question text="What happens when a price ceiling is set below the equilibrium price?">
+    <Option value="a">A surplus is created</Option>
+    <Option value="b" correct>A shortage is created</Option>
+    <Option value="c">The market is unaffected</Option>
+    <Option value="d">Supply increases</Option>
+  </Question>
+  <Question text="If two goods have a positive cross-price elasticity, they are:">
+    <Option value="a">Complements</Option>
+    <Option value="b" correct>Substitutes</Option>
+    <Option value="c">Independent goods</Option>
+    <Option value="d">Inferior goods</Option>
+  </Question>
+  <Question text="In the cobweb model, convergence to equilibrium occurs when:">
+    <Option value="a">The demand curve is steeper than the supply curve</Option>
+    <Option value="b" correct>The supply curve is steeper than the demand curve</Option>
+    <Option value="c">Both curves have the same slope</Option>
+    <Option value="d">The price ceiling is binding</Option>
+  </Question>
+</Quiz>
+
+## What's Next
+
+With a solid grasp of demand, supply, and market equilibrium, you are now prepared to study how individual consumers make optimal choices. The next topic is **Consumer Utility Theory** — indifference curves, budget constraints, and the consumer optimum.
+
+<Callout type="info">
+**Recommended next**: [Consumer Utility Theory](/general-economics/consumer-theory) — applies the demand framework to individual consumer decision-making.
+</Callout>

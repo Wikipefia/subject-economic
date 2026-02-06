@@ -1,0 +1,388 @@
+---
+title:
+  ru: "Производство и издержки"
+  en: "Production and Costs"
+  cz: "Produkce a náklady"
+slug: "production-costs"
+author: "kopecky"
+keywords:
+  ru: ["производство", "издержки", "предельный продукт", "отдача от масштаба", "максимизация прибыли"]
+  en: ["production", "costs", "marginal product", "returns to scale", "profit maximization"]
+  cz: ["produkce", "náklady", "mezní produkt", "výnosy z rozsahu", "maximalizace zisku"]
+created: "2025-02-15"
+updated: "2025-09-01"
+difficulty: "intermediate"
+estimatedReadTime: 22
+prerequisites:
+  - "introduction"
+  - "demand-supply-market"
+---
+
+# Production and Costs
+
+Understanding how firms produce output and the costs they incur is central to microeconomics. This article covers **production functions**, **cost structures**, **revenue concepts**, and the conditions under which firms **maximize profit**.
+
+<Callout type="info">
+This article assumes familiarity with basic market concepts. Make sure you have read [Introduction to Economics](/general-economics/introduction) and [Demand, Supply, and the Market](/general-economics/demand-supply-market) first.
+</Callout>
+
+## The Production Function
+
+A **production function** describes the relationship between inputs (factors of production) and the maximum output a firm can produce:
+
+$$
+Q = f(K, L)
+$$
+
+where $Q$ is quantity of output, $K$ is capital, and $L$ is labor.
+
+<Tabs>
+<Tab label="Short Run">
+
+In the **short run**, at least one factor of production is **fixed** — typically capital $K$. The firm can only adjust its variable input (labor $L$).
+
+- The firm operates with a given plant size, set of machines, or factory
+- Only labor can be increased or decreased
+- The production function becomes: $Q = f(\bar{K}, L)$
+
+</Tab>
+<Tab label="Long Run">
+
+In the **long run**, **all** factors of production are **variable**. The firm can adjust both capital and labor freely.
+
+- The firm can build new factories, buy new machines, or shut down facilities
+- There are no fixed inputs — every cost is variable
+- The firm chooses the optimal combination of $K$ and $L$
+
+</Tab>
+</Tabs>
+
+## Short-Run Production: One Variable Input
+
+When capital is fixed, the firm's output depends solely on how much labor it employs. Three key measures describe this relationship:
+
+- **Total Product (TP)**: total output produced with a given amount of labor
+- **Marginal Product (MP)**: additional output from one more unit of labor — $MP = \frac{\partial TP}{\partial L}$
+- **Average Product (AP)**: output per unit of labor — $AP = \frac{TP}{L}$
+
+### Law of Diminishing Marginal Returns
+
+<Callout type="warning">
+The **law of diminishing marginal returns** states that as more units of a variable input (labor) are added to a fixed input (capital), the marginal product of that variable input **eventually decreases**. This is one of the most important laws in economics.
+</Callout>
+
+Production with one variable input passes through **three stages**:
+
+1. **Stage I — Increasing returns from variable input**: $MP$ is rising. Each additional worker adds more output than the previous one (e.g., benefits of specialization).
+2. **Stage II — Decreasing returns**: $MP$ is falling but still positive. Total output continues to grow, but at a decreasing rate.
+3. **Stage III — Negative returns**: $MP$ is negative. Adding more workers actually reduces total output (overcrowding, coordination failures).
+
+<Collapse title="Numerical example: TP, MP, AP">
+
+| $L$ (Workers) | $TP$ (Units) | $MP$ ($\Delta TP / \Delta L$) | $AP$ ($TP / L$) |
+|---|---|---|---|
+| 0 | 0 | — | — |
+| 1 | 10 | 10 | 10.0 |
+| 2 | 25 | 15 | 12.5 |
+| 3 | 45 | 20 | 15.0 |
+| 4 | 60 | 15 | 15.0 |
+| 5 | 70 | 10 | 14.0 |
+| 6 | 75 | 5 | 12.5 |
+| 7 | 75 | 0 | 10.7 |
+| 8 | 70 | −5 | 8.75 |
+
+- **Stage I** (L = 1–3): MP is rising (10 → 15 → 20), increasing returns from specialization
+- **Stage II** (L = 4–7): MP is falling but positive (15 → 10 → 5 → 0), diminishing returns set in
+- **Stage III** (L = 8+): MP is negative (−5), workers get in each other's way
+
+Note that $MP = AP$ when $AP$ is at its maximum (at $L = 4$, both equal 15).
+
+</Collapse>
+
+## Long-Run Production
+
+In the long run both $K$ and $L$ are variable. The firm must decide on the **optimal combination** of inputs.
+
+### Isoquants
+
+An **isoquant** is a curve showing all combinations of $K$ and $L$ that produce the **same level of output** — analogous to indifference curves in consumer theory.
+
+- Isoquants are downward-sloping and convex to the origin
+- Higher isoquants represent higher output levels
+- Isoquants never cross
+
+### Marginal Rate of Technical Substitution (MRTS)
+
+The **MRTS** measures the rate at which one input can be substituted for another while keeping output constant:
+
+$$
+MRTS = -\frac{\Delta K}{\Delta L} = \frac{MP_L}{MP_K}
+$$
+
+The MRTS diminishes along an isoquant — as you use more labor, each additional unit of labor substitutes for less and less capital.
+
+### Isocost Line
+
+The **isocost line** shows all combinations of $K$ and $L$ the firm can purchase for a given total cost:
+
+$$
+w \cdot L + r \cdot K = TC
+$$
+
+where $w$ is the wage rate and $r$ is the rental rate of capital.
+
+### Optimal Input Combination
+
+The firm minimizes cost (for a given output) at the **tangency** of the isoquant and isocost line:
+
+$$
+MRTS = \frac{w}{r} \quad \Leftrightarrow \quad \frac{MP_L}{MP_K} = \frac{w}{r}
+$$
+
+<Callout type="info">
+This is the producer's equivalent of the consumer's optimum. Just as a consumer equates MRS to the price ratio, a producer equates MRTS to the input price ratio.
+</Callout>
+
+## Returns to Scale
+
+Returns to scale describe what happens to output when **all inputs are scaled by the same factor** $t > 1$:
+
+<Tabs>
+<Tab label="Increasing Returns">
+
+$$
+f(tK, tL) > t \cdot Q
+$$
+
+Output grows **faster** than the proportional increase in inputs. Doubling all inputs more than doubles output.
+
+**Causes**: specialization, technical efficiencies at larger scale, volume discounts on inputs.
+
+</Tab>
+<Tab label="Constant Returns">
+
+$$
+f(tK, tL) = t \cdot Q
+$$
+
+Output grows at **exactly the same rate** as inputs. Doubling all inputs exactly doubles output.
+
+</Tab>
+<Tab label="Decreasing Returns">
+
+$$
+f(tK, tL) < t \cdot Q
+$$
+
+Output grows **slower** than the proportional increase in inputs. Doubling all inputs less than doubles output.
+
+**Causes**: management complexity, coordination difficulties, bureaucratic overhead at very large scale.
+
+</Tab>
+</Tabs>
+
+## Short-Run Costs
+
+In the short run, costs are divided into **fixed** and **variable** components:
+
+- **Fixed Costs (FC)**: do not change with output — rent, loan payments, insurance, depreciation of capital
+- **Variable Costs (VC)**: change with output — labor costs, raw materials, energy
+- **Total Cost**: $TC = FC + VC$
+
+Key average and marginal cost measures:
+
+$$
+MC = \frac{\partial TC}{\partial Q} = \frac{\Delta TC}{\Delta Q}
+$$
+
+$$
+AC = \frac{TC}{Q}, \quad AVC = \frac{VC}{Q}, \quad AFC = \frac{FC}{Q}, \quad AC = AVC + AFC
+$$
+
+<Callout type="info">
+Since $FC$ is constant, $MC$ depends **only on variable costs**: $MC = \frac{\Delta VC}{\Delta Q}$. Fixed costs have no effect on the marginal cost of producing one more unit.
+</Callout>
+
+<Collapse title="Numerical example: Short-run costs">
+
+Assume $FC = 50$.
+
+| $Q$ | $FC$ | $VC$ | $TC$ | $MC$ | $AFC$ | $AVC$ | $AC$ |
+|---|---|---|---|---|---|---|---|
+| 0 | 50 | 0 | 50 | — | — | — | — |
+| 1 | 50 | 30 | 80 | 30 | 50.0 | 30.0 | 80.0 |
+| 2 | 50 | 50 | 100 | 20 | 25.0 | 25.0 | 50.0 |
+| 3 | 50 | 60 | 110 | 10 | 16.7 | 20.0 | 36.7 |
+| 4 | 50 | 80 | 130 | 20 | 12.5 | 20.0 | 32.5 |
+| 5 | 50 | 110 | 160 | 30 | 10.0 | 22.0 | 32.0 |
+| 6 | 50 | 150 | 200 | 40 | 8.3 | 25.0 | 33.3 |
+| 7 | 50 | 200 | 250 | 50 | 7.1 | 28.6 | 35.7 |
+
+Notice: $MC$ first falls (from 30 to 10), then rises — the classic U-shape driven by diminishing returns.
+
+</Collapse>
+
+### Relationship Between MC and AC
+
+<Callout type="error">
+**Critical relationship** — this appears frequently on exams:
+- When $MC < AC$ → $AC$ is **falling**
+- When $MC > AC$ → $AC$ is **rising**
+- $MC$ intersects $AC$ at its **minimum point**
+- $MC$ also intersects $AVC$ at $AVC$'s minimum point
+- $AFC$ continuously decreases as output rises (fixed cost spread over more units)
+</Callout>
+
+Think of it like a batting average: if your latest score (MC) is below your average (AC), your average falls. If your latest score is above your average, your average rises.
+
+## Long-Run Costs
+
+In the long run, **all costs are variable** — there are no fixed costs. The firm can adjust its plant size, capital stock, and all other inputs.
+
+The **Long-Run Average Cost (LAC)** curve is the **envelope** of all short-run AC curves — for each output level, the firm chooses the plant size that minimizes average cost.
+
+<Tabs>
+<Tab label="Economies of Scale">
+
+$LAC$ is **falling**. Larger output leads to lower average cost.
+
+Sources: specialization, bulk purchasing, spreading R&D costs, technical efficiencies.
+
+</Tab>
+<Tab label="Constant Returns">
+
+$LAC$ is **flat**. Average cost does not change with scale.
+
+</Tab>
+<Tab label="Diseconomies of Scale">
+
+$LAC$ is **rising**. Larger output leads to higher average cost.
+
+Sources: management complexity, communication breakdowns, bureaucratic costs.
+
+</Tab>
+</Tabs>
+
+The output level at which $LAC$ reaches its minimum is called the **minimum efficient scale (MES)** — the smallest output at which a firm can produce at the lowest possible long-run average cost.
+
+## Revenue Concepts
+
+Before analyzing profit maximization, we need three revenue measures:
+
+- **Total Revenue**: $TR = P \cdot Q$
+- **Marginal Revenue**: $MR = \frac{\partial TR}{\partial Q}$ — additional revenue from selling one more unit
+- **Average Revenue**: $AR = \frac{TR}{Q} = P$
+
+<Callout type="info">
+In **perfect competition**, the firm is a price taker, so $P$ is constant: $MR = AR = P$. In **imperfect competition** (monopoly, oligopoly), the firm must lower price to sell more, so $MR < P$.
+</Callout>
+
+## Profit Maximization
+
+A firm's **economic profit** is:
+
+$$
+\pi = TR - TC
+$$
+
+### The Profit-Maximizing Condition
+
+A firm maximizes profit by producing where:
+
+$$
+MR = MC
+$$
+
+This is the **golden rule** of profit maximization: the firm expands output as long as the revenue from one more unit ($MR$) exceeds the cost of producing it ($MC$), and stops where they are equal.
+
+### Profit Outcomes
+
+<Tabs>
+<Tab label="Positive Profit">
+
+If $P > AC$ at the profit-maximizing output → the firm earns **positive economic profit** (above-normal profit).
+
+$$
+\pi = (P - AC) \times Q > 0
+$$
+
+</Tab>
+<Tab label="Zero Profit">
+
+If $P = AC$ → the firm earns **zero economic profit** (normal profit). The firm covers all costs including the opportunity cost of capital.
+
+</Tab>
+<Tab label="Loss — Continue">
+
+If $P < AC$ but $P > AVC$ → the firm makes a **loss** but continues operating in the short run. Revenue covers all variable costs and part of fixed costs. Shutting down would mean losing all FC.
+
+</Tab>
+<Tab label="Shutdown">
+
+If $P < AVC$ → the firm **shuts down**. Revenue does not even cover variable costs — the firm loses less by producing nothing and just paying FC.
+
+</Tab>
+</Tabs>
+
+<Callout type="error">
+**Shutdown condition**: The firm shuts down in the short run when $P < AVC$. The point where $P = AVC_{\min}$ is called the **shutdown point**. Below this price, the firm produces zero output.
+</Callout>
+
+<Collapse title="Derivation: Why MR = MC maximizes profit">
+
+Profit is maximized where the difference between $TR$ and $TC$ is greatest. Taking the derivative and setting it to zero:
+
+$$
+\frac{d\pi}{dQ} = \frac{dTR}{dQ} - \frac{dTC}{dQ} = MR - MC = 0
+$$
+
+$$
+\Rightarrow MR = MC
+$$
+
+Second-order condition: $\frac{d^2\pi}{dQ^2} < 0$, meaning $MC$ must be rising at the intersection (MC cuts MR from below).
+
+</Collapse>
+
+## Summary
+
+| Concept | Key Formula / Insight |
+|---|---|
+| Production function | $Q = f(K, L)$ |
+| Marginal product | $MP = \partial TP / \partial L$; eventually diminishes |
+| MRTS | $MP_L / MP_K$; optimal where $MRTS = w/r$ |
+| Total cost | $TC = FC + VC$ |
+| Marginal cost | $MC = \Delta TC / \Delta Q$; U-shaped |
+| MC–AC relationship | $MC$ crosses $AC$ at $AC_{\min}$ |
+| LAC | Envelope of short-run AC; U-shaped due to economies / diseconomies of scale |
+| Profit maximization | $MR = MC$ |
+| Shutdown condition | Firm shuts down if $P < AVC$ |
+
+<Quiz>
+  <Question text="What does the law of diminishing marginal returns state?">
+    <Option value="a">Total product always decreases as more labor is added.</Option>
+    <Option value="b" correct>Eventually, each additional unit of labor adds less to total output when capital is fixed.</Option>
+    <Option value="c">Average product always exceeds marginal product.</Option>
+    <Option value="d">Returns to scale are always decreasing.</Option>
+  </Question>
+  <Question text="At what point does MC intersect AC?">
+    <Option value="a">At the maximum of AC</Option>
+    <Option value="b">At the minimum of MC</Option>
+    <Option value="c" correct>At the minimum of AC</Option>
+    <Option value="d">Where AC equals AFC</Option>
+  </Question>
+  <Question text="A firm should shut down in the short run when:">
+    <Option value="a">Price is less than average cost</Option>
+    <Option value="b">Marginal cost exceeds marginal revenue</Option>
+    <Option value="c" correct>Price is less than average variable cost</Option>
+    <Option value="d">Fixed costs exceed variable costs</Option>
+  </Question>
+</Quiz>
+
+## What's Next
+
+With production and cost theory in hand, you are ready to analyze how firms behave in different **market structures** — from perfect competition to monopoly.
+
+<Callout type="info">
+**Recommended next**: [Market Structures](/general-economics/market-structures) — applies the cost and revenue concepts from this article to different competitive environments.
+</Callout>

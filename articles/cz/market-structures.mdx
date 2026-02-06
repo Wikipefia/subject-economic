@@ -1,0 +1,576 @@
+---
+title:
+  ru: "Рыночные структуры"
+  en: "Market Structures"
+  cz: "Tržní struktury"
+slug: "market-structures"
+author: "kopecky"
+keywords:
+  ru: ["конкуренция", "монополия", "олигополия", "рыночная структура", "эффективность"]
+  en: ["competition", "monopoly", "oligopoly", "market structure", "efficiency"]
+  cz: ["konkurence", "monopol", "oligopol", "tržní struktura", "efektivnost"]
+created: "2025-03-01"
+updated: "2025-09-10"
+difficulty: "intermediate"
+estimatedReadTime: 24
+prerequisites:
+  - "introduction"
+  - "demand-supply-market"
+  - "production-costs"
+---
+
+# Tržní struktury
+
+Chování firem — jakým způsobem stanovují ceny, kolik vyrábějí a zda inovují — zásadně závisí na **tržní struktuře**, ve které působí. Tržní struktura popisuje konkurenční prostředí: počet firem, bariéry vstupu, typ produktu a míru kontroly nad cenou.
+
+<Callout type="info">
+Analýza tržních struktur propojuje mikroekonomickou teorii s reálnou analýzou odvětví. Pochopení těchto modelů vysvětluje, proč se ceny benzinu pohybují synchronně, zatímco nabídka restaurací se výrazně liší.
+</Callout>
+
+## Přehled tržních struktur
+
+Čtyři základní tržní struktury se liší v několika klíčových dimenzích:
+
+| Charakteristika | Dokonalá konkurence | Monopolistická konkurence | Oligopol | Monopol |
+|---|---|---|---|---|
+| **Počet firem** | Velmi mnoho | Mnoho | Několik | Jedna |
+| **Typ produktu** | Homogenní (identický) | Diferencovaný (blízké substituty) | Homogenní nebo diferencovaný | Unikátní (žádné blízké substituty) |
+| **Bariéry vstupu** | Žádné | Nízké | Vysoké | Velmi vysoké |
+| **Vliv na cenu** | Žádný (příjemce ceny) | Mírný | Značný (vzájemná závislost) | Úplný (tvůrce ceny) |
+| **Křivka poptávky** | Horizontální (dokonale elastická) | Klesající (elastická) | Zalomená / závisí na modelu | Klesající (= tržní poptávka) |
+| **Dlouhodobý zisk** | Nulový ekonomický | Nulový ekonomický | Možný kladný | Možný kladný |
+| **Příklady** | Zemědělské komodity, devizový trh | Restaurace, oděvní značky | Telekomunikace, aerolinky, auto | Místní utility, patentované léky |
+
+---
+
+## Dokonalá konkurence
+
+Dokonalá konkurence je **referenční model** — idealizovaná tržní struktura, která slouží jako měřítko pro hodnocení všech ostatních.
+
+### Předpoklady modelu
+
+1. **Velký počet malých firem** — žádná firma nemůže ovlivnit tržní cenu
+2. **Homogenní produkt** — kupující považují výrobky všech firem za identické
+3. **Volný vstup a výstup** — žádné bariéry pro vstup do odvětví ani pro odchod
+4. **Dokonalá informovanost** — všichni kupující i prodávající znají všechny ceny a vlastnosti produktů
+5. **Nulové transakční náklady** — nákup a prodej nepřináší žádné dodatečné náklady
+
+### Křivka poptávky firmy
+
+Protože firma je **příjemcem ceny** (price taker), čelí dokonale elastické (horizontální) křivce poptávky na úrovni tržní ceny $P^*$. Může prodat jakékoliv množství za $P^*$, ale nic nad touto cenou.
+
+Z toho plyne:
+
+$$
+AR = MR = P^*
+$$
+
+kde $AR$ je průměrný příjem (average revenue) a $MR$ je mezní příjem (marginal revenue).
+
+<Callout type="info">
+**Proč je křivka poptávky horizontální?** Pokud firma zvýší cenu byť jen o korunu nad $P^*$, všichni zákazníci přejdou ke konkurenci (produkty jsou identické). Pokud sníží cenu pod $P^*$, zbytečně obětuje zisk — může prodat vše i za $P^*$.
+</Callout>
+
+### Maximalizace zisku
+
+Firma maximalizuje zisk v bodě, kde $MR = MC$, což se v podmínkách dokonalé konkurence zjednodušuje na:
+
+$$
+P = MC
+$$
+
+<Collapse title="Odvození podmínky maximalizace zisku">
+
+Zisk firmy je definován jako:
+
+$$
+\pi = TR - TC = P \cdot Q - TC(Q)
+$$
+
+kde $TR$ je celkový příjem a $TC$ jsou celkové náklady.
+
+Podmínka prvního řádu (nutná podmínka maxima):
+
+$$
+\frac{d\pi}{dQ} = \frac{d(TR)}{dQ} - \frac{d(TC)}{dQ} = MR - MC = 0
+$$
+
+Z toho plyne $MR = MC$. Protože v dokonalé konkurenci platí $MR = P$, dostáváme:
+
+$$
+P = MC
+$$
+
+Podmínka druhého řádu vyžaduje, aby křivka $MC$ byla v bodě optima rostoucí (tj. křivka $MC$ protíná $MR$ zdola):
+
+$$
+\frac{d^2\pi}{dQ^2} = \frac{dMR}{dQ} - \frac{dMC}{dQ} < 0
+$$
+
+Protože $\frac{dMR}{dQ} = 0$ (horizontální poptávka), musí platit $\frac{dMC}{dQ} > 0$.
+</Collapse>
+
+### Krátkodobé výsledky
+
+V krátkém období může dokonale konkurenční firma dosáhnout:
+
+- **Kladného ekonomického zisku**: když $P > ATC$ v bodě maximalizace zisku
+- **Nulového ekonomického zisku** (normální zisk): když $P = ATC$
+- **Záporného ekonomického zisku** (ztráta): když $P < ATC$
+
+**Bod uzavření firmy**: Firma by měla zastavit výrobu, pokud $P < AVC$ (cena klesne pod průměrné variabilní náklady). V tomto bodě firma nepokryje ani své variabilní náklady a ztrácí více výrobou než zastavením.
+
+$$
+\text{Zastavení výroby, pokud } P < AVC_{\min}
+$$
+
+<Callout type="warning">
+**Pozor na rozdíl**: Bod uzavření ($P < AVC$) není totéž co bod nulového zisku ($P = ATC$). Firma může pokračovat ve výrobě se ztrátou, dokud pokrývá variabilní náklady — protože fixní náklady platí tak i tak.
+</Callout>
+
+### Krátkodobá nabídková křivka firmy
+
+Krátkodobá nabídková křivka firmy je **rostoucí část křivky $MC$ nad $AVC_{\min}$**. Pod tímto bodem firma nevyrábí.
+
+### Dlouhodobá rovnováha
+
+V dlouhém období volný vstup a výstup firem tlačí ekonomický zisk k nule:
+
+- Pokud $\pi > 0$: nové firmy vstupují → nabídka roste → cena klesá → zisk se snižuje
+- Pokud $\pi < 0$: firmy odcházejí → nabídka klesá → cena roste → ztráty se zmenšují
+
+**Podmínka dlouhodobé rovnováhy:**
+
+$$
+P = MC = AC_{\min}
+$$
+
+<Callout type="info">
+**Efektivnost dokonalé konkurence**: V dlouhodobé rovnováze dosahuje dokonalá konkurence obou typů efektivnosti:
+- **Alokační efektivnost** ($P = MC$): zdroje směřují tam, kde je spotřebitelé nejvíce oceňují
+- **Výrobní efektivnost** ($P = AC_{\min}$): výroba při nejnižších možných nákladech
+</Callout>
+
+---
+
+## Monopolistická konkurence
+
+Monopolistická konkurence kombinuje prvky dokonalé konkurence i monopolu. Firmy si konkurují, ale každá nabízí mírně odlišný produkt.
+
+### Charakteristiky
+
+1. **Mnoho firem** na trhu
+2. **Diferencované produkty** — produkt každé firmy je blízkým, ale ne dokonalým substitutem
+3. **Nízké bariéry vstupu** — relativně snadný vstup a výstup
+4. **Určitá cenová síla** — protože jsou produkty diferencované, firma čelí klesající křivce poptávky
+
+### Krátkodobá analýza
+
+Firma čelí klesající křivce poptávky, takže $P > MR$. Maximalizace zisku nastává při $MR = MC$, přičemž cena se odečítá z křivky poptávky.
+
+V krátkém období mohou firmy dosahovat kladného nebo záporného ekonomického zisku.
+
+### Dlouhodobá rovnováha
+
+Stejně jako v dokonalé konkurenci, volný vstup a výstup tlačí dlouhodobý ekonomický zisk k nule. Nové firmy vstupují, když jsou zisky kladné, a přebírají tržní podíl. Křivka poptávky firmy se posunuje doleva, dokud se zisk nevyrovná nule:
+
+$$
+P = ATC \quad \text{(v bodě maximalizace zisku)}
+$$
+
+Avšak na rozdíl od dokonalé konkurence nastává bod dotyku (tangence) **nalevo** od minima $ATC$.
+
+<Callout type="warning">
+**Klíčová neefektivnost monopolistické konkurence:**
+- **Výrobní neefektivnost**: $P > AC_{\min}$ — firmy vyrábějí pod kapacitou (přebytečná kapacita, excess capacity)
+- **Alokační neefektivnost**: $P > MC$ — spotřebitelé platí více, než činí mezní náklady výroby
+- **Kompenzace**: Spotřebitelé získávají **rozmanitost produktů**, kterou si cení
+</Callout>
+
+### Srovnání s dokonalou konkurencí
+
+| Kritérium | Dokonalá konkurence | Monopolistická konkurence |
+|---|---|---|
+| Dlouhodobý zisk | Nulový | Nulový |
+| $P$ vs $MC$ | $P = MC$ | $P > MC$ |
+| Výroba v $AC_{\min}$? | Ano | Ne (přebytečná kapacita) |
+| Alokační efektivnost | Ano | Ne |
+| Výrobní efektivnost | Ano | Ne |
+| Rozmanitost produktů | Žádná | Vysoká |
+
+Kompromis: monopolistická konkurence obětuje určitou efektivnost, ale poskytuje **diverzitu produktů**, kterou spotřebitelé oceňují.
+
+---
+
+## Oligopol
+
+Oligopol je trh ovládaný **několika velkými firmami**, jejichž rozhodnutí jsou strategicky vzájemně závislá — každá firma musí zvažovat, jak budou reagovat konkurenti.
+
+### Klíčové vlastnosti
+
+1. **Několik firem** ovládá trh
+2. **Významné bariéry vstupu** — úspory z rozsahu, kapitálové požadavky, patenty, značky
+3. **Strategická vzájemná závislost** — optimální strategie každé firmy závisí na tom, co dělají ostatní
+4. **Produkty mohou být homogenní nebo diferencované**
+
+<Tabs>
+<Tab label="Homogenní oligopol">
+Firmy prodávají identické produkty (např. ocel, cement, ropa). Konkurence se soustředí hlavně na cenu a množství.
+
+Příklady v ČR: výroba cementu (Českomoravský cement, Lafarge), výroba oceli.
+</Tab>
+
+<Tab label="Diferencovaný oligopol">
+Firmy prodávají diferencované produkty (např. automobily, smartphony, aerolinky). Konkurence zahrnuje značky, vlastnosti produktů, reklamu a servis vedle ceny.
+
+Příklady v ČR: mobilní operátoři (T-Mobile, O2, Vodafone), automobilový průmysl, bankovní sektor.
+</Tab>
+</Tabs>
+
+### Kartel (koluze)
+
+Firmy mohou uzavřít **dohodu** (explicitní nebo tacitní) o omezení výstupu a zvýšení cen, čímž se kolektivně chovají jako monopolista. **Kartel** je formální koluzní dohoda.
+
+- **Společná maximalizace zisku**: Kartel stanoví celkový výstup tam, kde odvětvové $MR = MC$
+- **Problém**: Každý člen má motivaci **podvádět** — vyrábět více než svou kvótu (dilema vězně)
+- **Kartely jsou v ČR i EU nelegální** — Úřad pro ochranu hospodářské soutěže (ÚOHS) je postihuje
+- OPEC je výjimkou jako suverénní kartel
+
+<Callout type="warning">
+**Dilema vězně v kartelu**: I když by spolupráce všem firmám přinesla vyšší zisky, každá jednotlivá firma má motivaci podvádět. Proto jsou kartely nestabilní a často se rozpadají.
+</Callout>
+
+### Model dominantní firmy
+
+Jedna velká firma (**dominantní firma**) má výraznou nákladovou výhodu nebo silnou značku a koexistuje s **konkurenčním okrajem** (competitive fringe) menších firem. Dominantní firma stanoví cenu; menší firmy jsou příjemci ceny.
+
+Dominantní firma čelí reziduální poptávce:
+
+$$
+D_{\text{dom}}(P) = D_{\text{trh}}(P) - S_{\text{fringe}}(P)
+$$
+
+### Model zalomené křivky poptávky
+
+Tento model vysvětluje **cenovou rigiditu** v oligopolech:
+
+- Pokud firma **zvýší** cenu, konkurenti **nesledují** → firma ztrácí mnoho zákazníků (elastická poptávka nad zalomením)
+- Pokud firma **sníží** cenu, konkurenti **sníží také** → firma získá málo nových zákazníků (neelastická poptávka pod zalomením)
+
+Výsledkem je **zalomení** v křivce poptávky při převládající ceně, které vytváří diskontinuitu v křivce $MR$. Křivka $MC$ se může posunout v rámci této mezery, aniž by se změnila optimální cena — to vysvětluje, proč jsou oligopolní ceny obvykle **strnulé** (sticky).
+
+### Modely duopolu
+
+<Collapse title="Cournotův, Bertrandův a Stackelbergův model">
+
+**Cournotův model (konkurence v množství)**
+- Firmy současně volí množství výstupu
+- Každá firma předpokládá, že množství konkurenta je fixní (funkce nejlepší odpovědi)
+- Rovnováha (Nashova rovnováha): každá firma vyrábí více než monopolní podíl, ale méně než konkurenční úroveň
+- Celkový výstup: mezi monopolem a dokonalou konkurencí
+- Pro dvě identické firmy s lineární poptávkou $P = a - bQ$ a konstantními $MC = c$:
+
+$$
+q_1^* = q_2^* = \frac{a - c}{3b}, \quad Q^* = \frac{2(a-c)}{3b}
+$$
+
+**Bertrandův model (cenová konkurence)**
+- Firmy současně volí ceny
+- S homogenními produkty je rovnováha $P = MC$ (konkurenční výsledek!) i se dvěma firmami
+- Tento „Bertrandův paradox" ukazuje, že cenová konkurence může být extrémně intenzivní
+- S diferencovanými produkty: rovnovážné ceny nad $MC$
+
+**Stackelbergův model (sekvenční vedení v množství)**
+- Jedna firma (vedoucí) se rozhodne první a zvolí množství
+- Následovatel pozoruje a optimálně reaguje
+- Vedoucí získává **výhodu prvního tahu** (first-mover advantage): vyrábí více a dosahuje vyššího zisku než následovatel
+
+$$
+q_L^* = \frac{a - c}{2b}, \quad q_F^* = \frac{a - c}{4b}
+$$
+
+Vedoucí vyrábí dvakrát více než následovatel.
+</Collapse>
+
+---
+
+## Monopol
+
+Monopol existuje, když je na trhu **jediná firma** bez blízkých substitutů.
+
+### Zdroje monopolní síly
+
+- **Právní bariéry**: patenty, autorská práva, státní licence, koncese
+- **Přirozený monopol**: úspory z rozsahu jsou tak velké, že jedna firma může obsloužit celý trh s nižšími náklady než dvě a více firem (např. distribuce elektřiny, vodárenství)
+- **Kontrola klíčového zdroje**: výhradní vlastnictví nezbytného vstupu
+- **Síťové efekty**: hodnota produktu roste s počtem uživatelů
+
+<Callout type="info">
+**Přirozený monopol v ČR**: Distribuce elektřiny (ČEZ Distribuce, E.ON Distribuce, PREdistribuce), železniční infrastruktura (Správa železnic), vodárenství. Tyto monopoly jsou regulovány Energetickým regulačním úřadem (ERÚ) nebo jinými regulátory.
+</Callout>
+
+### Poptávka a příjem
+
+Monopolista čelí **celé tržní křivce poptávky**, která je klesající. Aby prodal více, musí snížit cenu na **všechny** jednotky:
+
+$$
+MR = P + Q \cdot \frac{dP}{dQ} < P
+$$
+
+Protože $\frac{dP}{dQ} < 0$, je mezní příjem vždy nižší než cena.
+
+<Collapse title="Vztah MR a elasticity poptávky">
+
+Mezní příjem lze vyjádřit pomocí cenové elasticity poptávky $E_d$:
+
+$$
+MR = P\left(1 + \frac{1}{E_d}\right) = P\left(1 - \frac{1}{|E_d|}\right)
+$$
+
+Protože monopolista vyrábí tam, kde $MR > 0$, působí vždy na **elastickém** úseku křivky poptávky ($|E_d| > 1$).
+
+Pro lineární křivku poptávky $P = a - bQ$:
+
+$$
+TR = aQ - bQ^2 \implies MR = a - 2bQ
+$$
+
+Křivka $MR$ má stejný průsečík se svislou osou, ale **dvojnásobný sklon** oproti křivce poptávky.
+
+**Lernerův index monopolní síly:**
+
+$$
+L = \frac{P - MC}{P} = \frac{1}{|E_d|}
+$$
+
+Čím nižší elasticita poptávky, tím větší přirážka (markup) nad mezními náklady.
+</Collapse>
+
+### Maximalizace zisku
+
+Monopolista maximalizuje zisk v bodě, kde:
+
+$$
+MR = MC
+$$
+
+Cenu poté odečte z **křivky poptávky** při optimálním množství $Q^*$:
+
+$$
+P^* = D(Q^*) > MR = MC
+$$
+
+To znamená, že monopolista účtuje cenu **nad** mezními náklady — vytváří cenovou přirážku.
+
+<Collapse title="Numerický příklad maximalizace zisku monopolu">
+
+Poptávka: $P = 100 - 2Q$
+
+Celkové náklady: $TC = 20Q + 0{,}5Q^2$
+
+**Krok 1**: Mezní příjem
+
+$$
+TR = P \cdot Q = 100Q - 2Q^2 \implies MR = 100 - 4Q
+$$
+
+**Krok 2**: Mezní náklady
+
+$$
+MC = \frac{dTC}{dQ} = 20 + Q
+$$
+
+**Krok 3**: Podmínka maximalizace zisku $MR = MC$
+
+$$
+100 - 4Q = 20 + Q \implies 80 = 5Q \implies Q^* = 16
+$$
+
+**Krok 4**: Cena z křivky poptávky
+
+$$
+P^* = 100 - 2(16) = 68
+$$
+
+**Krok 5**: Zisk
+
+$$
+\pi = TR - TC = 68 \cdot 16 - (20 \cdot 16 + 0{,}5 \cdot 16^2) = 1088 - 448 = 640
+$$
+</Collapse>
+
+### Efektivnost a ztráta mrtvé váhy
+
+<Callout type="error">
+**Monopol je neefektivní**: Protože $P > MC$, monopolista vyrábí méně než společensky optimální množství. To vytváří **ztrátu mrtvé váhy** (deadweight loss, DWL) — čistou ztrátu celkového přebytku, kterou nezíská ani výrobce, ani spotřebitelé. Část spotřebitelského přebytku se přenáší k monopolistovi jako ekonomický zisk.
+</Callout>
+
+Ve srovnání s dokonalou konkurencí:
+- **Výstup je nižší**: $Q_m < Q_c$
+- **Cena je vyšší**: $P_m > P_c$
+- **Žádná alokační efektivnost**: $P > MC$
+- **Žádná výrobní efektivnost**: nutně nevyrábí při $AC_{\min}$
+
+### Regulace monopolu
+
+Stát může regulovat monopol několika způsoby:
+
+1. **Regulace ceny na úrovni MC** ($P = MC$): Dosáhne alokační efektivnosti, ale přirozený monopol může mít ztrátu (pokud $AC > MC$)
+2. **Regulace ceny na úrovni AC** ($P = AC$): Firma dosahuje nulového ekonomického zisku, produkuje více než neregulovaný monopol
+3. **Antimonopolní politika**: Rozbití monopolu, zákaz fúzí
+4. **Státní vlastnictví**: Přímé řízení monopolního podniku
+
+---
+
+## Cenová diskriminace
+
+Cenová diskriminace nastává, když firma účtuje **různé ceny** různým spotřebitelům (nebo za různé jednotky) za **tentýž produkt**, přičemž cenové rozdíly nejsou odůvodněny nákladovými rozdíly.
+
+### Podmínky cenové diskriminace
+
+1. Firma musí mít **tržní sílu** (klesající křivka poptávky)
+2. Firma musí být schopna **identifikovat** spotřebitele s různou ochotou platit
+3. **Nemožnost přeprodeje** (arbitráž musí být nemožná)
+
+<Tabs>
+<Tab label="1. stupeň (dokonalá)">
+Firma účtuje každému spotřebiteli jeho **maximální ochotu platit** za každou jednotku. Tím přebírá **veškerý** spotřebitelský přebytek.
+
+- **Výsledek**: Žádná ztráta mrtvé váhy! Výstup se rovná konkurenčnímu.
+- **V praxi**: Téměř nemožné; přibližují se tomu aukce, smlouvání nebo personalizované cenové algoritmy.
+</Tab>
+
+<Tab label="2. stupeň (množstevní)">
+Firma účtuje různé ceny za jednotku na základě **nakoupeného množství** (množstevní slevy, blokové ceny, balíčky).
+
+- **Příklady**: Odstupňované tarify elektřiny, „kup 2, třetí zdarma", softwarové licence
+- Spotřebitelé se **sami zařadí** do cenových kategorií podle vlastní poptávky
+- Dva hlavní přístupy:
+  - **Dvousložková tarifa** (two-part tariff): pevný poplatek + cena za jednotku
+  - **Blokové cenotvorba**: různé ceny pro různé množstevní bloky
+</Tab>
+
+<Tab label="3. stupeň (segmentace)">
+Firma účtuje různé ceny různým **identifikovatelným tržním segmentům** na základě pozorovatelných charakteristik.
+
+- **Příklady**: Studentské slevy, seniorské ceny, geografické ceny, špičkové vs mimošpičkové tarify
+- Firma stanoví $MR_1 = MR_2 = MC$ napříč segmenty
+- Vyšší cena pro segment s **méně elastickou** poptávkou
+
+$$
+\frac{P_1}{P_2} = \frac{1 - 1/|E_2|}{1 - 1/|E_1|}
+$$
+
+**Příklad z ČR**: České dráhy účtují různé ceny pro studenty (75% sleva s ISIC), seniory a dospělé — klasický příklad cenové diskriminace 3. stupně.
+</Tab>
+</Tabs>
+
+---
+
+## Monopson
+
+**Monopson** je trh s **jediným kupujícím**. Je to zrcadlový obraz monopolu.
+
+| Charakteristika | Monopol (jediný prodávající) | Monopson (jediný kupující) |
+|---|---|---|
+| Tržní síla na straně | Nabídky | Poptávky |
+| Čelí | Klesající poptávce | Rostoucí nabídce |
+| Klíčové zkreslení | $P > MC$ (příliš málo prodáno) | $W < MRP$ (příliš málo koupeno) |
+| Příklad | Výrobce patentovaného léku | Zaměstnavatel ve městě s jedním podnikem, velký maloobchodník |
+
+Monopsonista čelí rostoucí křivce nabídky. Aby najal více práce (nebo koupil více vstupu), musí zvýšit mzdu (cenu) pro **všechny** jednotky, takže mezní náklady na faktor ($MFC$) převyšují cenu nabídky:
+
+$$
+MFC > W \quad \text{(cena nabídky)}
+$$
+
+Monopsonista najímá v bodě $MFC = MRP$ (mezní příjem z produktu), což vede k **nižším mzdám a nižší zaměstnanosti** než na konkurenčním trhu práce.
+
+<Callout type="info">
+Když monopsonní zaměstnavatel čelí monopolnímu odborovému svazu (bilaterální monopol), výsledek je **neurčitý** jen na základě teorie — závisí na vyjednávací síle obou stran.
+</Callout>
+
+---
+
+## Shrnutí
+
+<Tabs>
+<Tab label="Srovnání efektivnosti">
+
+| Tržní struktura | Alokační efektivnost ($P = MC$) | Výrobní efektivnost ($AC_{\min}$) | Dlouhodobý ekonomický zisk |
+|---|---|---|---|
+| Dokonalá konkurence | ✅ Ano | ✅ Ano | Nulový |
+| Monopolistická konkurence | ❌ Ne ($P > MC$) | ❌ Ne (přebytečná kapacita) | Nulový |
+| Oligopol | ❌ Ne | ❌ Ne | Možný (kladný) |
+| Monopol | ❌ Ne ($P > MC$) | ❌ Ne | Možný (kladný) |
+
+</Tab>
+
+<Tab label="Klíčové rovnice">
+
+**Dokonalá konkurence:**
+$P = MR = AR$, maximalizace zisku při $P = MC$
+
+**Monopolistická konkurence:**
+$P > MR$, maximalizace zisku při $MR = MC$, dlouhodobě $P = ATC$
+
+**Monopol:**
+$MR = P(1 - 1/|E_d|)$, maximalizace zisku při $MR = MC$
+
+**Lernerův index:** $L = (P - MC)/P = 1/|E_d|$
+
+**Monopson:**
+Najímá při $MFC = MRP$, platí $W < MRP$
+
+</Tab>
+
+<Tab label="Regulace v ČR">
+
+- **ÚOHS** (Úřad pro ochranu hospodářské soutěže) — dozor nad kartely a dominancí
+- **ERÚ** (Energetický regulační úřad) — regulace přirozených monopolů v energetice
+- **ČTÚ** (Český telekomunikační úřad) — regulace telekomunikačního oligopolu
+- **ČNB** (Česká národní banka) — bankovní dohled
+
+</Tab>
+</Tabs>
+
+---
+
+## Otestujte své znalosti
+
+<Quiz>
+  <Question text="Jaká je podmínka dlouhodobé rovnováhy v dokonalé konkurenci?">
+    <Option value="a">P = MC</Option>
+    <Option value="b" correct>P = MC = AC v minimu AC</Option>
+    <Option value="c">MR = MC s kladným ziskem</Option>
+    <Option value="d">P > MC = AC</Option>
+  </Question>
+
+  <Question text="Proč monopolista vždy působí na elastickém úseku křivky poptávky?">
+    <Option value="a">Protože neelastická poptávka znamená nulový příjem</Option>
+    <Option value="b" correct>Protože MR je záporný v neelastické oblasti, takže zisk tam nemůže být maximalizován</Option>
+    <Option value="c">Protože vláda zakazuje neelastické cenotvorbu</Option>
+    <Option value="d">Protože mezní náklady jsou vždy kladné v elastické oblasti</Option>
+  </Question>
+
+  <Question text="Co vysvětluje model zalomené křivky poptávky?">
+    <Option value="a">Proč firmy v oligopolu mají vysoké zisky</Option>
+    <Option value="b">Proč firmy v oligopolu vyrábějí totéž</Option>
+    <Option value="c" correct>Proč jsou ceny v oligopolu strnulé (rigidní)</Option>
+    <Option value="d">Proč oligopolní firmy vždy koludují</Option>
+  </Question>
+
+  <Question text="Který typ cenové diskriminace přebírá VEŠKERÝ spotřebitelský přebytek?">
+    <Option value="a" correct>První stupeň (dokonalá cenová diskriminace)</Option>
+    <Option value="b">Druhý stupeň (množstevní slevy)</Option>
+    <Option value="c">Třetí stupeň (tržní segmentace)</Option>
+    <Option value="d">Žádný — cenová diskriminace vždy ponechává určitý přebytek</Option>
+  </Question>
+
+  <Question text="V Cournotově modelu duopolu, kolik vyrábí každá firma ve srovnání s monopolem?">
+    <Option value="a">Stejně jako monopol</Option>
+    <Option value="b" correct>Více než monopolní podíl, ale méně než konkurenční úroveň</Option>
+    <Option value="c">Přesně polovinu konkurenčního množství</Option>
+    <Option value="d">Přesně konkurenční množství</Option>
+  </Question>
+</Quiz>

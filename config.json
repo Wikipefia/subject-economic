@@ -1,20 +1,20 @@
 {
-  "slug": "discrete-mathematics",
+  "slug": "general-economics",
   "name": {
-    "ru": "Дискретная математика",
-    "en": "Discrete Mathematics",
-    "cz": "Diskrétní matematika"
+    "ru": "Общая экономика",
+    "en": "General Economics",
+    "cz": "Obecná ekonomie"
   },
   "description": {
-    "ru": "Логика, комбинаторика, теория графов, теория множеств и их приложения в информатике",
-    "en": "Logic, combinatorics, graph theory, set theory, and their applications in computer science",
-    "cz": "Logika, kombinatorika, teorie grafů, teorie množin a jejich aplikace v informatice"
+    "ru": "Микроэкономика и макроэкономика: спрос и предложение, теория потребителя, издержки производства, рыночные структуры, ВВП, инфляция, безработица, экономический цикл и экономическая политика",
+    "en": "Microeconomics and macroeconomics: supply and demand, consumer theory, production costs, market structures, GDP, inflation, unemployment, business cycles, and economic policy",
+    "cz": "Mikroekonomie a makroekonomie: nabídka a poptávka, teorie spotřebitele, náklady výroby, tržní struktury, HDP, inflace, nezaměstnanost, hospodářský cyklus a hospodářská politika"
   },
-  "teachers": ["ivan-petrov", "maria-novakova"],
+  "teachers": ["kopecky"],
   "keywords": {
-    "ru": ["дискретная математика", "графы", "логика", "комбинаторика", "множества", "рекурсия", "алгоритмы"],
-    "en": ["discrete mathematics", "graphs", "logic", "combinatorics", "sets", "recursion", "algorithms"],
-    "cz": ["diskrétní matematika", "grafy", "logika", "kombinatorika", "množiny", "rekurze", "algoritmy"]
+    "ru": ["экономика", "микроэкономика", "макроэкономика", "спрос", "предложение", "ВВП", "инфляция", "безработица", "рыночные структуры", "экономическая политика"],
+    "en": ["economics", "microeconomics", "macroeconomics", "demand", "supply", "GDP", "inflation", "unemployment", "market structures", "economic policy"],
+    "cz": ["ekonomie", "mikroekonomie", "makroekonomie", "poptávka", "nabídka", "HDP", "inflace", "nezaměstnanost", "tržní struktury", "hospodářská politika"]
   },
   "categories": [
     {
@@ -24,16 +24,25 @@
         "en": "Foundations",
         "cz": "Základy"
       },
-      "articles": ["introduction", "core-concepts"]
+      "articles": ["introduction", "demand-supply-market"]
     },
     {
-      "slug": "advanced",
+      "slug": "microeconomics",
       "name": {
-        "ru": "Продвинутые темы",
-        "en": "Advanced Topics",
-        "cz": "Pokročilá témata"
+        "ru": "Микроэкономика",
+        "en": "Microeconomics",
+        "cz": "Mikroekonomie"
       },
-      "articles": ["advanced-topics"]
+      "articles": ["consumer-theory", "production-costs", "market-structures"]
+    },
+    {
+      "slug": "macroeconomics",
+      "name": {
+        "ru": "Макроэкономика",
+        "en": "Macroeconomics",
+        "cz": "Makroekonomie"
+      },
+      "articles": ["economic-indicators", "unemployment-inflation", "business-cycle-policy"]
     },
     {
       "slug": "practice",
@@ -46,13 +55,13 @@
     }
   ],
   "metadata": {
-    "semester": 2,
-    "credits": 6,
+    "semester": 1,
+    "credits": 5,
     "difficulty": "medium",
     "department": {
-      "ru": "Кафедра прикладной математики и информатики",
-      "en": "Department of Applied Mathematics and Computer Science",
-      "cz": "Katedra aplikované matematiky a informatiky"
+      "ru": "Кафедра экономики",
+      "en": "Department of Economics",
+      "cz": "Katedra ekonomie"
     }
   }
 }

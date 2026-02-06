@@ -1,0 +1,601 @@
+---
+title:
+  ru: "Спрос, предложение и рынок"
+  en: "Demand, Supply, and the Market"
+  cz: "Poptávka, nabídka a trh"
+slug: "demand-supply-market"
+author: "kopecky"
+keywords:
+  ru: ["спрос", "предложение", "эластичность", "равновесие", "рыночная цена"]
+  en: ["demand", "supply", "elasticity", "equilibrium", "market price"]
+  cz: ["poptávka", "nabídka", "elasticita", "rovnováha", "tržní cena"]
+created: "2025-01-20"
+updated: "2025-08-25"
+difficulty: "beginner"
+estimatedReadTime: 22
+prerequisites:
+  - "introduction"
+---
+
+# Poptávka, nabídka a trh
+
+Interakce poptávky a nabídky je ústředním mechanismem, jehož prostřednictvím tržní ekonomiky alokují zdroje, určují ceny a distribuují statky a služby. Tento článek buduje analytický rámec pro pochopení fungování trhů.
+
+<Callout type="info">
+**Předpoklad**: Ujistěte se, že jste si přečetli [Úvod do ekonomie](/general-economics/introduction). Předpokládá se znalost základních ekonomických pojmů (ekonomické subjekty, výrobní faktory, typy trhů).
+</Callout>
+
+## Poptávka
+
+**Poptávka** vyjadřuje vztah mezi cenou statku a množstvím, které jsou spotřebitelé ochotni a schopni koupit v daném časovém období, **ceteris paribus** (za jinak nezměněných okolností).
+
+### Druhy poptávky
+
+| Druh | Definice |
+|---|---|
+| **Individuální poptávka** | Poptávka jednoho spotřebitele po jednom statku |
+| **Tržní (dílčí) poptávka** | Horizontální součet všech individuálních poptávek na daném trhu |
+| **Agregátní poptávka** | Celková poptávka po všech statcích a službách v ekonomice (makroekonomický pojem) |
+
+### Funkce poptávky
+
+Pro **lineární funkci poptávky** je vztah mezi cenou ($P$) a poptávaným množstvím ($Q_D$):
+
+$$
+P = a - bQ_D
+$$
+
+kde:
+- $a > 0$ je **svislý průsečík** (cena, při které poptávané množství klesne na nulu) — tzv. **prohibitivní cena**
+- $b > 0$ je **směrnice** (rychlost, s jakou cena klesá s růstem množství)
+
+Alternativně, vyjádřeno jako množství v závislosti na ceně:
+
+$$
+Q_D = \frac{a - P}{b} = \frac{a}{b} - \frac{1}{b}P
+$$
+
+<Callout type="info">
+Křivka poptávky je **klesající** — s rostoucí cenou poptávané množství klesá. Tento vztah se nazývá **zákon klesající poptávky** (law of diminishing demand).
+</Callout>
+
+### Proč je křivka poptávky klesající?
+
+Inverzní vztah mezi cenou a poptávaným množstvím vysvětlují dva efekty:
+
+1. **Substituční efekt**: Když cena statku vzroste, spotřebitelé přecházejí na levnější substituty
+2. **Důchodový efekt**: Když cena statku vzroste, reálná kupní síla spotřebitele klesá, takže si kupuje méně
+
+Zákon klesající poptávky je jedním z nejrobustnějších empirických poznatků v ekonomii. Existují vzácné teoretické výjimky (Giffenovy statky, Veblenovy statky), ale v praxi jsou mimořádně řídké.
+
+### Determinanty poptávky (faktory posunu)
+
+Změna vlastní ceny způsobuje pohyb *po* křivce poptávky. Změny jiných faktorů způsobují **posun** celé křivky:
+
+| Determinant | Vliv růstu na poptávku |
+|---|---|
+| Počet spotřebitelů na trhu | Poptávka roste (posun doprava) |
+| Důchod spotřebitele (normální statky) | Poptávka roste (posun doprava) |
+| Důchod spotřebitele (méněcenné statky) | Poptávka klesá (posun doleva) |
+| Cena substitutů | Poptávka roste (posun doprava) |
+| Cena komplementů | Poptávka klesá (posun doleva) |
+| Pozitivní očekávání (očekávaný růst ceny) | Poptávka roste (posun doprava) |
+| Příznivá změna preferencí/módy | Poptávka roste (posun doprava) |
+
+<Callout type="warning">
+**Klíčové rozlišení**: Změna *vlastní ceny* statku způsobuje **pohyb po** křivce poptávky (změna poptávaného množství). Změna jakéhokoliv *jiného* determinantu způsobuje **posun** celé křivky poptávky (změna poptávky).
+</Callout>
+
+### Substituty a komplementy
+
+- **Substituty** jsou statky, které se vzájemně nahrazují (máslo a margarín, Coca-Cola a Pepsi). Růst ceny jednoho zvyšuje poptávku po druhém.
+- **Komplementy** jsou statky, které se spotřebovávají společně (auto a benzín, tiskárna a inkoust). Růst ceny jednoho snižuje poptávku po druhém.
+
+## Elasticita poptávky
+
+Elasticita měří **citlivost** (responsivitu) jedné veličiny na změnu jiné veličiny. Je to bezrozměrný poměr, který umožňuje srovnání mezi různými statky a trhy.
+
+<Tabs>
+<Tab label="Cenová elasticita">
+
+### Cenová elasticita poptávky ($E_{PD}$)
+
+Měří, jak citlivě reaguje poptávané množství na změnu vlastní ceny statku:
+
+$$
+E_{PD} = \frac{\%\Delta Q_D}{\%\Delta P} = \frac{\Delta Q_D / Q_D}{\Delta P / P}
+$$
+
+Protože cena a množství se na křivce poptávky pohybují opačnými směry, $E_{PD}$ je typicky **záporná**. Pro klasifikaci často používáme absolutní hodnotu $|E_{PD}|$:
+
+| Absolutní hodnota | Typ | Popis | Příklad |
+|---|---|---|---|
+| $\|E_{PD}\| = 0$ | Dokonale neelastická | Množství nereaguje vůbec | Inzulín pro diabetiky |
+| $0 < \|E_{PD}\| < 1$ | Neelastická | Množství reaguje méně než proporcionálně | Benzín, chléb, základní potraviny |
+| $\|E_{PD}\| = 1$ | Jednotkově elastická | Množství reaguje proporcionálně | — |
+| $1 < \|E_{PD}\| < \infty$ | Elastická | Množství reaguje více než proporcionálně | Luxusní statky, dovolené |
+| $\|E_{PD}\| \to \infty$ | Dokonale elastická | Jakýkoli růst ceny → množství klesne na nulu | Dokonalá konkurence |
+
+<Collapse title="Faktory ovlivňující cenovou elasticitu poptávky">
+
+Několik faktorů určuje, jak elastická je poptávka:
+
+1. **Dostupnost substitutů**: Více substitutů → elastičtější (spotřebitelé mohou snadno přejít)
+2. **Nezbytnost vs. luxus**: Nezbytnosti → neelastická; luxus → elastická
+3. **Podíl na důchodu**: Větší podíl na rozpočtu → elastičtější
+4. **Časový horizont**: Dlouhé období → elastičtější (spotřebitelé mají čas se přizpůsobit)
+5. **Definice trhu**: Užší definice → elastičtější (např. „Coca-Cola" je elastičtější než „nealkoholické nápoje")
+6. **Zvyklosti a návyky**: Návykové statky (tabák, káva) → neelastičtější
+
+</Collapse>
+
+**Vztah mezi elasticitou a celkovými tržbami** ($TR = P \times Q$):
+
+| Pokud je poptávka... | Růst ceny → TR | Pokles ceny → TR |
+|---|---|---|
+| Elastická ($\|E\| > 1$) | Klesají | Rostou |
+| Jednotkově elastická ($\|E\| = 1$) | Nezmění se | Nezmění se |
+| Neelastická ($\|E\| < 1$) | Rostou | Klesají |
+
+<Callout type="info">
+**Praktický význam**: Pokud firma prodává statek s neelastickou poptávkou, může zvýšit tržby zvýšením ceny. Pokud je poptávka elastická, firma zvýší tržby snížením ceny. Proto je pro firmy klíčové znát elasticitu poptávky po svých produktech.
+</Callout>
+
+</Tab>
+<Tab label="Důchodová elasticita">
+
+### Důchodová elasticita poptávky ($E_{YD}$)
+
+Měří, jak poptávané množství reaguje na změnu důchodu spotřebitele ($Y$):
+
+$$
+E_{YD} = \frac{\%\Delta Q_D}{\%\Delta Y} = \frac{\Delta Q_D / Q_D}{\Delta Y / Y}
+$$
+
+| Hodnota | Klasifikace | Příklad |
+|---|---|---|
+| $E_{YD} < 0$ | **Méněcenný (inferiorní) statek** — poptávka klesá s růstem důchodu | Instantní nudle, MHD, levné značky |
+| $0 < E_{YD} < 1$ | **Normální statek (nezbytnost)** — poptávka roste, ale méně než proporcionálně | Chléb, mléko, základní oblečení |
+| $E_{YD} > 1$ | **Normální statek (luxus)** — poptávka roste více než proporcionálně | Restaurace, sportovní auta, šperky, cestování |
+
+<Callout type="info">
+**Engelův zákon**: S růstem důchodu klesá podíl výdajů na potraviny na celkových výdajích, i když absolutní výdaje na potraviny mohou růst. Potraviny mají důchodovou elasticitu mezi 0 a 1 (nezbytnost). Tento zákon formuloval Ernst Engel v 19. století.
+</Callout>
+
+</Tab>
+<Tab label="Křížová elasticita">
+
+### Křížová cenová elasticita poptávky ($E_{CD}$)
+
+Měří, jak poptávané množství statku $X$ reaguje na změnu ceny statku $Y$:
+
+$$
+E_{CD} = \frac{\%\Delta Q_X}{\%\Delta P_Y} = \frac{\Delta Q_X / Q_X}{\Delta P_Y / P_Y}
+$$
+
+| Hodnota | Vztah | Příklad |
+|---|---|---|
+| $E_{CD} > 0$ | **Substituty** — statky, které se vzájemně nahrazují | Máslo a margarín, Coca-Cola a Pepsi |
+| $E_{CD} < 0$ | **Komplementy** — statky, které se spotřebovávají společně | Auto a benzín, tiskárna a inkoust |
+| $E_{CD} = 0$ | **Nezávislé statky** — žádný vztah | Chléb a jízdní kola |
+
+**Využití křížové elasticity**:
+- Pomáhá firmám identifikovat konkurenční produkty (substituty)
+- Pomáhá definovat relevantní trh pro antimonopolní regulaci
+- Vysoká kladná křížová elasticita naznačuje, že dva výrobky patří na stejný trh
+
+</Tab>
+</Tabs>
+
+<Collapse title="Odvození: Bodová elasticita na lineární křivce poptávky">
+
+Pro lineární křivku poptávky $Q_D = \alpha - \beta P$ (kde $\alpha = a/b$ a $\beta = 1/b$) je bodová elasticita v libovolném bodě $(P, Q)$:
+
+$$
+E_{PD} = \frac{dQ_D}{dP} \cdot \frac{P}{Q_D} = -\beta \cdot \frac{P}{Q_D}
+$$
+
+Ve středním bodě křivky poptávky platí $|E_{PD}| = 1$ (jednotková elasticita). Nad středním bodem je poptávka elastická; pod ním je neelastická. Na svislém průsečíku ($Q = 0$) se elasticita blíží nekonečnu; na vodorovném průsečíku ($P = 0$) se elasticita rovná nule.
+
+To znamená, že **přímková křivka poptávky má v každém bodě jinou elasticitu** — směrnice je konstantní, ale elasticita se mění. Směrnice a elasticita jsou různé pojmy!
+
+</Collapse>
+
+## Nabídka
+
+**Nabídka** vyjadřuje vztah mezi cenou statku a množstvím, které jsou výrobci ochotni a schopni prodat v daném časovém období, **ceteris paribus**.
+
+### Funkce nabídky
+
+Pro **lineární funkci nabídky**:
+
+$$
+P = c + dQ_S
+$$
+
+kde:
+- $c$ je **svislý průsečík** (minimální cena, při které začíná výroba; může být záporný)
+- $d > 0$ je **směrnice** (rychlost, s jakou cena roste s množstvím)
+
+Alternativně:
+
+$$
+Q_S = \frac{P - c}{d}
+$$
+
+<Callout type="info">
+Křivka nabídky je typicky **rostoucí** — s rostoucí cenou roste nabízené množství. Odráží to **zákon nabídky**: vyšší ceny činí výrobu ziskovější a motivují firmy vyrábět více.
+</Callout>
+
+### Proč je křivka nabídky rostoucí?
+
+Rostoucí průběh nabídky vysvětluje zákon rostoucích mezních nákladů: s rostoucím objemem výroby rostou mezní náklady (firms musí využívat stále méně produktivní zdroje). Aby bylo pro firmu rentabilní vyrábět více, potřebuje vyšší cenu.
+
+### Determinanty nabídky (faktory posunu)
+
+| Determinant | Vliv růstu na nabídku |
+|---|---|
+| Ceny vstupů (mzdy, suroviny, energie) | Nabídka klesá (posun doleva) |
+| Technologické zlepšení | Nabídka roste (posun doprava) |
+| Počet výrobců na trhu | Nabídka roste (posun doprava) |
+| Příznivá očekávání | Nabídka roste (posun doprava) |
+| Dotace (subvence) | Nabídka roste (posun doprava) |
+| Daně z výroby | Nabídka klesá (posun doleva) |
+| Přírodní podmínky (zemědělství) | Příznivé → nabídka roste |
+
+## Tržní rovnováha
+
+**Tržní rovnováha** nastává tam, kde se poptávané množství rovná nabízenému množství. V tomto bodě neexistuje tendence ke změně ceny.
+
+### Nalezení rovnováhy
+
+Položíme poptávku rovnu nabídce:
+
+$$
+Q_D = Q_S
+$$
+
+Pro lineární funkce $P = a - bQ$ (poptávka) a $P = c + dQ$ (nabídka):
+
+$$
+a - bQ = c + dQ
+$$
+
+$$
+Q^* = \frac{a - c}{b + d}
+$$
+
+$$
+P^* = a - bQ^* = \frac{ad + bc}{b + d}
+$$
+
+kde $P^*$ je **rovnovážná cena** a $Q^*$ je **rovnovážné množství**.
+
+<Callout type="info">
+V rovnováze se trh **vyčistí** — každá vyrobená jednotka je koupena a každý ochotný kupující najde prodávajícího za převládající cenu. Neexistuje přebytek ani nedostatek.
+</Callout>
+
+### Nerovnováha
+
+| Situace | Podmínka | Výsledek |
+|---|---|---|
+| **Přebytek nabídky** (surplus) | $P > P^*$ → $Q_S > Q_D$ | Cena klesá směrem k rovnováze |
+| **Přebytek poptávky** (nedostatek) | $P < P^*$ → $Q_D > Q_S$ | Cena roste směrem k rovnováze |
+
+Trh má přirozenou tendenci směřovat k rovnováze — při přebytku nabídky výrobci snižují ceny, aby prodali zásoby; při přebytku poptávky mohou výrobci zvyšovat ceny.
+
+### Pavučinový model (Cobweb Model)
+
+**Pavučinový model** popisuje, jak se trhy mohou přizpůsobovat rovnováze v čase, když existuje **produkční zpoždění** (např. zemědělské trhy, kde se rozhodnutí o výsadbě činí sezónu předem).
+
+<Tabs>
+<Tab label="Tlumené oscilace">
+
+Když je křivka nabídky **strmější** než křivka poptávky, trh **konverguje** k rovnováze prostřednictvím klesajících cenových oscilací.
+
+V každém cyklu se odchylka od rovnováhy zmenšuje. Jedná se o **stabilní** pavučinu.
+
+$$
+|d| > |b| \implies \text{konvergence (stabilní rovnováha)}
+$$
+
+Příklad: Trh s obilovinami, kde úroda reaguje na loňskou cenu, ale odchylky se postupně zmenšují.
+
+</Tab>
+<Tab label="Explozivní oscilace">
+
+Když je křivka poptávky **strmější** než křivka nabídky, trh **diverguje** od rovnováhy s rostoucími oscilacemi.
+
+V každém cyklu se odchylka zvětšuje. Jedná se o **nestabilní** pavučinu.
+
+$$
+|b| > |d| \implies \text{divergence (nestabilní rovnováha)}
+$$
+
+</Tab>
+<Tab label="Rovnoměrné oscilace">
+
+Když mají křivky poptávky a nabídky **stejné směrnice** (v absolutní hodnotě), trh osciluje kolem rovnováhy s konstantní amplitudou.
+
+$$
+|b| = |d| \implies \text{konstantní oscilace}
+$$
+
+Cena neustále kolísá mezi dvěma hodnotami, aniž by se přibližovala rovnováze.
+
+</Tab>
+</Tabs>
+
+## Změny rovnováhy
+
+### Posun poptávky (nabídka nezměněna)
+
+Když poptávka **vzroste** (posun doprava) při nezměněné nabídce:
+- Rovnovážná cena **roste**: $P^* \uparrow$
+- Rovnovážné množství **roste**: $Q^* \uparrow$
+
+Když poptávka **klesne** (posun doleva) při nezměněné nabídce:
+- Rovnovážná cena **klesá**: $P^* \downarrow$
+- Rovnovážné množství **klesá**: $Q^* \downarrow$
+
+**Příklad**: Růst důchodu spotřebitelů zvýší poptávku po normálních statcích → cena i množství v rovnováze vzrostou.
+
+### Posun nabídky (poptávka nezměněna)
+
+Když nabídka **vzroste** (posun doprava) při nezměněné poptávce:
+- Rovnovážná cena **klesá**: $P^* \downarrow$
+- Rovnovážné množství **roste**: $Q^* \uparrow$
+
+Když nabídka **klesne** (posun doleva) při nezměněné poptávce:
+- Rovnovážná cena **roste**: $P^* \uparrow$
+- Rovnovážné množství **klesá**: $Q^* \downarrow$
+
+**Příklad**: Technologické zlepšení sníží výrobní náklady → nabídka vzroste → cena klesne, ale množství vzroste.
+
+### Současný posun poptávky i nabídky
+
+Pokud se posune poptávka i nabídka současně, výsledek závisí na relativní velikosti posunů. Jednoznačný je vždy pouze jeden z výsledků (cena nebo množství), druhý závisí na relativní velikosti posunů:
+
+| Poptávka ↑, Nabídka ↑ | $Q^*$ určitě ↑ | $P^*$ závisí na velikosti posunů |
+|---|---|---|
+| **Poptávka ↑, Nabídka ↓** | **$P^*$ určitě ↑** | **$Q^*$ závisí na velikosti posunů** |
+| **Poptávka ↓, Nabídka ↑** | **$P^*$ určitě ↓** | **$Q^*$ závisí na velikosti posunů** |
+| **Poptávka ↓, Nabídka ↓** | **$Q^*$ určitě ↓** | **$P^*$ závisí na velikosti posunů** |
+
+### Speciální případy
+
+<Collapse title="Dokonale elastické a dokonale neelastické křivky">
+
+**Dokonale neelastická poptávka** ($E_{PD} = 0$): Křivka poptávky je svislá přímka. Poptávané množství se nemění bez ohledu na cenu.
+- Posun nabídky mění pouze cenu, nikoli množství.
+- Příklad: Životně důležité léky bez substitutů.
+
+**Dokonale elastická poptávka** ($E_{PD} \to \infty$): Křivka poptávky je vodorovná přímka. Jakákoli cena nad danou úrovní vede k nulové poptávce.
+- Posun nabídky mění pouze množství, nikoli cenu.
+- Příklad: Situace firmy v dokonalé konkurenci.
+
+**Dokonale neelastická nabídka**: Křivka nabídky je svislá přímka (fixní množství, např. půda).
+- Posun poptávky mění pouze cenu, nikoli množství.
+
+**Dokonale elastická nabídka**: Křivka nabídky je vodorovná přímka.
+- Posun poptávky mění pouze množství, nikoli cenu.
+
+</Collapse>
+
+## Státní zásahy do trhu
+
+Vlády často zasahují do fungování trhů. Ačkoliv jsou tyto zásahy často dobře míněné, vytvářejí předvídatelné ekonomické účinky.
+
+<Tabs>
+<Tab label="Cenový strop">
+
+### Cenový strop (maximální cena)
+
+**Cenový strop** je zákonem stanovená maximální cena, nastavená **pod** rovnovážnou cenou.
+
+$$
+P_{\text{strop}} < P^* \implies Q_D > Q_S \implies \text{nedostatek}
+$$
+
+**Účinky**:
+- Vytváří **přebytek poptávky** (nedostatek na trhu)
+- Snižuje přebytek výrobce
+- Může vést k černým trhům, frontám, přídělům, zhoršení kvality
+- Vytváří **mrtvou ztrátu** (deadweight loss) — některé vzájemně výhodné obchody se neuskuteční
+
+**Příklady**: Regulace nájemného na trzích bydlení, cenové stropy na základní potraviny.
+
+<Callout type="warning">
+Cenový strop nastavený *nad* rovnovážnou cenou **nemá žádný účinek** — trh již produkuje cenu pod stropem.
+</Callout>
+
+</Tab>
+<Tab label="Cenové dno">
+
+### Cenové dno (minimální cena)
+
+**Cenové dno** je zákonem stanovená minimální cena, nastavená **nad** rovnovážnou cenou.
+
+$$
+P_{\text{dno}} > P^* \implies Q_S > Q_D \implies \text{přebytek}
+$$
+
+**Účinky**:
+- Vytváří **přebytek nabídky** (nadbytek na trhu)
+- Snižuje přebytek spotřebitele
+- Může vyžadovat vládní nákupy přebytku
+- Vytváří **mrtvou ztrátu** (deadweight loss)
+
+**Příklady**: Minimální mzda na trhu práce, garantované výkupní ceny v zemědělství.
+
+<Callout type="warning">
+Cenové dno nastavené *pod* rovnovážnou cenou **nemá žádný účinek** — trh již produkuje cenu nad dnem.
+</Callout>
+
+</Tab>
+<Tab label="Daně">
+
+### Spotřební daň (per-unit tax)
+
+**Jednotková daň** ($t$) uvalená na výrobce posouvá křivku nabídky nahoru o výši daně:
+
+$$
+P_{\text{nová nabídka}} = (c + t) + dQ_S
+$$
+
+**Účinky**:
+- Rovnovážná cena placená spotřebiteli **roste** (ale o méně než celá daň)
+- Cena přijatá výrobci **klesá** (po odečtení daně)
+- Rovnovážné množství **klesá**
+- **Daňové břemeno** je sdíleno mezi spotřebiteli a výrobci
+- Vytváří **mrtvou ztrátu** (deadweight loss)
+
+**Daňová incidence** závisí na relativních elasticitách:
+
+$$
+\frac{\text{Břemeno spotřebitele}}{\text{Břemeno výrobce}} = \frac{E_S}{|E_D|}
+$$
+
+Strana trhu s **neelastičtější** poptávkou/nabídkou nese větší část daňového břemene.
+
+<Callout type="info">
+**Důležitý poznatek**: Nezáleží na tom, zda je daň formálně uvalena na spotřebitele nebo výrobce — ekonomické rozložení břemene je vždy stejné a závisí pouze na relativních elasticitách. Toto je princip **ekvivalence daňové incidence**.
+</Callout>
+
+</Tab>
+<Tab label="Dotace">
+
+### Dotace (subvence)
+
+**Jednotková dotace** ($s$) na výrobce posouvá křivku nabídky dolů:
+
+$$
+P_{\text{nová nabídka}} = (c - s) + dQ_S
+$$
+
+**Účinky**:
+- Rovnovážná cena placená spotřebiteli **klesá**
+- Cena přijatá výrobci **roste** (včetně dotace)
+- Rovnovážné množství **roste**
+- Vytváří **mrtvou ztrátu** (dotace stojí více, než je přínos ve formě přebytku)
+- Přínos je sdílen mezi spotřebiteli a výrobci na základě relativních elasticit
+
+</Tab>
+</Tabs>
+
+### Přebytek spotřebitele a výrobce
+
+**Přebytek spotřebitele** ($CS$) je rozdíl mezi tím, co jsou spotřebitelé ochotni zaplatit, a tím, co skutečně platí — plocha mezi křivkou poptávky a tržní cenou:
+
+$$
+CS = \int_0^{Q^*} D(Q)\,dQ - P^* \cdot Q^*
+$$
+
+Pro lineární poptávku: $CS = \frac{1}{2}(a - P^*) \cdot Q^*$
+
+**Přebytek výrobce** ($PS$) je rozdíl mezi tržní cenou a minimální cenou, za kterou jsou výrobci ochotni prodávat — plocha mezi tržní cenou a křivkou nabídky:
+
+$$
+PS = P^* \cdot Q^* - \int_0^{Q^*} S(Q)\,dQ
+$$
+
+Pro lineární nabídku: $PS = \frac{1}{2}(P^* - c) \cdot Q^*$
+
+**Celkový přebytek** ($TS = CS + PS$) je maximalizován v konkurenční rovnováze. Jakýkoliv zásah, který posune trh od rovnováhy, vytváří **mrtvou ztrátu** (DWL) — čistý pokles celkového přebytku.
+
+<Callout type="info">
+Mrtvá ztráta (deadweight loss) představuje hodnotu obchodů, které by se v neregulovaném trhu **uskutečnily**, ale kvůli zásahu se **neuskuteční**. Je to čistá ztráta pro společnost — nikdo ji nezíská.
+</Callout>
+
+## Početní příklad
+
+<Collapse title="Numerický příklad: Nalezení rovnováhy a účinek daně">
+
+**Zadání**:
+- Poptávka: $Q_D = 100 - 2P$
+- Nabídka: $Q_S = -20 + 3P$
+
+**Krok 1: Nalezení rovnováhy**
+
+Položíme $Q_D = Q_S$:
+
+$$100 - 2P = -20 + 3P$$
+$$120 = 5P$$
+$$P^* = 24$$
+$$Q^* = 100 - 2(24) = 52$$
+
+**Krok 2: Na výrobce je uvalena daň $t = 5$ za jednotku**
+
+Nová nabídka: $Q_S = -20 + 3(P - 5) = -35 + 3P$
+
+Nová rovnováha: $100 - 2P = -35 + 3P$
+
+$$135 = 5P$$
+$$P_{\text{spotřebitel}} = 27 \quad (\text{cena, kterou platí spotřebitelé})$$
+$$P_{\text{výrobce}} = 27 - 5 = 22 \quad (\text{cena, kterou obdrží výrobci})$$
+$$Q_{\text{nové}} = 100 - 2(27) = 46$$
+
+**Výsledky**:
+- Cena pro spotřebitele vzrostla z 24 na 27 (+3): spotřebitelé nesou 3/5 daně
+- Cena pro výrobce klesla z 24 na 22 (−2): výrobci nesou 2/5 daně
+- Množství kleslo z 52 na 46
+- Daňový výnos = $5 \times 46 = 230$
+- Mrtvá ztráta = $\frac{1}{2} \times 5 \times (52 - 46) = 15$
+
+**Proč spotřebitelé nesou více?** Protože nabídka ($E_S = 3P/Q_S$) je v rovnováze elastičtější než poptávka ($|E_D| = 2P/Q_D$). Neelastičtější strana (poptávka) by nesla více, ale zde se poměr obrací ve prospěch výrobců, kteří mají vyšší elasticitu.
+
+</Collapse>
+
+## Shrnutí
+
+| Pojem | Klíčový bod |
+|---|---|
+| Poptávka | Klesající: $P = a - bQ$ |
+| Nabídka | Rostoucí: $P = c + dQ$ |
+| Rovnováha | $Q_D = Q_S$ určuje $P^*$ a $Q^*$ |
+| Cenová elasticita | $E_{PD} = \frac{\%\Delta Q}{\%\Delta P}$; elastická > 1, neelastická < 1 |
+| Důchodová elasticita | Normální statky (+), méněcenné statky (−) |
+| Křížová elasticita | Substituty (+), komplementy (−) |
+| Pavučinový model | Konvergentní, divergentní nebo rovnoměrné oscilace |
+| Státní zásahy | Cenový strop → nedostatek; cenové dno → přebytek; daně → DWL |
+
+<Quiz>
+  <Question text="Pokud je cenová elasticita poptávky po statku −0,5, jaký typ poptávky to představuje?">
+    <Option value="a">Elastická poptávka</Option>
+    <Option value="b" correct>Neelastická poptávka</Option>
+    <Option value="c">Jednotkově elastická poptávka</Option>
+    <Option value="d">Dokonale elastická poptávka</Option>
+  </Question>
+  <Question text="Co se stane, když je cenový strop nastaven pod rovnovážnou cenou?">
+    <Option value="a">Vznikne přebytek nabídky</Option>
+    <Option value="b" correct>Vznikne nedostatek (přebytek poptávky)</Option>
+    <Option value="c">Trh není ovlivněn</Option>
+    <Option value="d">Nabídka vzroste</Option>
+  </Question>
+  <Question text="Pokud mají dva statky kladnou křížovou cenovou elasticitu, jsou to:">
+    <Option value="a">Komplementy</Option>
+    <Option value="b" correct>Substituty</Option>
+    <Option value="c">Nezávislé statky</Option>
+    <Option value="d">Méněcenné statky</Option>
+  </Question>
+  <Question text="V pavučinovém modelu ke konvergenci k rovnováze dochází, když:">
+    <Option value="a">Křivka poptávky je strmější než křivka nabídky</Option>
+    <Option value="b" correct>Křivka nabídky je strmější než křivka poptávky</Option>
+    <Option value="c">Obě křivky mají stejnou směrnici</Option>
+    <Option value="d">Cenový strop je závazný</Option>
+  </Question>
+  <Question text="Kdo nese větší část daňového břemene?">
+    <Option value="a">Vždy spotřebitel</Option>
+    <Option value="b">Vždy výrobce</Option>
+    <Option value="c" correct>Strana trhu s neelastičtější poptávkou/nabídkou</Option>
+    <Option value="d">Záleží na tom, na koho je daň formálně uvalena</Option>
+  </Question>
+</Quiz>
+
+## Co dál
+
+Se solidním pochopením poptávky, nabídky a tržní rovnováhy jste nyní připraveni studovat, jak jednotliví spotřebitelé činí optimální rozhodnutí. Dalším tématem je **Teorie užitku spotřebitele** — indiferenční křivky, rozpočtové omezení a optimum spotřebitele.
+
+<Callout type="info">
+**Doporučujeme pokračovat**: [Teorie užitku spotřebitele](/general-economics/consumer-theory) — aplikuje rámec poptávky na rozhodování jednotlivého spotřebitele.
+</Callout>

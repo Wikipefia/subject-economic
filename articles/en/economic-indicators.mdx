@@ -1,0 +1,393 @@
+---
+title:
+  ru: "Показатели экономической эффективности"
+  en: "Economic Performance Indicators"
+  cz: "Ukazatele výkonu ekonomiky"
+slug: "economic-indicators"
+author: "kopecky"
+keywords:
+  ru: ["ВВП", "ВНП", "экономический рост", "агрегатный спрос", "макроэкономика"]
+  en: ["GDP", "GNP", "economic growth", "aggregate demand", "macroeconomics"]
+  cz: ["HDP", "HNP", "ekonomický růst", "agregátní poptávka", "makroekonomie"]
+created: "2025-03-15"
+updated: "2025-09-15"
+difficulty: "intermediate"
+estimatedReadTime: 20
+prerequisites:
+  - "introduction"
+---
+
+# Economic Performance Indicators
+
+How do we measure the health of an entire economy? Unlike a firm's balance sheet, a nation's economic performance requires aggregate indicators that capture the total output, income, and spending of millions of agents. The most important of these is **Gross Domestic Product (GDP)**.
+
+<Callout type="info">
+Macroeconomics begins with measurement. Before we can analyze business cycles, design policy, or compare countries, we need reliable indicators of economic performance. This article covers the key measures and models.
+</Callout>
+
+---
+
+## Gross Domestic Product (GDP)
+
+**GDP** is the total market value of all **final goods and services** produced within a country's borders during a given time period (usually one year or one quarter).
+
+Key points in the definition:
+
+- **Market value**: goods and services valued at their market prices
+- **Final**: only finished products, not intermediate goods (to avoid double counting)
+- **Within the country**: geographic criterion (domestic), regardless of who owns the factors of production
+- **Given time period**: a flow variable, not a stock
+
+### Nominal vs Real GDP
+
+- **Nominal GDP**: measured at **current** (actual) prices of each year
+
+$$
+\text{Nominal GDP}_t = \sum_{i} P_{i,t} \cdot Q_{i,t}
+$$
+
+- **Real GDP**: measured at **constant** (base-year) prices, removing the effect of inflation
+
+$$
+\text{Real GDP}_t = \sum_{i} P_{i,\text{base}} \cdot Q_{i,t}
+$$
+
+<Callout type="warning">
+Always use **real GDP** when comparing economic performance across time. Nominal GDP can grow simply because prices rise (inflation), even if actual production is unchanged.
+</Callout>
+
+### GDP Deflator
+
+The **GDP deflator** measures the overall price level of domestically produced goods and services:
+
+$$
+\text{GDP Deflator} = \frac{\text{Nominal GDP}}{\text{Real GDP}} \times 100
+$$
+
+Unlike the CPI, the GDP deflator covers **all** domestically produced goods (not just a consumer basket) and uses **current** quantity weights (Paasche-type index).
+
+---
+
+## Three Methods of GDP Measurement
+
+GDP can be measured from three equivalent perspectives. In theory, all three yield the same result.
+
+<Tabs>
+<Tab label="Production (Output) Method">
+
+Sums the **value added** at each stage of production across all sectors of the economy.
+
+$$
+\text{GDP} = \sum_{\text{sectors}} (\text{Output} - \text{Intermediate Consumption})
+$$
+
+**Value added** = the value a firm adds to inputs through its production process.
+
+**Example**: A farmer grows wheat (value: 10 CZK), a miller makes flour (value: 25 CZK), a baker makes bread (value: 40 CZK).
+
+| Stage | Output | Intermediate Input | Value Added |
+|---|---|---|---|
+| Farming | 10 CZK | 0 CZK | 10 CZK |
+| Milling | 25 CZK | 10 CZK | 15 CZK |
+| Baking | 40 CZK | 25 CZK | 15 CZK |
+| **Total** | | | **40 CZK** |
+
+The total value added (40 CZK) equals the price of the final good — no double counting.
+</Tab>
+
+<Tab label="Expenditure Method">
+
+Sums all spending on final goods and services:
+
+$$
+\text{GDP} = C + I + G + NX
+$$
+
+where:
+- $C$ = **Consumption** — household spending on goods and services
+- $I$ = **Investment** — business spending on capital goods, residential construction, and inventory changes
+- $G$ = **Government spending** — public expenditure on goods and services (excluding transfer payments)
+- $NX$ = **Net exports** = Exports $-$ Imports
+
+| Component | Czech Republic Share (approx.) | Description |
+|---|---|---|
+| $C$ | ~47% | Household final consumption |
+| $I$ | ~26% | Gross capital formation |
+| $G$ | ~20% | Government final consumption |
+| $NX$ | ~+7% | Trade surplus (CZ is a net exporter) |
+
+<Callout type="info">
+The Czech Republic consistently runs a **trade surplus**, meaning exports exceed imports. This is driven by the strong manufacturing sector (especially automotive — Škoda Auto).
+</Callout>
+</Tab>
+
+<Tab label="Income Method">
+
+Sums all incomes earned in the production of GDP:
+
+$$
+\text{GDP} = W + R + i + \Pi + D + T_{\text{ind}}
+$$
+
+where:
+- $W$ = **Wages and salaries** (compensation of employees)
+- $R$ = **Rents** (income from land and property)
+- $i$ = **Interest** (income from capital)
+- $\Pi$ = **Profits** (corporate and proprietor income)
+- $D$ = **Depreciation** (capital consumption allowance)
+- $T_{\text{ind}}$ = **Indirect taxes** minus subsidies (net production taxes)
+
+This method reflects that every dollar spent on a product must become someone's income.
+</Tab>
+</Tabs>
+
+---
+
+## Related National Income Indicators
+
+GDP is just one of several aggregate measures. Here is how they relate:
+
+| Indicator | Formula |
+|---|---|
+| **GNP** (Gross National Product) | $\text{GDP} + \text{Net factor income from abroad}$ |
+| **NDP** (Net Domestic Product) | $\text{GDP} - \text{Depreciation}$ |
+| **NNP** (Net National Product) | $\text{GNP} - \text{Depreciation}$ |
+| **National Income (NI)** | $\text{NNP} - \text{Indirect taxes} + \text{Subsidies}$ |
+| **Personal Income (PI)** | $\text{NI} - \text{Retained profits} - \text{Social contributions} + \text{Transfers}$ |
+| **Disposable Income (DI)** | $\text{PI} - \text{Personal taxes}$ |
+
+<Collapse title="GNP vs GDP: What's the Difference?">
+
+**GDP** measures production by geographic location (within the country's borders).
+
+**GNP** measures production by nationality of factors (by a country's residents, wherever they are located).
+
+$$
+\text{GNP} = \text{GDP} + \text{Net Factor Income from Abroad}
+$$
+
+**Net factor income from abroad** = income earned by domestic residents abroad minus income earned by foreign residents domestically.
+
+**Example**: A Czech worker in Germany earns wages that count toward Czech **GNP** but German **GDP**. A German-owned factory in Czechia generates profits that count toward Czech **GDP** but German **GNP**.
+
+For most countries, the difference between GDP and GNP is small. For countries with large remittance flows (e.g., Philippines) or significant foreign investment (e.g., Ireland), the difference can be substantial.
+</Collapse>
+
+---
+
+## GDP Growth Rate
+
+The **real GDP growth rate** is the primary indicator of economic expansion or contraction:
+
+$$
+g = \frac{\text{GDP}_t - \text{GDP}_{t-1}}{\text{GDP}_{t-1}} \times 100\%
+$$
+
+### Czech Republic GDP Growth
+
+| Year | Real GDP Growth (%) | Key Events |
+|---|---|---|
+| 2006 | +6.9 | Pre-crisis boom |
+| 2007 | +5.6 | Continued expansion |
+| 2008 | +2.7 | Global financial crisis begins |
+| **2009** | **−4.7** | **Great Recession — deepest post-1989 contraction** |
+| 2010 | +2.0 | Gradual recovery |
+| 2015 | +5.4 | Strong growth phase |
+| 2019 | +3.0 | Pre-pandemic peak |
+| **2020** | **−5.5** | **COVID-19 pandemic** |
+| 2021 | +3.6 | Post-pandemic rebound |
+| 2022 | +2.4 | Energy crisis, inflation pressure |
+| 2023 | −0.2 | Stagnation amid tight monetary policy |
+
+<Callout type="warning">
+The two sharpest declines in Czech GDP since independence were the **2009 financial crisis** ($-4.7\%$) and the **2020 COVID pandemic** ($-5.5\%$). Both were driven by external shocks — global financial contagion and a worldwide health emergency.
+</Callout>
+
+---
+
+## Limitations of GDP
+
+GDP is a powerful but imperfect measure. It fails to capture several important dimensions of economic welfare:
+
+| Limitation | Explanation |
+|---|---|
+| **Informal economy** | Black market, unreported cash work — not measured |
+| **Household production** | Childcare, cooking, home repairs done by household members — excluded |
+| **Environmental damage** | Pollution, resource depletion — not subtracted; cleanup spending actually *adds* to GDP |
+| **Quality of life** | Leisure time, health, personal safety — not reflected |
+| **Inequality** | GDP per capita says nothing about distribution of income |
+| **Non-market activities** | Volunteer work, open-source software — excluded |
+
+### Alternative Measures
+
+<Tabs>
+<Tab label="HDI (Human Development Index)">
+
+The **HDI**, developed by the UN (UNDP), combines three dimensions:
+
+1. **Health**: Life expectancy at birth
+2. **Education**: Mean and expected years of schooling
+3. **Standard of living**: GNI per capita (PPP)
+
+HDI ranges from 0 to 1. The Czech Republic scores approximately **0.889** (2023), ranking in the "very high human development" category.
+</Tab>
+
+<Tab label="Other Alternatives">
+
+- **GNH** (Gross National Happiness) — Bhutan's holistic measure including psychological well-being, health, time use, living standards, good governance, ecological resilience, community vitality, cultural resilience, education
+- **Genuine Progress Indicator (GPI)** — adjusts GDP for inequality, environmental costs, and non-market benefits
+- **OECD Better Life Index** — composite index covering housing, income, jobs, community, education, environment, civic engagement, health, life satisfaction, safety, work-life balance
+</Tab>
+</Tabs>
+
+---
+
+## Aggregate Demand and Aggregate Supply
+
+The **AD-AS model** is the foundational framework for analyzing macroeconomic fluctuations and policy.
+
+### Aggregate Demand (AD)
+
+The AD curve shows the total quantity of goods and services demanded at each price level. It slopes **downward** in the price level ($P$) — real output ($Y$) space.
+
+**Why AD slopes downward:**
+
+1. **Wealth effect (Pigou effect)**: Higher $P$ → lower real wealth → less consumption
+2. **Interest rate effect (Keynes effect)**: Higher $P$ → higher money demand → higher interest rates → less investment
+3. **Exchange rate effect**: Higher $P$ → domestic goods more expensive → fewer exports, more imports → lower $NX$
+
+**Shifts in AD**: Changes in any component of $C + I + G + NX$ that are not caused by the price level:
+
+- Increase in consumer confidence → AD shifts right
+- Increase in government spending → AD shifts right
+- Contractionary monetary policy (higher interest rates) → AD shifts left
+
+### Aggregate Supply (AS)
+
+<Tabs>
+<Tab label="Short-Run AS (SRAS)">
+
+The SRAS curve slopes **upward**: as the price level rises, firms are willing to supply more output (in the short run) because some input prices (especially wages) are **sticky** — they adjust slowly.
+
+$$
+Y = Y^* + \alpha(P - P^e)
+$$
+
+where $Y^*$ is potential output, $P$ is actual price level, $P^e$ is expected price level, and $\alpha > 0$.
+
+**Shifts in SRAS**: Changes in input costs, supply shocks (oil price spike shifts SRAS left), technology improvements (shift SRAS right).
+</Tab>
+
+<Tab label="Long-Run AS (LRAS)">
+
+The LRAS curve is **vertical** at the level of **potential output** $Y^*$. In the long run, all prices and wages fully adjust, so the price level does not affect real output.
+
+$$
+Y = Y^* \quad \text{(regardless of } P \text{)}
+$$
+
+Potential output is determined by the economy's productive capacity: labor force, capital stock, technology, institutions.
+
+**Shifts in LRAS**: Economic growth (capital accumulation, technological progress, labor force growth) shifts LRAS right.
+</Tab>
+</Tabs>
+
+### AD-AS Equilibrium
+
+Short-run equilibrium occurs where $AD$ intersects $SRAS$. Long-run equilibrium additionally requires the intersection to be on the $LRAS$ curve (at potential output).
+
+- **If actual output > potential output** (AD intersects SRAS to the right of LRAS): inflationary gap → wages rise → SRAS shifts left → economy returns to $Y^*$ at higher price level
+- **If actual output < potential output** (AD intersects SRAS to the left of LRAS): recessionary gap → wages fall → SRAS shifts right → economy returns to $Y^*$ at lower price level
+
+---
+
+## Potential Output and the Output Gap
+
+### Potential Output
+
+**Potential GDP** ($Y^*$) is the level of output the economy can produce when all resources are used at their **normal** (sustainable) rates — full employment of labor and capital, without generating inflationary or deflationary pressure.
+
+<Callout type="info">
+Potential output does **not** mean maximum output. It is the level consistent with stable inflation — the economy's long-run sustainable capacity.
+</Callout>
+
+### Output Gap
+
+The **output gap** measures the difference between actual and potential GDP:
+
+$$
+\text{Output Gap} = Y - Y^* = \text{Actual GDP} - \text{Potential GDP}
+$$
+
+| Output Gap | Sign | Name | Implications |
+|---|---|---|---|
+| $Y > Y^*$ | Positive | **Inflationary (expansionary) gap** | Economy overheating, rising inflation, low unemployment |
+| $Y = Y^*$ | Zero | **At potential** | Stable inflation, natural rate of unemployment |
+| $Y < Y^*$ | Negative | **Recessionary (deflationary) gap** | Idle resources, high unemployment, downward pressure on prices |
+
+<Collapse title="Estimating Potential Output in Practice">
+
+Potential output is not directly observable — it must be estimated. Common methods include:
+
+1. **Production function approach**: Estimate a Cobb-Douglas production function $Y^* = A \cdot K^\alpha \cdot L^{1-\alpha}$ using trend values of productivity ($A$), capital ($K$), and labor ($L$).
+
+2. **HP filter (Hodrick-Prescott)**: A statistical technique that extracts a smooth trend from actual GDP data.
+
+3. **NAIRU-based**: Estimate the output level consistent with the non-accelerating inflation rate of unemployment.
+
+The Czech National Bank (ČNB) and the European Commission regularly publish estimates of the Czech output gap.
+</Collapse>
+
+---
+
+## Summary
+
+| Indicator | What It Measures | Key Formula |
+|---|---|---|
+| **Nominal GDP** | Total output at current prices | $\sum P_{i,t} \cdot Q_{i,t}$ |
+| **Real GDP** | Total output at constant prices | $\sum P_{i,\text{base}} \cdot Q_{i,t}$ |
+| **GDP Deflator** | Overall price level | $\frac{\text{Nominal GDP}}{\text{Real GDP}} \times 100$ |
+| **GDP Growth Rate** | Rate of economic expansion | $g = \frac{GDP_t - GDP_{t-1}}{GDP_{t-1}} \times 100\%$ |
+| **GNP** | Output by nationals | $\text{GDP} + \text{Net factor income from abroad}$ |
+| **Output Gap** | Cyclical position | $Y - Y^*$ |
+
+---
+
+## Test Your Knowledge
+
+<Quiz>
+  <Question text="Which method of GDP measurement sums value added across all sectors?">
+    <Option value="a" correct>Production (output) method</Option>
+    <Option value="b">Expenditure method</Option>
+    <Option value="c">Income method</Option>
+    <Option value="d">Deflator method</Option>
+  </Question>
+
+  <Question text="In the expenditure method, what does NX represent?">
+    <Option value="a">National expenditure</Option>
+    <Option value="b">Net taxation</Option>
+    <Option value="c" correct>Net exports (Exports minus Imports)</Option>
+    <Option value="d">Non-market transactions</Option>
+  </Question>
+
+  <Question text="If nominal GDP rises but real GDP stays constant, what has happened?">
+    <Option value="a">Real economic growth occurred</Option>
+    <Option value="b" correct>Prices rose (inflation) with no real output change</Option>
+    <Option value="c">The GDP deflator decreased</Option>
+    <Option value="d">Exports increased</Option>
+  </Question>
+
+  <Question text="A negative output gap indicates:">
+    <Option value="a">The economy is overheating</Option>
+    <Option value="b" correct>Actual GDP is below potential — there are idle resources</Option>
+    <Option value="c">Inflation is accelerating</Option>
+    <Option value="d">The GDP deflator is negative</Option>
+  </Question>
+
+  <Question text="Why is the Long-Run Aggregate Supply (LRAS) curve vertical?">
+    <Option value="a">Because firms cannot increase output</Option>
+    <Option value="b">Because the government controls supply</Option>
+    <Option value="c" correct>Because in the long run, all prices adjust fully, so the price level does not affect real output</Option>
+    <Option value="d">Because aggregate demand is constant</Option>
+  </Question>
+</Quiz>

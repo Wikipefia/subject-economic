@@ -4,7 +4,7 @@ title:
   en: "Practice Problems"
   cz: "Praktické úlohy"
 slug: "practice-problems"
-author: "ivan-petrov"
+author: "kopecky"
 keywords:
   ru: ["задачи", "упражнения", "тесты", "практика"]
   en: ["problems", "exercises", "quizzes", "practice"]
@@ -12,251 +12,427 @@ keywords:
 created: "2025-04-01"
 updated: "2025-09-15"
 difficulty: "intermediate"
-estimatedReadTime: 20
+estimatedReadTime: 25
 prerequisites:
   - "introduction"
-  - "core-concepts"
-tutors:
-  - "ivan-petrov"
+  - "demand-supply-market"
 ---
 
 # Practice Problems
 
-Theory without practice is incomplete. This article provides interactive problems covering logic, sets, combinatorics, and graphs — test your understanding with quizzes, code challenges, and worked examples.
+This article brings together **interactive quizzes** and **worked examples** covering the entire General Economics course. Use it as a self-assessment tool before exams or as targeted practice after finishing each topic.
 
 <Callout type="info">
-Work through each section in order. The quizzes provide immediate feedback, and the code playgrounds let you experiment with solutions.
+Each section corresponds to a chapter of the course. Work through the quizzes first, then study the worked examples carefully — they demonstrate the calculation techniques you need for the exam.
 </Callout>
 
-## Section 1: Logic
+---
 
-### Quiz — Truth Tables
+## 1. Economic Fundamentals
+
+Test your understanding of the basic building blocks — economic systems, production factors, and the scope of economics.
 
 <Quiz>
-<Question text="What is the truth value of (T → F) ∧ (F → T)?">
-  <Option value="true">True</Option>
-  <Option value="false" correct>False</Option>
-</Question>
-
-<Question text="Which logical connective has this truth table: TT→T, TF→T, FT→F, FF→T?">
-  <Option value="and">AND (∧)</Option>
-  <Option value="or">OR (∨)</Option>
-  <Option value="implies">IMPLIES (→)</Option>
-  <Option value="biconditional" correct>BICONDITIONAL (↔)</Option>
-</Question>
-
-<Question text="De Morgan's Law: ¬(p ∧ q) is equivalent to...">
-  <Option value="a">¬p ∧ ¬q</Option>
-  <Option value="b" correct>¬p ∨ ¬q</Option>
-  <Option value="c">p ∨ q</Option>
-  <Option value="d">¬p → ¬q</Option>
-</Question>
+  <Question text="Which economic system relies primarily on the price mechanism and individual decision-making to allocate resources?">
+    <Option value="a">Centrally planned economy</Option>
+    <Option value="b" correct>Market economy</Option>
+    <Option value="c">Customary (traditional) economy</Option>
+    <Option value="d">Subsistence economy</Option>
+  </Question>
+  <Question text="Which of the following is a PRIMARY (original) production factor?">
+    <Option value="a">Machinery</Option>
+    <Option value="b">Factory buildings</Option>
+    <Option value="c" correct>Land</Option>
+    <Option value="d">Software</Option>
+  </Question>
+  <Question text="Microeconomics differs from macroeconomics in that microeconomics studies:">
+    <Option value="a">Aggregate price levels and GDP</Option>
+    <Option value="b" correct>Individual consumers, firms, and specific markets</Option>
+    <Option value="c">Monetary policy and central banking</Option>
+    <Option value="d">Unemployment rates across the whole economy</Option>
+  </Question>
+  <Question text="In a mixed economy, economic decisions are made by:">
+    <Option value="a">The central government alone</Option>
+    <Option value="b">Market forces alone</Option>
+    <Option value="c" correct>A combination of market forces and government intervention</Option>
+    <Option value="d">Cultural traditions and customs</Option>
+  </Question>
 </Quiz>
 
-### Practice — Boolean Simplification
+---
 
-Simplify the following boolean expression using logical equivalences:
+## 2. Supply and Demand
+
+These questions cover the demand and supply model — shifts, elasticity, and equilibrium.
+
+<Quiz>
+  <Question text="If consumer income increases and the good is a normal good, the demand curve will:">
+    <Option value="a" correct>Shift to the right (increase in demand)</Option>
+    <Option value="b">Shift to the left (decrease in demand)</Option>
+    <Option value="c">Not shift — only quantity demanded changes</Option>
+    <Option value="d">Become perfectly elastic</Option>
+  </Question>
+  <Question text="A good has a price elasticity of demand equal to −0.4. This means the good is:">
+    <Option value="a">Elastic — consumers are very responsive to price changes</Option>
+    <Option value="b" correct>Inelastic — consumers are relatively unresponsive to price changes</Option>
+    <Option value="c">Unit elastic</Option>
+    <Option value="d">Perfectly elastic</Option>
+  </Question>
+  <Question text="If the current market price is ABOVE the equilibrium price, the market experiences:">
+    <Option value="a">Excess demand (shortage)</Option>
+    <Option value="b" correct>Excess supply (surplus)</Option>
+    <Option value="c">Equilibrium</Option>
+    <Option value="d">A shift in the supply curve</Option>
+  </Question>
+  <Question text="An increase in the price of a production input (e.g., raw materials) will cause the supply curve to:">
+    <Option value="a">Shift to the right</Option>
+    <Option value="b" correct>Shift to the left (decrease in supply)</Option>
+    <Option value="c">Become more elastic</Option>
+    <Option value="d">Not change — only quantity supplied changes</Option>
+  </Question>
+</Quiz>
+
+### Worked Example: Finding Market Equilibrium
+
+**Problem:** The demand function is $P = 100 - 2Q_D$ and the supply function is $P = 20 + 3Q_S$. Find the equilibrium price and quantity.
+
+<Collapse title="Step-by-step solution">
+
+**Step 1:** At equilibrium, quantity demanded equals quantity supplied ($Q_D = Q_S = Q^*$) and the prices are equal:
 
 $$
-\lnot(\lnot p \lor q) \lor (p \land q)
+100 - 2Q = 20 + 3Q
 $$
 
-<Collapse title="Show step-by-step solution">
+**Step 2:** Solve for $Q^*$:
 
-1. Apply De Morgan's to $\lnot(\lnot p \lor q)$:
-$$= (\lnot\lnot p \land \lnot q) \lor (p \land q)$$
+$$
+100 - 20 = 3Q + 2Q
+$$
 
-2. Double negation on $\lnot\lnot p$:
-$$= (p \land \lnot q) \lor (p \land q)$$
+$$
+80 = 5Q
+$$
 
-3. Factor out $p$ (distributive law):
-$$= p \land (\lnot q \lor q)$$
+$$
+Q^* = 16
+$$
 
-4. Since $\lnot q \lor q$ is a tautology (always true):
-$$= p \land T = p$$
+**Step 3:** Substitute $Q^* = 16$ into either function to find $P^*$:
 
-**Result**: The expression simplifies to just $p$.
+$$
+P^* = 100 - 2(16) = 100 - 32 = 68
+$$
+
+**Verification** using the supply function:
+
+$$
+P^* = 20 + 3(16) = 20 + 48 = 68 \checkmark
+$$
+
+**Result:** The equilibrium quantity is $Q^* = 16$ units and the equilibrium price is $P^* = 68$ monetary units.
+
 </Collapse>
 
-## Section 2: Sets and Counting
+---
 
-### Quiz — Set Operations
+## 3. Consumer Theory
 
-<Quiz>
-<Question text="If A = &#123;1,2,3,4&#125; and B = &#123;3,4,5,6&#125;, what is |A ∪ B|?">
-  <Option value="4">4</Option>
-  <Option value="6" correct>6</Option>
-  <Option value="8">8</Option>
-  <Option value="2">2</Option>
-</Question>
-
-<Question text="How many subsets does a set with 5 elements have?">
-  <Option value="5">5</Option>
-  <Option value="10">10</Option>
-  <Option value="25">25</Option>
-  <Option value="32" correct>32</Option>
-</Question>
-
-<Question text="C(10, 3) = ?">
-  <Option value="720">720</Option>
-  <Option value="120" correct>120</Option>
-  <Option value="1000">1000</Option>
-  <Option value="30">30</Option>
-</Question>
-</Quiz>
-
-### Code Challenge — Powerset Generator
-
-Write a function that generates the powerset (set of all subsets) of a given set.
-
-<CodePlayground language="python" code={`def powerset(s: set) -> list[set]:
-    """Generate all subsets of set s.
-
-    Hint: For each element, you can either include it or not.
-    Total subsets = 2^|s|
-
-    Try to implement this!
-    """
-    result = [set()]  # Start with empty set
-
-    for elem in s:
-        # For each existing subset, create a new subset that includes elem
-        new_subsets = [subset | {elem} for subset in result]
-        result.extend(new_subsets)
-
-    return result
-
-# Test
-s = {1, 2, 3}
-ps = powerset(s)
-print(f"Powerset of {s}:")
-for subset in sorted(ps, key=lambda x: (len(x), sorted(x))):
-    print(f"  {subset}")
-print(f"\\nTotal subsets: {len(ps)} (expected: {2**len(s)})")`} />
-
-## Section 3: Combinatorics
-
-### The Birthday Problem
-
-What's the probability that in a room of $n$ people, at least two share a birthday?
-
-$$
-P(\text{at least one match}) = 1 - \frac{365!}{365^n \cdot (365-n)!}
-$$
-
-<CodePlayground language="python" code={`from math import comb, factorial
-import random
-
-def birthday_probability(n: int) -> float:
-    """Exact probability of a birthday collision in n people."""
-    if n > 365:
-        return 1.0
-    # Probability of NO collision
-    p_no_collision = 1.0
-    for i in range(n):
-        p_no_collision *= (365 - i) / 365
-    return 1 - p_no_collision
-
-def birthday_simulation(n: int, trials: int = 10000) -> float:
-    """Monte Carlo simulation of the birthday problem."""
-    collisions = 0
-    for _ in range(trials):
-        birthdays = [random.randint(1, 365) for _ in range(n)]
-        if len(set(birthdays)) < n:
-            collisions += 1
-    return collisions / trials
-
-print("Birthday Problem:")
-print(f"{'n':>4} | {'Exact':>8} | {'Simulated':>10}")
-print("-" * 30)
-for n in [10, 20, 23, 30, 50, 70]:
-    exact = birthday_probability(n)
-    simulated = birthday_simulation(n)
-    print(f"{n:4d} | {exact:8.4f} | {simulated:10.4f}")`} />
-
-<Callout type="info">
-With just 23 people, there's a >50% chance of a birthday match! This result surprises most people and is a classic example of how human intuition about probability is often wrong.
-</Callout>
-
-## Section 4: Graphs
-
-### Quiz — Graph Properties
+Quiz on utility, indifference curves, and the budget constraint.
 
 <Quiz>
-<Question text="A tree with 10 vertices has how many edges?">
-  <Option value="10">10</Option>
-  <Option value="9" correct>9</Option>
-  <Option value="11">11</Option>
-  <Option value="20">20</Option>
-</Question>
-
-<Question text="What is the maximum number of edges in a simple undirected graph with 6 vertices?">
-  <Option value="12">12</Option>
-  <Option value="15" correct>15</Option>
-  <Option value="30">30</Option>
-  <Option value="6">6</Option>
-</Question>
-
-<Question text="Which traversal uses a queue?">
-  <Option value="dfs">Depth-First Search (DFS)</Option>
-  <Option value="bfs" correct>Breadth-First Search (BFS)</Option>
-  <Option value="both">Both</Option>
-  <Option value="neither">Neither</Option>
-</Question>
+  <Question text="The law of diminishing marginal utility states that:">
+    <Option value="a">Total utility always decreases</Option>
+    <Option value="b" correct>As consumption of a good increases, the additional utility from each extra unit decreases</Option>
+    <Option value="c">Marginal utility is always negative</Option>
+    <Option value="d">Consumers always prefer less of a good</Option>
+  </Question>
+  <Question text="Indifference curves are typically:">
+    <Option value="a">Upward-sloping and linear</Option>
+    <Option value="b">Horizontal lines</Option>
+    <Option value="c" correct>Downward-sloping and convex to the origin</Option>
+    <Option value="d">Circles around the optimal point</Option>
+  </Question>
+  <Question text="The slope of the budget constraint is determined by:">
+    <Option value="a">Consumer income only</Option>
+    <Option value="b">Total utility</Option>
+    <Option value="c" correct>The ratio of the prices of the two goods ($-P_1 / P_2$)</Option>
+    <Option value="d">The marginal rate of substitution</Option>
+  </Question>
 </Quiz>
 
-### Code Challenge — Shortest Path
+### Worked Example: Optimal Consumer Choice
 
-Implement Dijkstra's algorithm for finding the shortest path in a weighted graph.
+**Problem:** A consumer has income $Y = 600$, prices $P_1 = 20$ and $P_2 = 30$, and utility function $U = q_1 \cdot q_2$. Find the optimal consumption basket.
 
-<CodePlayground language="python" code={`import heapq
+<Collapse title="Step-by-step solution">
 
-def dijkstra(graph: dict, start: str) -> dict:
-    """Find shortest distances from start to all vertices.
+**Step 1:** Write the budget constraint:
 
-    graph: dict mapping vertex to list of (neighbor, weight) tuples
-    Returns: dict mapping vertex to shortest_distance
-    """
-    distances = {v: float('inf') for v in graph}
-    distances[start] = 0
-    pq = [(0, start)]  # (distance, vertex)
+$$
+P_1 q_1 + P_2 q_2 = Y
+$$
 
-    while pq:
-        dist, u = heapq.heappop(pq)
-        if dist > distances[u]:
-            continue
+$$
+20q_1 + 30q_2 = 600
+$$
 
-        for neighbor, weight in graph[u]:
-            new_dist = dist + weight
-            if new_dist < distances[neighbor]:
-                distances[neighbor] = new_dist
-                heapq.heappush(pq, (new_dist, neighbor))
+**Step 2:** The optimality condition requires that the marginal rate of substitution equals the price ratio:
 
-    return distances
+$$
+MRS = \frac{MU_1}{MU_2} = \frac{P_1}{P_2}
+$$
 
-# Example graph
-graph = {
-    'A': [('B', 4), ('C', 2)],
-    'B': [('A', 4), ('C', 1), ('D', 5)],
-    'C': [('A', 2), ('B', 1), ('D', 8), ('E', 10)],
-    'D': [('B', 5), ('C', 8), ('E', 2)],
-    'E': [('C', 10), ('D', 2)],
-}
+For $U = q_1 \cdot q_2$:
 
-distances = dijkstra(graph, 'A')
-print("Shortest distances from A:")
-for vertex, dist in sorted(distances.items()):
-    print(f"  A -> {vertex}: {dist}")`} />
+$$
+MU_1 = \frac{\partial U}{\partial q_1} = q_2, \quad MU_2 = \frac{\partial U}{\partial q_2} = q_1
+$$
+
+$$
+\frac{q_2}{q_1} = \frac{20}{30} = \frac{2}{3}
+$$
+
+$$
+q_2 = \frac{2}{3} q_1
+$$
+
+**Step 3:** Substitute into the budget constraint:
+
+$$
+20q_1 + 30 \cdot \frac{2}{3} q_1 = 600
+$$
+
+$$
+20q_1 + 20q_1 = 600
+$$
+
+$$
+40q_1 = 600
+$$
+
+$$
+q_1^* = 15
+$$
+
+**Step 4:** Find $q_2^*$:
+
+$$
+q_2^* = \frac{2}{3} \cdot 15 = 10
+$$
+
+**Result:** The optimal basket is $q_1^* = 15$ and $q_2^* = 10$, yielding utility $U = 15 \times 10 = 150$.
+
+</Collapse>
+
+---
+
+## 4. Production and Costs
+
+Quiz on cost concepts and the firm's production decisions.
+
+<Quiz>
+  <Question text="When marginal cost (MC) equals average cost (AC), average cost is:">
+    <Option value="a">Rising</Option>
+    <Option value="b">Falling</Option>
+    <Option value="c" correct>At its minimum</Option>
+    <Option value="d">Equal to zero</Option>
+  </Question>
+  <Question text="Which of the following is a fixed cost?">
+    <Option value="a">Cost of raw materials</Option>
+    <Option value="b">Wages of production workers (paid per unit)</Option>
+    <Option value="c" correct>Annual rent for the factory building</Option>
+    <Option value="d">Electricity used in production</Option>
+  </Question>
+  <Question text="A perfectly competitive firm should shut down in the short run when the price falls below:">
+    <Option value="a">Average total cost (AC)</Option>
+    <Option value="b" correct>Average variable cost (AVC)</Option>
+    <Option value="c">Marginal cost (MC)</Option>
+    <Option value="d">Average fixed cost (AFC)</Option>
+  </Question>
+  <Question text="Variable costs are zero when output is:">
+    <Option value="a" correct>Zero</Option>
+    <Option value="b">At its maximum</Option>
+    <Option value="c">Equal to fixed costs</Option>
+    <Option value="d">Variable costs are never zero</Option>
+  </Question>
+</Quiz>
+
+### Worked Example: Cost Functions
+
+**Problem:** A firm has total cost $TC = 100 + 5Q + 0.5Q^2$. Find FC, VC, AC, AVC, AFC, and MC.
+
+<Collapse title="Step-by-step solution">
+
+**Step 1:** Identify fixed and variable costs:
+
+$$
+FC = 100 \quad \text{(the constant term, independent of } Q\text{)}
+$$
+
+$$
+VC = 5Q + 0.5Q^2 \quad \text{(all terms that depend on } Q\text{)}
+$$
+
+**Step 2:** Average costs (divide by $Q$):
+
+$$
+AC = \frac{TC}{Q} = \frac{100}{Q} + 5 + 0.5Q
+$$
+
+$$
+AVC = \frac{VC}{Q} = 5 + 0.5Q
+$$
+
+$$
+AFC = \frac{FC}{Q} = \frac{100}{Q}
+$$
+
+**Step 3:** Marginal cost (derivative of TC with respect to $Q$):
+
+$$
+MC = \frac{dTC}{dQ} = 5 + Q
+$$
+
+**Numerical example** — at $Q = 10$:
+
+| Measure | Formula | Value |
+|---|---|---|
+| TC | $100 + 5(10) + 0.5(100)$ | 200 |
+| FC | 100 | 100 |
+| VC | $5(10) + 0.5(100)$ | 100 |
+| AC | $200 / 10$ | 20 |
+| AVC | $100 / 10$ | 10 |
+| AFC | $100 / 10$ | 10 |
+| MC | $5 + 10$ | 15 |
+
+Note that $AC = AVC + AFC = 10 + 10 = 20$ ✓
+
+</Collapse>
+
+---
+
+## 5. Market Structures
+
+Test your understanding of the spectrum from perfect competition to monopoly.
+
+<Quiz>
+  <Question text="In perfect competition, an individual firm is a:">
+    <Option value="a" correct>Price taker — it accepts the market price as given</Option>
+    <Option value="b">Price maker — it sets the price above marginal cost</Option>
+    <Option value="c">Quantity setter — it determines total market output</Option>
+    <Option value="d">Monopolist in its niche</Option>
+  </Question>
+  <Question text="In monopolistic competition, long-run economic profit is:">
+    <Option value="a">Positive, because firms have market power</Option>
+    <Option value="b" correct>Zero, because free entry drives profits to zero</Option>
+    <Option value="c">Negative, because of excess capacity</Option>
+    <Option value="d">Indeterminate without more information</Option>
+  </Question>
+  <Question text="Which of the following is NOT a characteristic of an oligopoly?">
+    <Option value="a">A small number of large firms</Option>
+    <Option value="b">Strategic interdependence between firms</Option>
+    <Option value="c" correct>Free entry and exit of firms</Option>
+    <Option value="d">Possibility of collusion and cartel formation</Option>
+  </Question>
+  <Question text="A monopolist maximizes profit where:">
+    <Option value="a">Price equals marginal cost</Option>
+    <Option value="b">Average cost is minimized</Option>
+    <Option value="c" correct>Marginal revenue equals marginal cost (MR = MC)</Option>
+    <Option value="d">Total revenue is maximized</Option>
+  </Question>
+</Quiz>
+
+---
+
+## 6. Macroeconomic Indicators
+
+Questions on GDP measurement and national accounting.
+
+<Quiz>
+  <Question text="The expenditure approach to GDP is given by:">
+    <Option value="a">$GDP = W + R + I + \pi$</Option>
+    <Option value="b" correct>$GDP = C + I + G + NX$</Option>
+    <Option value="c">$GDP = C + S + T$</Option>
+    <Option value="d">$GDP = Y - T + TR$</Option>
+  </Question>
+  <Question text="Real GDP differs from nominal GDP in that real GDP:">
+    <Option value="a">Includes depreciation of capital</Option>
+    <Option value="b" correct>Is adjusted for changes in the price level (inflation)</Option>
+    <Option value="c">Only counts government spending</Option>
+    <Option value="d">Excludes net exports</Option>
+  </Question>
+  <Question text="In the expenditure approach, the component 'I' represents:">
+    <Option value="a">Consumer income</Option>
+    <Option value="b">Government interest payments</Option>
+    <Option value="c" correct>Gross private domestic investment (firms' investment in capital goods and inventories)</Option>
+    <Option value="d">Imports of goods and services</Option>
+  </Question>
+  <Question text="If nominal GDP increased by 8% and the GDP deflator rose by 5%, real GDP grew by approximately:">
+    <Option value="a">13%</Option>
+    <Option value="b">5%</Option>
+    <Option value="c" correct>3%</Option>
+    <Option value="d">8%</Option>
+  </Question>
+</Quiz>
+
+---
+
+## 7. Unemployment, Inflation, and Policy
+
+Questions covering the labor market, price stability, and economic policy instruments.
+
+<Quiz>
+  <Question text="A worker who is unemployed because they are searching for a better job matching their skills is experiencing:">
+    <Option value="a">Cyclical unemployment</Option>
+    <Option value="b" correct>Frictional unemployment</Option>
+    <Option value="c">Structural unemployment</Option>
+    <Option value="d">Seasonal unemployment</Option>
+  </Question>
+  <Question text="Hyperinflation is typically defined as inflation exceeding:">
+    <Option value="a">10% per year</Option>
+    <Option value="b">20% per year</Option>
+    <Option value="c" correct>50% per month (or several hundred percent per year)</Option>
+    <Option value="d">100% per decade</Option>
+  </Question>
+  <Question text="An expansionary monetary policy involves the central bank:">
+    <Option value="a" correct>Lowering interest rates and increasing the money supply</Option>
+    <Option value="b">Raising interest rates and decreasing the money supply</Option>
+    <Option value="c">Increasing taxes and reducing government spending</Option>
+    <Option value="d">Setting price ceilings on consumer goods</Option>
+  </Question>
+  <Question text="The Phillips curve illustrates an inverse relationship between:">
+    <Option value="a">GDP and government spending</Option>
+    <Option value="b" correct>Inflation and unemployment</Option>
+    <Option value="c">Interest rates and investment</Option>
+    <Option value="d">Exports and imports</Option>
+  </Question>
+  <Question text="Which of the following is a tool of fiscal policy?">
+    <Option value="a">Open market operations by the central bank</Option>
+    <Option value="b">Changing the reserve requirement ratio</Option>
+    <Option value="c" correct>Adjusting government spending and taxation</Option>
+    <Option value="d">Setting the discount rate</Option>
+  </Question>
+</Quiz>
+
+---
 
 ## Summary
 
 <Callout type="info">
-**How did you do?** If you answered most quiz questions correctly and completed the code challenges, you have a solid grasp of the material. If some topics were tricky, review the relevant articles in the Foundations and Advanced Topics categories.
+**Assessment guidance:** If you answered most questions correctly and understood the worked examples, you have a solid command of the material. Focus any remaining study time on sections where you made errors. For the exam, practice the calculation techniques in Sections 2–4 until you can solve them confidently without hints.
 </Callout>
 
-Key takeaways from this practice session:
+| Section | Key Skill Tested |
+|---|---|
+| Economic Fundamentals | Distinguishing economic systems and production factors |
+| Supply and Demand | Shifting curves, elasticity, equilibrium calculation |
+| Consumer Theory | MRS, budget constraint, optimal basket |
+| Production and Costs | Deriving FC, VC, AC, AVC, AFC, MC from a total cost function |
+| Market Structures | Comparing competition, monopoly, oligopoly |
+| Macroeconomic Indicators | GDP components and measurement |
+| Unemployment, Inflation, Policy | Types of unemployment, inflation, monetary and fiscal tools |
 
-1. **Logic**: Master De Morgan's laws and truth tables — they're the basis of all conditional reasoning
-2. **Counting**: The multiplication principle, permutations, and combinations appear in algorithm analysis constantly
-3. **Graphs**: Know both BFS and DFS, understand adjacency representations, and practice shortest-path algorithms
-4. **Practice > Theory**: The only way to get better is to solve more problems
+<Callout type="warning">
+Remember: understanding **why** an answer is correct matters more than memorizing the answer itself. If you got a question wrong, go back to the relevant article and study the concept again.
+</Callout>

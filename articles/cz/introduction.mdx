@@ -1,80 +1,396 @@
 ---
 title:
-  ru: "Введение в дискретную математику"
-  en: "Introduction to Discrete Mathematics"
-  cz: "Úvod do diskrétní matematiky"
+  ru: "Введение в экономику"
+  en: "Introduction to Economics"
+  cz: "Úvod do ekonomie"
 slug: "introduction"
-author: "ivan-petrov"
+author: "kopecky"
 keywords:
-  ru: ["логика", "множества", "доказательства", "основы"]
-  en: ["logic", "sets", "proofs", "foundations"]
-  cz: ["logika", "množiny", "důkazy", "základy"]
+  ru: ["экономика", "микроэкономика", "макроэкономика", "факторы производства", "экономические субъекты"]
+  en: ["economics", "microeconomics", "macroeconomics", "production factors", "economic subjects"]
+  cz: ["ekonomie", "mikroekonomie", "makroekonomie", "výrobní faktory", "ekonomické subjekty"]
 created: "2025-01-15"
 updated: "2025-08-20"
 difficulty: "beginner"
-estimatedReadTime: 12
+estimatedReadTime: 15
 ---
 
-# Úvod do diskrétní matematiky
+# Úvod do ekonomie
 
-Diskrétní matematika studuje matematické struktury, které jsou svou podstatou **diskrétní** — nikoli spojité. Zatímco matematická analýza pracuje s hladkými křivkami, diskrétní matematika operuje s odlišitelnými, oddělenými hodnotami: celými čísly, grafy, logickými výroky.
+Ekonomie je **společenská věda**, která zkoumá chování ekonomických subjektů a alokaci **vzácných zdrojů** k uspokojení neomezených lidských potřeb. Na úvod je nutné rozlišit dva pojmy, které se v běžné řeči často zaměňují.
 
 <Callout type="info">
 Toto je úvodní článek. Nejsou potřeba žádné předpoklady — začněte zde, pokud jste v kurzu noví.
 </Callout>
 
-## Výroková logika
+## Ekonomie vs. ekonomika
 
-**Výrok** je oznamovací věta, která je buď pravdivá, nebo nepravdivá, ale ne obojí.
+Tyto dva pojmy se často zaměňují, ale označují zcela odlišné věci:
 
-| Výrok | Pravdivostní hodnota |
-|---|---|
-| "2 + 2 = 4" | Pravda |
-| "Země je plochá" | Nepravda |
-| "Prší?" | Není výrok (otázka) |
+| Pojem | Význam | Příklad |
+|---|---|---|
+| **Ekonomie** | *Věda* — systematický soubor poznatků zkoumající, jak společnosti alokují vzácné zdroje | „Studuje ekonomii na univerzitě." |
+| **Ekonomika** | *Systém* — skutečný souhrn výrobních, distribučních a spotřebních činností na daném území | „Česká ekonomika loni vzrostla o 2,5 %." |
 
-### Logické spojky
+Ekonomie je tedy vědecká disciplína, která **zkoumá** ekonomiku. Ekonomika je **objekt** zkoumání.
 
-- **Konjunkce** ($p \land q$): pravdivá pouze když jsou oba $p$ i $q$ pravdivé
-- **Disjunkce** ($p \lor q$): pravdivá když alespoň jedno z $p$, $q$ je pravdivé
-- **Negace** ($\lnot p$): obrací pravdivostní hodnotu
-- **Implikace** ($p \to q$): nepravdivá pouze když $p$ je pravdivé a $q$ nepravdivé
+<Callout type="warning">
+Nezaměňujte tyto pojmy! Při zkoušce je záměna „ekonomie" (věda) a „ekonomika" (reálný systém) častou chybou. V angličtině se rozlišuje „economics" vs. „economy", v ruštině „экономика" (věda i systém, podle kontextu) nebo „экономическая наука" (věda).
+</Callout>
 
-### De Morganovy zákony
+### Ekonomie jako společenská věda
 
-$$
-\lnot(p \land q) \equiv (\lnot p) \lor (\lnot q)
-$$
+Ekonomie patří mezi společenské vědy (na rozdíl od přírodních věd) a má několik důležitých vlastností:
 
-$$
-\lnot(p \lor q) \equiv (\lnot p) \land (\lnot q)
-$$
+- Zkoumá **lidské chování** — rozhodování jednotlivců, firem a vlád
+- Její závěry jsou **podmíněné** — platí za určitých předpokladů (*ceteris paribus*)
+- Používá **modely** — zjednodušené reprezentace reality
+- Pracuje s pojmem **racionalita** — předpoklad, že subjekty maximalizují svůj užitek či zisk
+- Nelze provádět kontrolované experimenty tak snadno jako v přírodních vědách
 
-## Základy teorie množin
+## Mikroekonomie vs. makroekonomie
 
-**Množina** je neuspořádaná kolekce různých objektů nazývaných **prvky**.
+Moderní ekonomie se dělí na dvě hlavní větve:
 
-```python
-A = {1, 2, 3, 4, 5}
-B = {3, 4, 5, 6, 7}
+<Tabs>
+<Tab label="Mikroekonomie">
 
-sjednoceni = A | B    # {1, 2, 3, 4, 5, 6, 7}  (A ∪ B)
-prunik = A & B        # {3, 4, 5}               (A ∩ B)
-rozdil = A - B        # {1, 2}                  (A \ B)
-```
+**Mikroekonomie** zkoumá chování **jednotlivých ekonomických subjektů** — spotřebitelů, firem a konkrétních trhů.
 
-### Princip inkluze a exkluze
+Klíčová témata:
+- **Poptávka a nabídka** na jednotlivých trzích
+- **Spotřebitelská volba** a maximalizace užitku
+- **Chování firmy** — výroba, náklady, maximalizace zisku
+- **Tržní struktury** — dokonalá konkurence, monopol, oligopol, monopolistická konkurence
+- **Tvorba cen** na trzích statků i výrobních faktorů
+- **Tržní selhání** — externality, veřejné statky, asymetrické informace
 
-$$
-|A \cup B| = |A| + |B| - |A \cap B|
-$$
+Mikroekonomie se ptá: *Jak se jednotlivý spotřebitel rozhoduje, co koupí? Jak firma stanoví svou cenu? Proč vznikají monopoly?*
 
-## Důkazové techniky
+</Tab>
+<Tab label="Makroekonomie">
 
-1. **Přímý důkaz**: předpokládejte $p$, ukažte $q$
-2. **Důkaz sporem**: předpokládejte $\lnot p$, odvoďte rozpor
-3. **Matematická indukce**: bazový případ + indukční krok
+**Makroekonomie** zkoumá ekonomiku **jako celek** — agregátní výstup, cenovou hladinu a národní hospodářskou politiku.
+
+Klíčová témata:
+- **Hrubý domácí produkt (HDP)** a ekonomický růst
+- **Inflace** a celková cenová hladina
+- **Nezaměstnanost** a trh práce v agregátu
+- **Měnová politika** — centrální banka, úrokové sazby, peněžní zásoba
+- **Fiskální politika** — vládní výdaje, zdanění, rozpočtové deficity
+- **Hospodářský cyklus** — expanze, recese, dno, oživení
+- **Platební bilance** a mezinárodní ekonomické vztahy
+
+Makroekonomie se ptá: *Proč vznikají recese? Jak může vláda stimulovat ekonomiku? Jaký je vztah mezi inflací a nezaměstnaností?*
+
+</Tab>
+</Tabs>
+
+### Vzájemný vztah mikro a makro
+
+Mikroekonomie a makroekonomie nejsou izolované disciplíny. Makroekonomické jevy (inflace, nezaměstnanost) jsou výsledkem rozhodování milionů mikroekonomických subjektů. Současná ekonomie stále více usiluje o **mikroekonomické základy makroekonomie** — vysvětlení agregátních jevů na základě individuálního chování.
+
+## Pozitivní vs. normativní ekonomie
+
+K ekonomii lze přistupovat dvěma zásadně odlišnými způsoby:
+
+<Tabs>
+<Tab label="Pozitivní ekonomie">
+
+**Pozitivní ekonomie** se zabývá **objektivním popisem** — co ekonomika *je* a jak *funguje*. Formuluje tvrzení, která lze testovat, ověřit nebo vyvrátit pomocí dat.
+
+Příklady pozitivních tvrzení:
+- „Zvýšení minimální mzdy o 10 % zvýší nezaměstnanost mladých o 2 %."
+- „Inflace v ČR dosáhla v roce 2024 hodnoty 2,8 %."
+- „Snížení úrokových sazeb vede k růstu investičních výdajů."
+- „Při poklesu ceny roste poptávané množství."
+
+Pozitivní ekonomie **nevynáší hodnotové soudy** — popisuje realitu takovou, jaká je.
+
+</Tab>
+<Tab label="Normativní ekonomie">
+
+**Normativní ekonomie** zahrnuje **hodnotové soudy** — co ekonomika *má být* nebo jaké politiky *by měly být* prosazovány. Tato tvrzení nelze prokázat ani vyvrátit pouze na základě dat.
+
+Příklady normativních tvrzení:
+- „Vláda by měla zvýšit minimální mzdu, aby snížila chudobu."
+- „Daně bohatých by měly být vyšší."
+- „Volný obchod je lepší než protekcionismus."
+- „Stát by měl zajistit bezplatné vysokoškolské vzdělání."
+
+Normativní ekonomie odráží osobní, politické nebo etické preference.
+
+</Tab>
+</Tabs>
 
 <Callout type="info">
-Matematická indukce je jako domino: svalte první kostku (bazový případ) a ukažte, že každá kostka svalí další (indukční krok).
+**Jak je rozlišit**: Pokud tvrzení obsahuje slova jako „měl by", „je třeba", „lépe" nebo „spravedlivější", jde pravděpodobně o normativní tvrzení. Pokud popisuje měřitelný vztah, jde o pozitivní tvrzení.
+</Callout>
+
+## Ekonomické subjekty
+
+**Ekonomický subjekt** je jakákoliv entita, která činí ekonomická rozhodnutí. Rozlišujeme čtyři hlavní typy:
+
+### 1. Domácnosti (spotřebitelé)
+
+Domácnosti jsou základní spotřební jednotkou ekonomiky:
+
+- **Vlastní výrobní faktory** (práci, půdu, kapitál) a nabízejí je firmám na faktorových trzích
+- **Přijímají důchody** — mzdy za práci, rentu za půdu, úroky/dividendy za kapitál
+- Mohou dostávat **transferové platby od státu** (důchody, sociální dávky, podpora v nezaměstnanosti)
+- **Platí daně** státu (daň z příjmu, DPH, spotřební daně)
+- **Spotřebovávají** statky a služby s cílem maximalizovat svůj užitek
+- **Spoří** — část příjmu, kterou nespotřebují, ukládají (úspory se mění v investice)
+
+### 2. Firmy (výrobci)
+
+Firmy přeměňují vstupy na výstupy:
+
+- **Najímají výrobní faktory** od domácností (práci, kapitál, půdu)
+- **Vyrábějí statky a služby** pro trh
+- **Získávají tržby** z prodeje svého výstupu
+- **Nesou náklady** — mzdy, renty, úroky, suroviny, energie
+- Jejich cílem je typicky **maximalizace zisku** ($\pi = TR - TC$, kde $TR$ jsou celkové tržby a $TC$ celkové náklady)
+- Rozlišujeme firmy podle právní formy: živnostníci, s.r.o., a.s., družstva
+
+### 3. Stát / vláda
+
+Stát hraje v ekonomice několik rolí:
+
+- **Poskytuje veřejné statky** (národní obrana, infrastruktura, veřejné školství, soudnictví)
+- **Vytváří legislativní rámec** — zákony, regulace, ochrana vlastnických práv
+- **Provádí fiskální politiku** — zdanění a vládní výdaje
+- **Přerozděluje důchody** prostřednictvím transferů a progresivního zdanění
+- **Koriguje tržní selhání** — regulace externalit, monopolů, asymetrických informací
+- **Stabilizuje ekonomiku** — proticyklická hospodářská politika
+
+<Callout type="info">
+Role státu v ekonomice je předmětem zásadních debat. Liberální ekonomové (např. Hayek, Friedman) prosazují minimální zásahy státu, zatímco keynesiánci zdůrazňují potřebu aktivní stabilizační politiky.
+</Callout>
+
+### 4. Zahraniční sektor (zahraničí)
+
+Zahraniční sektor zachycuje mezinárodní ekonomické interakce:
+
+| Pojem | Popis |
+|---|---|
+| **Uzavřená ekonomika** | Neobchoduje s ostatními zeměmi (pouze teoretický model) |
+| **Otevřená ekonomika** | Zapojuje se do mezinárodního obchodu — vyváží a dováží |
+| **Export (vývoz)** | Statky a služby prodávané zahraničním kupujícím |
+| **Import (dovoz)** | Statky a služby nakupované ze zahraničí |
+| **Čistý export** | Export mínus import ($NX = X - M$) |
+| **Platební bilance** | Systematický záznam všech ekonomických transakcí se zahraničím |
+
+V praxi jsou všechny moderní ekonomiky **otevřenými ekonomikami**. Model uzavřené ekonomiky slouží pouze jako teoretické zjednodušení.
+
+## Základní výrobní faktory
+
+Výrobní faktory (faktory produkce) jsou vstupy používané k výrobě statků a služeb. Rozlišujeme tři základní faktory:
+
+<Tabs>
+<Tab label="Práce (Labor)">
+
+**Práce** je cílevědomá lidská činnost zaměřená na výrobu statků a služeb.
+
+- Je **primárním faktorem** — existuje nezávisle na předchozí výrobě
+- **Cenou práce** je **mzda** (wage)
+- Kvalita práce závisí na vzdělání, dovednostech, zkušenostech a zdraví pracovníka
+- Na trhu práce se střetává nabídka práce (od domácností) s poptávkou po práci (od firem)
+- Rozlišujeme **fyzickou** a **duševní** práci
+- Práce je ovlivněna **lidským kapitálem** — investicemi do vzdělání a kvalifikace
+
+</Tab>
+<Tab label="Půda (Land)">
+
+**Půda** zahrnuje veškeré **přírodní zdroje** využívané ve výrobě.
+
+- Zahrnuje zemědělskou půdu, lesy, nerostné suroviny, vodu, vzduch
+- Je **primárním faktorem** — je dána přírodou, není vyrobena
+- **Cenou půdy** je **renta** (rent)
+- Půda je typicky charakteristická **fixní nebo velmi omezenou nabídkou**
+- V širším pojetí zahrnuje i klimatické podmínky a geografickou polohu
+
+</Tab>
+<Tab label="Kapitál (Capital)">
+
+**Kapitál** označuje vyrobené výrobní prostředky — stroje, nástroje, budovy, technologie.
+
+- Je **sekundárním (odvozeným) faktorem** — je výsledkem předchozích výrobních procesů
+- **Cenou kapitálu** je **úrok** nebo **renta** (interest, rent)
+- Kapitál se akumuluje prostřednictvím investic (úspory → výroba kapitálových statků)
+- Rozlišujeme **fyzický kapitál** (stroje, budovy) a **finanční kapitál** (peníze, akcie, dluhopisy)
+- Kapitál podléhá **opotřebení** (depreciaci) — musí být obnovován
+
+</Tab>
+</Tabs>
+
+<Collapse title="Rozšíření: Lidský kapitál a podnikatelství">
+
+Někteří ekonomové identifikují další výrobní faktory:
+
+- **Lidský kapitál** — znalosti, dovednosti a schopnosti vtělené do pracovníků. Buduje se vzděláním a školením a zvyšuje produktivitu práce. Pojem zavedl Gary Becker.
+- **Podnikatelství (entrepreneurship)** — schopnost organizovat ostatní faktory, nést riziko a inovovat. Odměnou podnikatele je **zisk** (profit). Joseph Schumpeter zdůrazňoval roli podnikatele jako hybatele „tvořivé destrukce".
+- **Informace a technologie** — v moderní ekonomice stále důležitější faktor, který zvyšuje produktivitu všech ostatních faktorů.
+
+</Collapse>
+
+### Tabulka výrobních faktorů
+
+| Faktor | Typ | Cena | Příklad |
+|---|---|---|---|
+| **Práce** | Primární | Mzda (wage) | Řidič, učitel, programátor |
+| **Půda** | Primární | Renta (rent) | Zemědělská půda, naleziště ropy |
+| **Kapitál** | Sekundární | Úrok (interest) | Továrna, počítač, software |
+
+## Trh
+
+**Trh** je jakékoliv uspořádání, kde se kupující a prodávající setkávají za účelem směny statků, služeb nebo výrobních faktorů. Je hlavním mechanismem, jehož prostřednictvím se v tržních ekonomikách zodpovídají základní ekonomické otázky.
+
+### Typy trhů
+
+| Typ trhu | Co se obchoduje | Poptávající | Nabízející |
+|---|---|---|---|
+| **Trh statků a služeb** | Finální produkty | Domácnosti | Firmy |
+| **Trh práce** | Pracovní služby | Firmy | Domácnosti |
+| **Trh kapitálu** | Finanční kapitál, stroje | Firmy | Domácnosti / jiné firmy |
+| **Trh půdy** | Půda a přírodní zdroje | Firmy | Vlastníci půdy |
+
+### Funkce peněz
+
+Peníze slouží jako **prostředek směny**, čímž eliminují neefektivitu barteru (naturální směny). Plní tři základní funkce:
+
+1. **Prostředek směny** (medium of exchange) — přijímány při platbě za statky a služby
+2. **Zúčtovací jednotka** (unit of account) — poskytují společné měřítko hodnoty
+3. **Uchovatel hodnoty** (store of value) — umožňují uchovat kupní sílu do budoucna
+
+<Callout type="info">
+Trhy mohou existovat i bez peněz (barter), ale peníze dramaticky snižují **transakční náklady** a umožňují složité ekonomické směny. Historicky peníze prošly vývojem od komoditních (zlato, stříbro) přes papírové po dnešní bezhotovostní a digitální formy.
+</Callout>
+
+### Tržní mechanismus
+
+Na trhu se střetává **nabídka** (supply) a **poptávka** (demand). Jejich interakcí se utváří **tržní cena** a **rovnovážné množství**:
+
+$$
+Q_D(P) = Q_S(P) \implies P^* \text{ (rovnovážná cena)}
+$$
+
+Tržní mechanismus automaticky koordinuje rozhodování milionů nezávislých subjektů. Adam Smith tuto schopnost trhu nazval **neviditelnou rukou** (invisible hand).
+
+## Základní ekonomické otázky
+
+Každá společnost musí zodpovědět tři základní otázky:
+
+1. **Co vyrábět?** — Které statky a služby, v jakém množství?
+2. **Jak vyrábět?** — S jakými technologiemi, kombinacemi faktorů?
+3. **Pro koho vyrábět?** — Jak se výstup rozdělí mezi členy společnosti?
+
+Různé ekonomické systémy odpovídají na tyto otázky různými způsoby:
+
+<Tabs>
+<Tab label="Tržní ekonomika">
+
+Rozhodnutí činí **jednotliví aktéři** prostřednictvím cenového mechanismu. Nabídka a poptávka určují, co se vyrábí, jak a pro koho.
+
+- **Výhody**: efektivnost alokace zdrojů, inovace, svoboda volby spotřebitele
+- **Nevýhody**: nerovnost, tržní selhání, nestabilita (cyklické krize)
+- **Klíčový myslitel**: Adam Smith — „neviditelná ruka trhu"
+- Základní princip: **laissez-faire** — nechte trh fungovat s minimálními zásahy
+
+</Tab>
+<Tab label="Centrálně plánovaná ekonomika">
+
+**Centrální autorita** (typicky stát) činí veškerá rozhodnutí o výrobě a distribuci.
+
+- **Výhody**: může řešit nerovnost, mobilizovat zdroje pro národní cíle
+- **Nevýhody**: neefektivnost, nedostatek motivace, problémy s informacemi, plýtvání
+- **Historické příklady**: Sovětský svaz, Československo před rokem 1989, Čína před reformami
+- Centrální plánování čelí zásadnímu **informačnímu problému** — plánovač nemůže znát preference milionů spotřebitelů
+
+</Tab>
+<Tab label="Zvyková ekonomika">
+
+Ekonomická rozhodnutí se řídí **tradicí a zvyky** předávanými z generace na generaci.
+
+- Vyskytuje se v subsistenčních komunitách a domorodých společnostech
+- Výrobní postupy, role a distribuce jsou určeny kulturními normami
+- V moderním světě velmi omezená
+
+</Tab>
+<Tab label="Smíšená ekonomika">
+
+Většina reálných ekonomik je **smíšená** — kombinuje tržní mechanismy se státními zásahy.
+
+- Soukromý sektor funguje prostřednictvím trhů
+- Vláda reguluje, daní, poskytuje veřejné statky a přerozděluje
+- **Příklady**: většina evropských zemí, USA, Japonsko, Česká republika
+- Míra státních zásahů se v různých zemích liší — od liberálnějších (USA, VB) po více regulované (skandinávské země)
+
+</Tab>
+</Tabs>
+
+## Koloběh ekonomiky
+
+Interakce mezi ekonomickými subjekty lze znázornit jako **ekonomický koloběh**:
+
+1. **Domácnosti** nabízejí výrobní faktory (práci, půdu, kapitál) **firmám** na faktorových trzích
+2. **Firmy** platí domácnostem důchody (mzdy, renty, úroky, zisky)
+3. **Domácnosti** vydávají důchody na statky a služby od firem na trzích statků a služeb
+4. **Firmy** získávají tržby z těchto prodejů
+5. **Stát** vybírá daně, poskytuje veřejné statky a provádí transferové platby
+6. **Zahraniční sektor** se účastní prostřednictvím exportu a importu
+
+$$
+\text{Celkový důchod} = \text{Celkové výdaje} = \text{Celkový výstup (HDP)}
+$$
+
+<Callout type="info">
+Tato identita — celkový důchod se rovná celkovým výdajům se rovná celkovému výstupu — je jednou z nejzákladnějších myšlenek makroekonomie a tvoří základ národního účetnictví.
+</Callout>
+
+## Shrnutí
+
+| Pojem | Klíčový bod |
+|---|---|
+| Ekonomie vs. ekonomika | Věda vs. reálný systém |
+| Mikro vs. makro | Jednotliví aktéři vs. agregátní ekonomika |
+| Pozitivní vs. normativní | Co *je* vs. co *by mělo být* |
+| Ekonomické subjekty | Domácnosti, firmy, stát, zahraničí |
+| Výrobní faktory | Práce (mzda), půda (renta), kapitál (úrok) |
+| Trh | Kde se střetává nabídka s poptávkou; trhy statků a faktorové trhy |
+| Ekonomické otázky | Co, jak, pro koho? → tržní, plánovaná, zvyková, smíšená |
+
+<Quiz>
+  <Question text="Který z následujících výroků je pozitivní ekonomické tvrzení?">
+    <Option value="a">Vláda by měla snížit daně malým podnikům.</Option>
+    <Option value="b" correct>Zvýšení úrokových sazeb snižuje spotřebitelské úvěry.</Option>
+    <Option value="c">Bezplatné zdravotnictví je základním lidským právem.</Option>
+    <Option value="d">Příjmová nerovnost je největší problém ekonomiky.</Option>
+  </Question>
+  <Question text="Který výrobní faktor je považován za sekundární (odvozený)?">
+    <Option value="a">Práce</Option>
+    <Option value="b">Půda</Option>
+    <Option value="c" correct>Kapitál</Option>
+    <Option value="d">Přírodní zdroje</Option>
+  </Question>
+  <Question text="V tržní ekonomice jsou tři základní ekonomické otázky zodpovídány primárně:">
+    <Option value="a">Centrální vládou</Option>
+    <Option value="b">Kulturními tradicemi</Option>
+    <Option value="c" correct>Cenovým mechanismem a jednotlivými aktéry</Option>
+    <Option value="d">Mezinárodními organizacemi</Option>
+  </Question>
+  <Question text="Jaký je rozdíl mezi ekonomií a ekonomikou?">
+    <Option value="a">Jsou to synonyma</Option>
+    <Option value="b" correct>Ekonomie je věda, ekonomika je reálný systém</Option>
+    <Option value="c">Ekonomie je praxe, ekonomika je teorie</Option>
+    <Option value="d">Ekonomie studuje pouze mikroekonomii</Option>
+  </Question>
+</Quiz>
+
+## Co dál
+
+Se základními pojmy na místě jste připraveni prozkoumat, jak fungují jednotlivé trhy. Další článek pokrývá **poptávku, nabídku a tržní rovnováhu** — základní stavební kameny mikroekonomické analýzy.
+
+<Callout type="info">
+**Doporučujeme pokračovat**: [Poptávka, nabídka a trh](/general-economics/demand-supply-market) — přímo navazuje na základy probrané zde.
 </Callout>

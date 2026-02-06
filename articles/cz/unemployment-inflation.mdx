@@ -1,0 +1,478 @@
+---
+title:
+  ru: "Безработица и инфляция"
+  en: "Unemployment and Inflation"
+  cz: "Nezaměstnanost a inflace"
+slug: "unemployment-inflation"
+author: "kopecky"
+keywords:
+  ru: ["безработица", "инфляция", "ИПЦ", "кривая Филлипса", "ценовая стабильность"]
+  en: ["unemployment", "inflation", "CPI", "Phillips curve", "price stability"]
+  cz: ["nezaměstnanost", "inflace", "CPI", "Phillipsova křivka", "cenová stabilita"]
+created: "2025-04-01"
+updated: "2025-09-15"
+difficulty: "intermediate"
+estimatedReadTime: 24
+prerequisites:
+  - "introduction"
+  - "economic-indicators"
+---
+
+# Nezaměstnanost a inflace
+
+Nezaměstnanost a inflace patří k nejsledovanějším makroekonomickým ukazatelům. Ovlivňují každodenní život milionů lidí a stojí v centru debat o hospodářské politice. Tento článek podrobně rozebírá jejich definice, měření, příčiny, důsledky a vzájemný vztah zachycený Phillipsovou křivkou.
+
+<Callout type="info">
+Tento článek navazuje na **Úvod do ekonomie** a **Ekonomické ukazatele**. Než začnete, ujistěte se, že rozumíte pojmům HDP a oběh důchodů v ekonomice.
+</Callout>
+
+---
+
+## Část I: Nezaměstnanost
+
+### Kategorie trhu práce
+
+Populaci v produktivním věku (15–64 let) lze rozdělit do tří vzájemně se vylučujících skupin:
+
+| Kategorie | Definice | Příklad |
+|---|---|---|
+| **Zaměstnaní** | Osoby, které mají placené zaměstnání (plný či částečný úvazek) nebo jsou OSVČ | Dělník v továrně, freelance grafik |
+| **Nezaměstnaní** | Osoby bez práce, které aktivně hledají zaměstnání a jsou schopné do práce nastoupit | Absolvent rozesílající životopisy |
+| **Ekonomicky neaktivní** | Osoby, které nepracují a aktivně práci nehledají | Studenti, důchodci, osoby na rodičovské dovolené |
+
+**Pracovní síla** (ekonomicky aktivní obyvatelstvo) je součtem zaměstnaných a nezaměstnaných:
+
+$$
+L = E + U
+$$
+
+kde $L$ je pracovní síla, $E$ je počet zaměstnaných a $U$ je počet nezaměstnaných.
+
+**Míra nezaměstnanosti** vyjadřuje podíl nezaměstnaných na pracovní síle:
+
+$$
+u = \frac{U}{L} \times 100\%
+$$
+
+<Callout type="warning">
+Míra nezaměstnanosti **nezahrnuje** tzv. odrazené pracovníky (discouraged workers) — osoby, které hledání práce vzdaly. Oficiální statistika tak může skutečný rozsah nezaměstnanosti podceňovat. Statistici proto sledují i širší ukazatele (např. míru podvyužití práce).
+</Callout>
+
+### Další ukazatele trhu práce
+
+Kromě míry nezaměstnanosti se sledují také:
+
+- **Míra ekonomické aktivity** — podíl pracovní síly na populaci v produktivním věku
+- **Míra zaměstnanosti** — podíl zaměstnaných na populaci v produktivním věku
+- **Míra dlouhodobé nezaměstnanosti** — podíl osob nezaměstnaných déle než 12 měsíců
+
+### Druhy nezaměstnanosti
+
+<Tabs>
+<Tab label="Frikční">
+
+**Frikční nezaměstnanost** vzniká, když pracovníci dočasně přecházejí mezi zaměstnáními. Charakteristiky:
+
+- Je **krátkodobá** a zpravidla **dobrovolná**
+- Vzniká v důsledku běžného procesu hledání práce — odchod za lepším místem, vstup absolventů na trh práce, stěhování
+- Je přirozenou součástí každé dynamické ekonomiky
+- Snižuje se zlepšením informací na trhu práce (pracovní portály, agentury, úřady práce)
+
+Frikční nezaměstnanost je považována za zdravou — odráží mobilitu a přizpůsobování na trhu práce.
+
+</Tab>
+<Tab label="Strukturální">
+
+**Strukturální nezaměstnanost** vzniká v důsledku **nesouladu** (mismatch) mezi kvalifikací pracovníků a požadavky zaměstnavatelů. Příčiny:
+
+- **Technologické změny** — automatizace a robotizace nahrazují určité profese (např. montážní dělníci v automobilovém průmyslu)
+- **Úpadek odvětví** — celá odvětví se zmenšují nebo zanikají (např. těžba uhlí v Ostravsko-karvinském regionu)
+- **Geografický nesoulad** — pracovní místa jsou v jiných regionech než pracovníci
+- **Legislativní bariéry** — vysoká minimální mzda, přísná regulace pracovního trhu, ochrana zaměstnanců ztěžující propouštění
+- **Nedostatečné vzdělání** — školy neprodukují absolventy s potřebnými dovednostmi
+
+Strukturální nezaměstnanost je typicky **dlouhodobá** a vyžaduje rekvalifikaci, vzdělávání nebo mobilitu pracovní síly.
+
+</Tab>
+<Tab label="Cyklická">
+
+**Cyklická nezaměstnanost** je způsobena **poklesy v hospodářském cyklu**. Při recesi:
+
+- Klesá agregátní poptávka → firmy omezují výrobu → propouštějí zaměstnance
+- Roste v období recese a klesá v období expanze
+- Je typem nezaměstnanosti, na který se makroekonomická politika primárně zaměřuje
+
+Cyklická nezaměstnanost představuje rozdíl mezi skutečnou mírou nezaměstnanosti a přirozenou mírou:
+
+$$
+u_{\text{cyklická}} = u - u^*
+$$
+
+</Tab>
+<Tab label="Sezónní">
+
+**Sezónní nezaměstnanost** je způsobena pravidelnými, předvídatelnými výkyvy poptávky po práci:
+
+- Pracovníci v cestovním ruchu mimo sezónu
+- Zemědělští dělníci po sklizni
+- Stavební dělníci v zimních měsících
+- Prodavači po vánoční sezóně
+
+Statistické úřady proto zveřejňují **sezónně očištěné** údaje o nezaměstnanosti.
+
+</Tab>
+</Tabs>
+
+### Přirozená míra nezaměstnanosti
+
+**Přirozená míra nezaměstnanosti** ($u^*$) je míra nezaměstnanosti, která převládá, když ekonomika produkuje na úrovni svého **potenciálního produktu**. Zahrnuje:
+
+- Frikční nezaměstnanost
+- Strukturální nezaměstnanost
+- **Nezahrnuje** cyklickou nezaměstnanost
+
+$$
+u^* = u_{\text{frikční}} + u_{\text{strukturální}}
+$$
+
+Tento koncept úzce souvisí s **NAIRU** — *Non-Accelerating Inflation Rate of Unemployment* (míra nezaměstnanosti neurychlující inflaci). Když se skutečná nezaměstnanost rovná NAIRU, neexistuje ani inflační, ani deflační tlak.
+
+<Callout type="info">
+Přirozená míra **není konstantní** — mění se v čase vlivem demografie, institucí trhu práce, technologií a vládních politik. V České republice se odhaduje zhruba na **3–5 %**, přičemž v posledních letech se pohybuje spíše na spodní hranici díky napjatému trhu práce.
+</Callout>
+
+### Důsledky nezaměstnanosti
+
+Nezaměstnanost přináší závažné náklady pro jednotlivce i společnost:
+
+#### Ekonomické náklady
+
+- **Ztráta výstupu** — ekonomika produkuje pod svým potenciálem. **Okunův zákon** říká, že za každý procentní bod, o který skutečná míra nezaměstnanosti převyšuje přirozenou míru, je reálný HDP přibližně **2 % pod** potenciálním HDP.
+
+$$
+\frac{Y - Y^*}{Y^*} \approx -2 \times (u - u^*)
+$$
+
+- Nižší daňové příjmy a vyšší výdaje na sociální dávky → zvýšení rozpočtového deficitu
+- Ztráta lidského kapitálu — nezaměstnaní ztrácejí kvalifikaci a pracovní návyky
+
+#### Sociální a osobní náklady
+
+- **Hystereze** — dlouhodobá nezaměstnanost zhoršuje budoucí zaměstnatelnost
+- Psychologické dopady — deprese, úzkost, ztráta sebeúcty
+- Vyšší míra chudoby, kriminality, rozpadu rodin
+- Regionální úpadek v oblastech s koncentrovanou nezaměstnaností
+
+<Collapse title="Nezaměstnanost v České republice — klíčové trendy">
+
+Česká republika má dlouhodobě jednu z nejnižších měr nezaměstnanosti v EU:
+
+| Období | Míra nezaměstnanosti | Kontext |
+|---|---|---|
+| 1990. léta | Nárůst z ~3 % na 8–9 % | Transformace, restrukturalizace státních podniků |
+| 2004–2008 | Pokles na 4–5 % | Vstup do EU, silný hospodářský růst |
+| 2009–2010 | Vzestup na ~7 % | Globální finanční krize |
+| 2015–2019 | Pokles pod 2 % | Silná poptávka v průmyslu, nedostatek pracovní síly |
+| 2020 | Mírný nárůst na 3–4 % | Pandemie COVID-19 (zmírnění programem Antivirus) |
+| 2022–2024 | Návrat na 2,5–3,5 % | Opětovné oživení trhu práce |
+
+**Regionální rozdíly** zůstávají výrazné — Moravskoslezský a Ústecký kraj mají tradičně vyšší nezaměstnanost než Praha či Jihomoravský kraj. Strukturální nezaměstnanost v těchto regionech souvisí s útlumem těžby a těžkého průmyslu.
+
+**Klíčové instituce**: Úřad práce ČR, Ministerstvo práce a sociálních věcí (MPSV), Český statistický úřad (ČSÚ).
+
+</Collapse>
+
+---
+
+## Část II: Inflace
+
+### Definice a základní pojmy
+
+**Inflace** je trvalý růst **celkové cenové hladiny** v čase. Je nutné rozlišovat:
+
+| Pojem | Definice |
+|---|---|
+| **Inflace** | Trvalý růst celkové cenové hladiny |
+| **Deflace** | Trvalý pokles celkové cenové hladiny |
+| **Dezinflace** | Pokles *míry* inflace (ceny stále rostou, ale pomaleji) |
+
+<Callout type="warning">
+Inflace **neznamená** zdražení jednoho konkrétního zboží. Pokud zdraží chleba, ale ostatní ceny klesnou, jde o změnu relativních cen, nikoli o inflaci. Inflace znamená růst **obecné cenové hladiny** — průměru cen všech statků a služeb.
+</Callout>
+
+### Druhy inflace podle tempa
+
+<Tabs>
+<Tab label="Mírná (plíživá)">
+
+**Mírná inflace** — jednociferné roční tempo (1–9 %).
+
+- Obecně považována za zvládnutelnou a ekonomicky příznivou
+- Centrální banky typicky cílují na **2 %**
+- Podporuje utrácení oproti hromadění hotovosti
+- Kompatibilní se stabilním ekonomickým růstem
+- Snižuje reálnou hodnotu dluhů — usnadňuje zadluženým splácení
+
+</Tab>
+<Tab label="Pádivá (galloping)">
+
+**Pádivá inflace** — dvou- či trojciferné roční tempo (10–999 %).
+
+- Rychle eroduje hodnotu peněz
+- Smlouvy v nominálních hodnotách se stávají obtížně vymahatelnými
+- Úrokové sazby prudce rostou — věřitelé požadují kompenzaci za očekávanou inflaci
+- Ekonomické plánování se stává extrémně obtížným
+- Narůstá nejistota a klesá ochota investovat
+
+</Tab>
+<Tab label="Hyperinflace">
+
+**Hyperinflace** — inflace přesahující přibližně **1 000 % ročně** (někdy definována jako >50 % měsíčně).
+
+- Peníze ztrácejí své základní funkce — lidé přecházejí na barter nebo zahraniční měny
+- Vyžaduje radikální měnovou reformu (zavedení nové měny, currency board apod.)
+
+**Historické příklady:**
+- **Německo (1921–1923)**: ceny se zdvojnásobovaly každých několik dní; lidé vozili peníze v kolečkách
+- **Zimbabwe (2007–2009)**: roční inflace dosáhla odhadem $2{,}3 \times 10^{10}$ %; byly tištěny bankovky v hodnotě 100 bilionů dolarů
+- **Venezuela (od 2016)**: přetrvávající krize s inflací přesahující 1 000 000 % v roce 2018
+
+**Společné rysy hyperinflací:**
+1. Masivní deficitní financování státních výdajů tiskem peněz
+2. Ztráta důvěry v domácí měnu
+3. Spirála mzdy–ceny se vymkne kontrole
+4. Řešení vyžaduje komplexní stabilizační program
+
+</Tab>
+</Tabs>
+
+### Příčiny inflace
+
+<Tabs>
+<Tab label="Poptávková (demand-pull)">
+
+**Poptávková inflace** nastává, když **agregátní poptávka převyšuje agregátní nabídku** při dané cenové hladině.
+
+- „Příliš mnoho peněz honící příliš málo zboží"
+- Příčiny: expanzivní fiskální politika (zvýšení vládních výdajů), expanzivní monetární politika (nízké úrokové sazby, kvantitativní uvolňování), růst spotřebitelské a podnikatelské důvěry, exportní boom
+- Křivka AD se posouvá doprava, zatímco AS nestíhá reagovat
+
+$$
+AD \uparrow \quad \Rightarrow \quad P \uparrow, \quad Y \uparrow \text{ (krátkodobě)}
+$$
+
+V krátkém období roste jak cenová hladina, tak reálný výstup. V delším období se ekonomika přizpůsobuje a výstup se vrací k potenciálu při vyšší cenové hladině.
+
+</Tab>
+<Tab label="Nákladová (cost-push)">
+
+**Nákladová inflace** vzniká v důsledku růstu **výrobních nákladů**, který snižuje agregátní nabídku.
+
+- Rostou ceny vstupů: energie, surovin, mezd
+- Křivka AS se posouvá doleva → ceny rostou, výstup klesá
+- Často vyvolána **nabídkovými šoky**
+
+**Příklad**: **Evropská energetická krize 2022** — po ruské invazi na Ukrajinu prudce vzrostly ceny zemního plynu a ropy. Energeticky náročná odvětví přenesla náklady na spotřebitele, čímž inflace v eurozóně i v České republice překročila **15 %**. V ČR dosáhla inflace v lednu 2023 hodnoty 16,7 % meziročně.
+
+$$
+AS \downarrow \quad \Rightarrow \quad P \uparrow, \quad Y \downarrow \text{ (riziko stagflace)}
+$$
+
+</Tab>
+</Tabs>
+
+### Zvláštní formy inflace
+
+| Forma | Popis |
+|---|---|
+| **Očekávaná inflace** | Inflace, kterou ekonomické subjekty předvídají a mohou se na ni připravit (indexace smluv, přizpůsobení mezd) |
+| **Neočekávaná inflace** | Inflace, která přichází jako překvapení — způsobuje přerozdělení bohatství a zkreslení |
+| **Skrytá inflace** | Cenová regulace maskuje inflační tlaky; místo cenového růstu vznikají nedostatky zboží |
+| **Potlačená inflace** | Obdobně jako skrytá — stát uměle drží ceny pod rovnovážnou úrovní |
+| **Stagflace** | Současný výskyt stagnace (nízký/záporný růst) a vysoké inflace — obzvláště nebezpečná, protože standardní nástroje politiky působí protichůdně |
+
+<Callout type="error">
+**Stagflace** je jednou z nejnáročnějších makroekonomických situací. Stimulace ekonomiky zhoršuje inflaci; boj s inflací zhoršuje nezaměstnanost. Nejznámější epizody stagflace přinesly **ropné šoky v 70. letech** 20. století.
+</Callout>
+
+### Důsledky inflace
+
+Inflace, zejména neočekávaná, má dalekosáhlé důsledky:
+
+1. **Snižuje kupní sílu** — za stejné množství peněz si koupíte méně zboží
+2. **Poškozuje věřitele a střadatele** — reálná hodnota úspor a pohledávek klesá
+3. **Zvýhodňuje dlužníky** — reálná zátěž dluhu se snižuje
+4. **Snižuje reálné mzdy** — pokud nominální mzdy nedrží krok s cenami
+5. **Vytváří nejistotu** — ztěžuje podnikatelské plánování a dlouhodobé smlouvy
+6. **Zkresluje investiční rozhodování** — prostředky proudí do inflačních zajištění (nemovitosti, zlato) místo produktivních investic
+7. **Mění spotřební vzorce** — lidé urychlují nákupy v očekávání dalšího zdražení
+
+<Collapse title="Redistribuční efekty inflace — detailněji">
+
+Inflace přerozděluje bohatství mezi různými skupinami:
+
+- **Věřitelé → dlužníci**: Pokud si půjčíte 1 mil. Kč při 3% úroku a inflace je 5 %, reálně vrátíte méně, než jste si půjčili. Věřitel ztrácí, dlužník získává.
+- **Zaměstnanci s fixním platem → zaměstnavatelé**: Pokud nominální mzda neroste tempem inflace, reálná mzda klesá.
+- **Důchodci a příjemci pevných dávek**: Pokud valorizace nedostatečně reflektuje skutečnou inflaci, klesá jejich životní úroveň.
+- **Stát jako dlužník**: Vysoká inflace snižuje reálnou hodnotu státního dluhu, ale může vést ke ztrátě důvěry investorů.
+
+Proto je **cenová stabilita** jedním z primárních cílů hospodářské politiky.
+
+</Collapse>
+
+### Měření inflace
+
+#### Index spotřebitelských cen (CPI)
+
+**CPI** (Consumer Price Index) je nejpoužívanější měřítko inflace. Sleduje náklady na fixní **spotřební koš** statků a služeb v čase.
+
+$$
+CPI = \frac{\sum p_{1i} \cdot w_i}{\sum w_i} \times 100
+$$
+
+kde $p_{1i}$ představuje běžnou cenu položky $i$ a $w_i$ její váhu v koši.
+
+**Míra inflace** je procentní změna CPI:
+
+$$
+\pi = \frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \times 100\%
+$$
+
+#### Další cenové indexy
+
+| Index | Co měří |
+|---|---|
+| **Deflátor HDP** | Cenovou změnu všech domácí produkcí vytvořených statků a služeb |
+| **Index cen výrobců (PPI)** | Ceny obdržené domácími producenty — předstihový ukazatel spotřebitelské inflace |
+| **Harmonizovaný index (HICP)** | EU standardizovaný CPI pro mezinárodní srovnání |
+
+#### Spotřební koš — metodika ČSÚ
+
+Český statistický úřad (**ČSÚ**) sestavuje spotřební koš na základě šetření o výdajích domácností. Koš zahrnuje:
+
+| Kategorie | Příklady | Přibližná váha |
+|---|---|---|
+| **Potraviny a nealkoholické nápoje** | Chléb, maso, mléčné výrobky, ovoce, zelenina | ~20 % |
+| **Bydlení, voda, energie** | Nájemné, elektřina, plyn, teplo | ~25 % |
+| **Doprava** | Pohonné hmoty, veřejná doprava, automobily | ~10 % |
+| **Nepotravinářské zboží** | Oděvy, elektronika, nábytek | ~15 % |
+| **Služby** | Zdravotnictví, vzdělávání, komunikace, rekreace | ~15 % |
+| **Ostatní** | Alkohol, tabák, stravování | ~15 % |
+
+Váhy odrážejí podíl každé kategorie na průměrných výdajích domácností a aktualizují se obvykle každé 1–2 roky. ČSÚ rovněž vypočítává **jádrovou inflaci** (očištěnou o regulované ceny a nepřímé daně).
+
+<Callout type="info">
+CPI je zveřejňován měsíčně. ČSÚ publikuje i další varianty — např. čistou inflaci, korigovanou inflaci a index životních nákladů. Pro srovnání v rámci EU se používá harmonizovaný index HICP.
+</Callout>
+
+---
+
+## Část III: Phillipsova křivka
+
+### Krátkodobá Phillipsova křivka
+
+V roce 1958 ekonom A. W. Phillips pozoroval empirický **inverzní vztah** mezi mírou nezaměstnanosti a mírou mzdové inflace ve Velké Británii. Toto pozorování bylo zobecněno na vztah mezi nezaměstnaností a cenovou inflací:
+
+$$
+\pi = \pi^e - \beta(u - u^*) + \varepsilon
+$$
+
+kde $\pi$ je skutečná míra inflace, $\pi^e$ je očekávaná inflace, $u$ je skutečná míra nezaměstnanosti, $u^*$ je přirozená míra, $\beta > 0$ je parametr citlivosti inflace na mezeru nezaměstnanosti a $\varepsilon$ zachycuje nabídkové šoky.
+
+V **krátkém období** existuje kompromis (tradeoff):
+
+- Nižší nezaměstnanost → vyšší inflace
+- Vyšší nezaměstnanost → nižší inflace
+- Tvůrci hospodářské politiky se mohou „pohybovat po" krátkodobé Phillipsově křivce
+
+### Dlouhodobá Phillipsova křivka
+
+Milton Friedman a Edmund Phelps v 60. letech argumentovali, že krátkodobý kompromis **v dlouhém období mizí**:
+
+1. Pracovníci a firmy přizpůsobují svá **inflační očekávání**
+2. Pokud se vláda snaží udržet nezaměstnanost pod přirozenou mírou, očekávaná inflace roste
+3. Krátkodobá křivka se **posouvá nahoru** — ekonomika skončí s vyšší inflací, ale stejnou nezaměstnaností
+4. Proces se opakuje → neustále se zrychlující inflace
+
+**Dlouhodobá Phillipsova křivka (LRPC)** je **vertikální** na úrovni přirozené míry nezaměstnanosti:
+
+$$
+u = u^* \quad \text{(v dlouhém období, nezávisle na } \pi \text{)}
+$$
+
+<Callout type="info">
+**Klíčový závěr**: V dlouhém období neexistuje kompromis mezi inflací a nezaměstnaností. Pokusy trvale snížit nezaměstnanost pod přirozenou míru vedou pouze k neustále se zrychlující inflaci — proto termín **NAIRU** (míra nezaměstnanosti neurychlující inflaci).
+</Callout>
+
+| Vlastnost | Krátkodobá Phillipsova křivka | Dlouhodobá Phillipsova křivka |
+|---|---|---|
+| Tvar | Klesající | Vertikální |
+| Kompromis | Ano — nižší $u$ → vyšší $\pi$ | Žádný kompromis |
+| Poloha | Závisí na $\pi^e$ (očekávaná inflace) | Fixní na $u^*$ |
+| Implikace pro politiku | Krátkodobá stabilizace možná | Pouze strukturální reformy mohou snížit $u^*$ |
+
+<Collapse title="Phillipsova křivka v praxi — historický kontext">
+
+- **1960. léta**: Phillipsova křivka se zdála empiricky potvrzena — vlády „jezdily" po křivce, volily kombinaci inflace a nezaměstnanosti.
+- **1970. léta**: Ropné šoky vyvolaly stagflaci — vysoká inflace i vysoká nezaměstnanost současně. Původní Phillipsova křivka selhala.
+- **Friedman-Phelpsova kritika**: Rozlišení krátkodobé a dlouhodobé křivky. Racionální očekávání (Robert Lucas).
+- **Současnost**: Vztah mezi inflací a nezaměstnaností je slabší, než předpokládal původní model. Globalizace, kotvení inflačních očekávání centrálními bankami a strukturální změny na trhu práce komplikují jednoduchý inverzní vztah.
+
+</Collapse>
+
+---
+
+## Shrnutí
+
+| Pojem | Klíčová myšlenka |
+|---|---|
+| Míra nezaměstnanosti | $u = U / L \times 100\%$ — podíl nezaměstnaných na pracovní síle |
+| Druhy nezaměstnanosti | Frikční, strukturální, cyklická, sezónní |
+| Přirozená míra | $u^* =$ frikční + strukturální; bez cyklické složky |
+| Okunův zákon | 1 p.b. nad přirozenou mírou ≈ 2 % ztráta HDP |
+| Inflace | Trvalý růst celkové cenové hladiny |
+| CPI | Vážený index cen spotřebního koše |
+| Poptávková vs. nákladová inflace | Nadměrná poptávka vs. rostoucí výrobní náklady |
+| Phillipsova křivka (KR) | Inverzní vztah: nižší $u$ → vyšší $\pi$ |
+| Phillipsova křivka (DR) | Vertikální na $u^*$ — žádný trvalý kompromis |
+
+<Quiz>
+  <Question text="Co zahrnuje přirozená míra nezaměstnanosti?">
+    <Option value="a">Pouze frikční nezaměstnanost</Option>
+    <Option value="b" correct>Frikční a strukturální nezaměstnanost</Option>
+    <Option value="c">Pouze cyklickou nezaměstnanost</Option>
+    <Option value="d">Všechny druhy včetně cyklické</Option>
+  </Question>
+  <Question text="Podle Okunova zákona, pokud je nezaměstnanost o 2 procentní body nad přirozenou mírou, reálný HDP je přibližně:">
+    <Option value="a">2 % pod potenciálem</Option>
+    <Option value="b">1 % pod potenciálem</Option>
+    <Option value="c" correct>4 % pod potenciálem</Option>
+    <Option value="d">6 % pod potenciálem</Option>
+  </Question>
+  <Question text="Evropská energetická krize 2022 je příkladem:">
+    <Option value="a">Poptávkové inflace</Option>
+    <Option value="b" correct>Nákladové inflace</Option>
+    <Option value="c">Hyperinflace</Option>
+    <Option value="d">Dezinflace</Option>
+  </Question>
+  <Question text="Co říká dlouhodobá Phillipsova křivka?">
+    <Option value="a">Nižší nezaměstnanost vždy znamená vyšší inflaci</Option>
+    <Option value="b">Inflace a nezaměstnanost jsou pozitivně korelovány</Option>
+    <Option value="c" correct>V dlouhém období neexistuje kompromis mezi inflací a nezaměstnaností</Option>
+    <Option value="d">Přirozená míra nezaměstnanosti je nulová</Option>
+  </Question>
+  <Question text="Která instituce v ČR zodpovídá za měření inflace?">
+    <Option value="a">Česká národní banka</Option>
+    <Option value="b" correct>Český statistický úřad (ČSÚ)</Option>
+    <Option value="c">Ministerstvo financí</Option>
+    <Option value="d">Úřad práce ČR</Option>
+  </Question>
+</Quiz>
+
+## Co dál
+
+Porozumění nezaměstnanosti a inflaci vás připraví na další téma: **Hospodářský cyklus a hospodářská politika** — kde prozkoumáme, jak vlády a centrální banky využívají fiskální a monetární nástroje ke stabilizaci ekonomiky.
+
+<Callout type="info">
+**Doporučujeme pokračovat**: [Hospodářský cyklus a hospodářská politika](/general-economics/business-cycle-policy) — zkoumá, jak tvůrci hospodářské politiky reagují na nezaměstnanost a inflaci prostřednictvím fiskálních a monetárních nástrojů.
+</Callout>
