@@ -1,0 +1,20 @@
+{
+  "name": "subject-discrete-mathematics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Wikipefia subject content repository: Discrete Mathematics",
+  "scripts": {
+    "validate": "wikipefia-mdx validate . --type subject",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@wikipefia/mdx-compiler": "^1.0.0",
+    "@types/node": "^22",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.6.2",
+  "engines": {
+    "node": ">=22"
+  }
+}
