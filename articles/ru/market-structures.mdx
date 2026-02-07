@@ -212,9 +212,9 @@ MR = P + Q \cdot \frac{dP}{dQ} < P
 $$
 
 <Graph title="Монополия: спрос, MR и MC" xLabel="Количество (Q)" yLabel="Цена / Издержки" xDomain={[0, 15]} yDomain={[0, 50]}>
-  <Plot fn={(q, v) => v.a - v.b * q} color="#0066cc" label="Спрос (D = AR)" />
-  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="MR" dashed />
-  <Plot fn={(q, v) => v.mc0 + v.mc1 * q} color="#22863a" label="MC" />
+  <Plot expr="a - b * x" color="#0066cc" label="Спрос (D = AR)" />
+  <Plot expr="a - 2 * b * x" color="#ff0000" label="MR" dashed />
+  <Plot expr="mc0 + mc1 * x" color="#22863a" label="MC" />
   <Slider name="a" min={20} max={60} default={40} step={1} label="Точка пересечения спроса (a)" />
   <Slider name="b" min={1} max={4} default={2} step={0.1} label="Наклон спроса (b)" />
   <Slider name="mc0" min={0} max={15} default={5} step={1} label="Точка пересечения MC" />

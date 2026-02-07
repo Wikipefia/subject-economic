@@ -53,8 +53,8 @@ Když $MU = 0$, celkový užitek dosahuje svého maxima. Nad tento bod spotřeba
 </Callout>
 
 <Graph title="Celkový a mezní užitek" xLabel="Spotřebované množství (q)" yLabel="Užitek" xDomain={[0, 8]} yDomain={[-5, 35]}>
-  <Plot fn={(q, v) => v.a * q - v.b * q * q} color="#0066cc" label="Celkový užitek (TU)" />
-  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="Mezní užitek (MU)" />
+  <Plot expr="a * x - b * x^2" color="#0066cc" label="Celkový užitek (TU)" />
+  <Plot expr="a - 2 * b * x" color="#ff0000" label="Mezní užitek (MU)" />
   <Slider name="a" min={5} max={20} default={12} step={0.5} label="Počáteční MU (a)" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Míra klesání (b)" />
 </Graph>
@@ -164,13 +164,13 @@ Sklon rozpočtové přímky závisí pouze na **poměru cen** $P_1/P_2$, nikoliv
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Příjem (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Cena statku 1 (P₁)" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Cena statku 2 (P₂)" />
-  <Value label="Max statek 1 (Y/P₁)" fn={(v) => `${(v.y / v.p1).toFixed(1)} units`} />
-  <Value label="Max statek 2 (Y/P₂)" fn={(v) => `${(v.y / v.p2).toFixed(1)} units`} />
-  <Value label="Sklon rozpočtové přímky (−P₁/P₂)" fn={(v) => `${(-v.p1 / v.p2).toFixed(3)}`} />
+  <Value label="Max statek 1 (Y/P₁)" expr="y / p1" decimals={1} suffix=" units" />
+  <Value label="Max statek 2 (Y/P₂)" expr="y / p2" decimals={1} suffix=" units" />
+  <Value label="Sklon rozpočtové přímky (−P₁/P₂)" expr="-p1 / p2" decimals={3} />
 </Interactive>
 
 <Graph title="Rozpočtové omezení" xLabel="Statek 1 (q₁)" yLabel="Statek 2 (q₂)" xDomain={[0, 30]} yDomain={[0, 25]}>
-  <Plot fn={(q1, v) => (v.y - v.p1 * q1) / v.p2} color="#1a1a1a" label="Rozpočtová přímka" />
+  <Plot expr="(y - p1 * x) / p2" color="#1a1a1a" label="Rozpočtová přímka" />
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Příjem (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Cena statku 1" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Cena statku 2" />

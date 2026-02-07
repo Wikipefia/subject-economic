@@ -53,8 +53,8 @@ When $MU = 0$, total utility is at its maximum. Beyond this point, consuming mor
 </Callout>
 
 <Graph title="Total and Marginal Utility" xLabel="Quantity consumed (q)" yLabel="Utility" xDomain={[0, 8]} yDomain={[-5, 35]}>
-  <Plot fn={(q, v) => v.a * q - v.b * q * q} color="#0066cc" label="Total Utility (TU)" />
-  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="Marginal Utility (MU)" />
+  <Plot expr="a * x - b * x^2" color="#0066cc" label="Total Utility (TU)" />
+  <Plot expr="a - 2 * b * x" color="#ff0000" label="Marginal Utility (MU)" />
   <Slider name="a" min={5} max={20} default={12} step={0.5} label="Initial MU (a)" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Diminishing rate (b)" />
 </Graph>
@@ -164,13 +164,13 @@ The slope of the budget line depends only on the **ratio of prices** $P_1/P_2$, 
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Income (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Price of Good 1 (P₁)" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Price of Good 2 (P₂)" />
-  <Value label="Max Good 1 (Y/P₁)" fn={(v) => `${(v.y / v.p1).toFixed(1)} units`} />
-  <Value label="Max Good 2 (Y/P₂)" fn={(v) => `${(v.y / v.p2).toFixed(1)} units`} />
-  <Value label="Budget Line Slope (−P₁/P₂)" fn={(v) => `${(-v.p1 / v.p2).toFixed(3)}`} />
+  <Value label="Max Good 1 (Y/P₁)" expr="y / p1" decimals={1} suffix=" units" />
+  <Value label="Max Good 2 (Y/P₂)" expr="y / p2" decimals={1} suffix=" units" />
+  <Value label="Budget Line Slope (−P₁/P₂)" expr="-p1 / p2" decimals={3} />
 </Interactive>
 
 <Graph title="Budget Constraint" xLabel="Good 1 (q₁)" yLabel="Good 2 (q₂)" xDomain={[0, 30]} yDomain={[0, 25]}>
-  <Plot fn={(q1, v) => (v.y - v.p1 * q1) / v.p2} color="#1a1a1a" label="Budget Line" />
+  <Plot expr="(y - p1 * x) / p2" color="#1a1a1a" label="Budget Line" />
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Income (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Price of Good 1" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Price of Good 2" />

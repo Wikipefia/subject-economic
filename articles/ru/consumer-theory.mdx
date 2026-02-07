@@ -53,8 +53,8 @@ $$
 </Callout>
 
 <Graph title="Общая и предельная полезность" xLabel="Потреблённое количество (q)" yLabel="Полезность" xDomain={[0, 8]} yDomain={[-5, 35]}>
-  <Plot fn={(q, v) => v.a * q - v.b * q * q} color="#0066cc" label="Общая полезность (TU)" />
-  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="Предельная полезность (MU)" />
+  <Plot expr="a * x - b * x^2" color="#0066cc" label="Общая полезность (TU)" />
+  <Plot expr="a - 2 * b * x" color="#ff0000" label="Предельная полезность (MU)" />
   <Slider name="a" min={5} max={20} default={12} step={0.5} label="Начальная MU (a)" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Скорость убывания (b)" />
 </Graph>
@@ -133,13 +133,13 @@ $$
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Доход (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Цена товара 1 (P₁)" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Цена товара 2 (P₂)" />
-  <Value label="Макс. товара 1 (Y/P₁)" fn={(v) => `${(v.y / v.p1).toFixed(1)} units`} />
-  <Value label="Макс. товара 2 (Y/P₂)" fn={(v) => `${(v.y / v.p2).toFixed(1)} units`} />
-  <Value label="Наклон бюджетной линии (−P₁/P₂)" fn={(v) => `${(-v.p1 / v.p2).toFixed(3)}`} />
+  <Value label="Макс. товара 1 (Y/P₁)" expr="y / p1" decimals={1} suffix=" units" />
+  <Value label="Макс. товара 2 (Y/P₂)" expr="y / p2" decimals={1} suffix=" units" />
+  <Value label="Наклон бюджетной линии (−P₁/P₂)" expr="-p1 / p2" decimals={3} />
 </Interactive>
 
 <Graph title="Бюджетное ограничение" xLabel="Товар 1 (q₁)" yLabel="Товар 2 (q₂)" xDomain={[0, 30]} yDomain={[0, 25]}>
-  <Plot fn={(q1, v) => (v.y - v.p1 * q1) / v.p2} color="#1a1a1a" label="Бюджетная линия" />
+  <Plot expr="(y - p1 * x) / p2" color="#1a1a1a" label="Бюджетная линия" />
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Доход (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Цена товара 1" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Цена товара 2" />

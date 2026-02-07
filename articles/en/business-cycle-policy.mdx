@@ -413,14 +413,9 @@ The path from central bank action to the real economy:
   <Slider name="repo" min={0} max={10} default={4} step={0.25} label="ČNB Repo Rate (%)" />
   <Slider name="spread" min={1} max={5} default={2} step={0.25} label="Bank Spread (%)" />
   <Slider name="mpc" min={0.5} max={0.95} default={0.75} step={0.05} label="Marginal Propensity to Consume" />
-  <Value label="Commercial Lending Rate" fn={(v) => `${(v.repo + v.spread).toFixed(2)}%`} />
-  <Value label="Deposit Rate (approx.)" fn={(v) => `${(v.repo - 0.5 > 0 ? v.repo - 0.5 : 0).toFixed(2)}%`} />
-  <Value label="Spending Multiplier (1/(1−MPC))" fn={(v) => `${(1 / (1 - v.mpc)).toFixed(1)}`} />
-  <Value label="Policy Stance" fn={(v) => {
-    if (v.repo < 2) return 'Expansionary — stimulating economy';
-    if (v.repo > 5) return 'Restrictive — cooling inflation';
-    return 'Neutral';
-  }} />
+  <Value label="Commercial Lending Rate" expr="repo + spread" decimals={2} suffix="%" />
+  <Value label="Deposit Rate (approx.)" expr="max(repo - 0.5, 0)" decimals={2} suffix="%" />
+  <Value label="Spending Multiplier (1/(1−MPC))" expr="1 / (1 - mpc)" decimals={1} />
 </Interactive>
 
 <Comparison title="Expansionary vs. Restrictive Policy">

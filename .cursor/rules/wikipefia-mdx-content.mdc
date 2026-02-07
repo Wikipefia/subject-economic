@@ -128,16 +128,18 @@ Not a component — built-in syntax processed by plugins.
 
 ## Graph / Plot / Slider
 
-Interactive function plotter (SVG). Pass JS functions as `fn` props — receives `(x, vars)`.
+Interactive function plotter (SVG). Pass math expression strings as `expr` props — evaluated by a safe parser. Variable `x` is the horizontal axis, slider variables available by name.
 
 - `Graph`: `title`, `xLabel`, `yLabel`, `xDomain` `[min,max]`, `yDomain` `[min,max]`. Requires `Plot` children.
-- `Plot`: `fn` (required), `color`, `label`, `dashed`. Inside `Graph`.
+- `Plot`: `expr` (required, math expression string like "a - b * x"), `color`, `label`, `dashed`. Inside `Graph`.
 - `Slider`: `name` (required), `min`, `max`, `default`, `step`, `label`. Inside `Graph` or `Interactive`.
+
+Math expressions support: `+`, `-`, `*`, `/`, `^` (power), parentheses, common functions (`sin`, `cos`, `sqrt`, `abs`, `log`, `min`, `max`, `pow`, `exp`), and constants (`PI`, `E`).
 
 ```mdx
 <Graph title="Supply and Demand" xLabel="Q" yLabel="P" xDomain={[0, 20]} yDomain={[0, 30]}>
-  <Plot fn={(q, v) => v.a - v.b * q} color="#0066cc" label="Demand" />
-  <Plot fn={(q, v) => v.c + v.d * q} color="#ff0000" label="Supply" />
+  <Plot expr="a - b * x" color="#0066cc" label="Demand" />
+  <Plot expr="c + d * x" color="#ff0000" label="Supply" />
   <Slider name="a" min={10} max={40} default={24} step={1} label="Demand intercept" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Demand slope" />
   <Slider name="c" min={-10} max={10} default={0} step={1} label="Supply intercept" />
@@ -149,11 +151,17 @@ Interactive function plotter (SVG). Pass JS functions as `fn` props — receives
 
 Reactive sandbox — sliders and toggles control computed values.
 
+- `Interactive`: `title` (optional, string). Requires children.
+- `Value`: `label` (required), `expr` (required, math expression string), `decimals` (optional, number, default 2), `prefix` (optional, string), `suffix` (optional, string). Inside `Interactive`.
+- `Toggle`: `name` (required), `default` (optional, boolean), `label` (optional, string). Inside `Interactive`.
+
+Math expressions support: `+`, `-`, `*`, `/`, `^` (power), parentheses, common functions (`sin`, `cos`, `sqrt`, `abs`, `log`, `min`, `max`, `pow`, `exp`), and constants (`PI`, `E`). Slider variables available by name.
+
 ```mdx
 <Interactive title="GDP Deflator">
   <Slider name="nominal" min={100} max={10000} default={5500} step={100} label="Nominal GDP" />
   <Slider name="deflator" min={50} max={200} default={110} step={1} label="Deflator (base=100)" />
-  <Value label="Real GDP" fn={(v) => `${(v.nominal / v.deflator * 100).toFixed(0)}`} />
+  <Value label="Real GDP" expr="nominal / deflator * 100" decimals={0} />
 </Interactive>
 ```
 
@@ -254,10 +262,10 @@ Violating nesting rules causes a build error.
 | `Figure`                         | `src`, `alt`              | `caption`, `width`, `height`       |
 | `MathBlock`                      | children                  | —                                  |
 | `Graph`                          | `Plot` children           | `title`, `xLabel`, `yLabel`, `xDomain`, `yDomain` |
-| `Plot`                           | `fn`                      | `color`, `label`, `dashed`         |
+| `Plot`                           | `expr`                    | `color`, `label`, `dashed`         |
 | `Slider`                         | `name`                    | `min`, `max`, `default`, `step`, `label` |
 | `Interactive`                    | children                  | `title`                            |
-| `Value`                          | `label`, `fn`             | —                                  |
+| `Value`                          | `label`, `expr`           | `decimals`, `prefix`, `suffix`     |
 | `Toggle`                         | `name`                    | `default`, `label`                 |
 | `Timeline` / `TimelineEvent`     | `date`, `title`           | `color`                            |
 | `DataTable`                      | `columns`, `rows`         | `caption`, `sortable`              |

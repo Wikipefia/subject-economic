@@ -143,13 +143,10 @@ $$
   <Slider name="u" min={0} max={15} default={7} step={0.1} label="Actual Unemployment (%)" />
   <Slider name="ustar" min={2} max={8} default={5} step={0.1} label="Natural Rate u* (%)" />
   <Slider name="ystar" min={1000} max={10000} default={5000} step={100} label="Potential GDP (Y*)" />
-  <Value label="Unemployment Gap" fn={(v) => `${(v.u - v.ustar).toFixed(1)} percentage points`} />
-  <Value label="Output Gap (% of Y*)" fn={(v) => `${(-2 * (v.u - v.ustar)).toFixed(1)}%`} />
-  <Value label="Estimated Actual GDP" fn={(v) => `${(v.ystar * (1 - 2 * (v.u - v.ustar) / 100)).toFixed(0)}`} />
-  <Value label="GDP Lost" fn={(v) => {
-    const loss = v.ystar * 2 * (v.u - v.ustar) / 100;
-    return loss > 0 ? `${loss.toFixed(0)} (below potential)` : `${(-loss).toFixed(0)} (above potential)`;
-  }} />
+  <Value label="Unemployment Gap" expr="u - ustar" decimals={1} suffix=" pp" />
+  <Value label="Output Gap (% of Y*)" expr="-2 * (u - ustar)" decimals={1} suffix="%" />
+  <Value label="Estimated Actual GDP" expr="ystar * (1 - 2 * (u - ustar) / 100)" decimals={0} />
+  <Value label="GDP Lost" expr="ystar * 2 * (u - ustar) / 100" decimals={0} />
 </Interactive>
 
 - Reduced tax revenue and increased government spending on benefits → larger budget deficits
@@ -377,8 +374,8 @@ $$
 | Policy implication | Short-term stabilization possible | Only structural reforms can reduce $u^*$ |
 
 <Graph title="Short-Run Phillips Curve" xLabel="Unemployment Rate u (%)" yLabel="Inflation Rate π (%)" xDomain={[0, 12]} yDomain={[-3, 15]}>
-  <Plot fn={(u, v) => v.pie + v.beta * (v.ustar - u)} color="#ff0000" label="SRPC" />
-  <Plot fn={(u, v) => v.pie2 + v.beta * (v.ustar - u)} color="#ff0000" label="SRPC (shifted)" dashed />
+  <Plot expr="pie + beta * (ustar - x)" color="#ff0000" label="SRPC" />
+  <Plot expr="pie2 + beta * (ustar - x)" color="#ff0000" label="SRPC (shifted)" dashed />
   <Slider name="pie" min={0} max={10} default={2} step={0.5} label="Expected Inflation πe" />
   <Slider name="pie2" min={0} max={10} default={5} step={0.5} label="Higher πe (shifted)" />
   <Slider name="beta" min={0.5} max={3} default={1.5} step={0.1} label="Slope β" />
