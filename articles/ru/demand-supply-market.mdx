@@ -224,6 +224,10 @@ $$
 <Graph title="Спрос и предложение" xLabel="Количество (Q)" yLabel="Цена (P)" xDomain={[0, 20]} yDomain={[0, 30]}>
   <Plot expr="a - b * x" color="#0066cc" label="Спрос (D)" />
   <Plot expr="c + d * x" color="#ff0000" label="Предложение (S)" />
+  <Area above="a - b * x" below="c + d * x" from="0" to="(a - c) / (b + d)" color="#0066cc" opacity={0.1} />
+  <Point x="(a - c) / (b + d)" y="a - b * ((a - c) / (b + d))" label="E*" color="#1a1a1a" showXLine showYLine />
+  <HLine y="a - b * ((a - c) / (b + d))" color="#999" dashed label="P*" />
+  <VLine x="(a - c) / (b + d)" color="#999" dashed label="Q*" />
   <Slider name="a" min={10} max={40} default={24} step={1} label="Пересечение кривой спроса (a)" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Наклон кривой спроса (b)" />
   <Slider name="c" min={-10} max={10} default={0} step={1} label="Пересечение кривой предложения (c)" />

@@ -424,6 +424,8 @@ $$
 <Graph title="Krátkodobá Phillipsova křivka" xLabel="Míra nezaměstnanosti u (%)" yLabel="Míra inflace π (%)" xDomain={[0, 12]} yDomain={[-3, 15]}>
   <Plot expr="pie + beta * (ustar - x)" color="#ff0000" label="SRPC" />
   <Plot expr="pie2 + beta * (ustar - x)" color="#ff0000" label="SRPC (posunutá)" dashed />
+  <VLine x="ustar" color="#1a1a1a" dashed label="u*" />
+  <Point x="ustar" y="pie" label="NAIRU" color="#1a1a1a" showYLine />
   <Slider name="pie" min={0} max={10} default={2} step={0.5} label="Očekávaná inflace πe" />
   <Slider name="pie2" min={0} max={10} default={5} step={0.5} label="Vyšší πe (posunutá)" />
   <Slider name="beta" min={0.5} max={3} default={1.5} step={0.1} label="Sklon β" />

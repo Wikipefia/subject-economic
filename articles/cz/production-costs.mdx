@@ -362,6 +362,7 @@ Předpokládejme $FC = 50$ CZK.
   <Plot expr="fc / x + 40 - 10 * x + x^2" color="#0066cc" label="AC" />
   <Plot expr="40 - 10 * x + x^2" color="#22863a" label="AVC" dashed />
   <Plot expr="fc / x" color="#999999" label="AFC" dashed />
+  <Point x="5" y="40 - 20 * 5 + 3 * 25" label="MC min" color="#ff0000" showXLine showYLine />
   <Slider name="fc" min={10} max={120} default={50} step={5} label="Fixní náklady (FC)" />
 </Graph>
 

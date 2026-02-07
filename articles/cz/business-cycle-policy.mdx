@@ -215,6 +215,13 @@ Hlavní dluhové nástroje:
 - **Státní pokladniční poukázky** (krátkodobé, splatnost do 1 roku)
 - **Dluhopisy Republiky** (pro drobné investory — občany)
 
+<CycleDiagram title="Fáze hospodářského cyklu">
+  <CycleNode label="Expanze" color="#22863a" description="Rostoucí HDP, zaměstnanost a spotřebitelská důvěra" />
+  <CycleNode label="Vrchol" color="#ff0000" description="Maximální výstup, inflační tlak" />
+  <CycleNode label="Kontrakce" color="#cc6600" description="Klesající HDP, rostoucí nezaměstnanost" />
+  <CycleNode label="Dno" color="#0066cc" description="Minimální výstup, začátek oživení" />
+</CycleDiagram>
+
 <Timeline title="Státní dluh ČR: klíčové milníky">
   <TimelineEvent date="1993" title="Po rozpadu Československa">
     Počáteční státní dluh 158,8 mld. Kč po rozdělení Československa.
@@ -432,6 +439,16 @@ Vyšší úrokové sazby zdražují úvěry → investice a spotřeba klesají �
 
 </Tab>
 </Tabs>
+
+<FlowDiagram title="Transmise měnové politiky" direction="horizontal">
+  <FlowNode id="cb" label="Centrální banka" icon="landmark" />
+  <FlowNode id="rate" label="Úroková sazba" icon="trending-up" />
+  <FlowNode id="credit" label="Úvěry a investice" icon="coin" />
+  <FlowNode id="gdp" label="HDP a zaměstnanost" icon="users" highlight />
+  <FlowArrow from="cb" to="rate" label="stanoví" />
+  <FlowArrow from="rate" to="credit" label="ovlivňuje" />
+  <FlowArrow from="credit" to="gdp" label="pohání" />
+</FlowDiagram>
 
 ### Transmisní mechanismus
 

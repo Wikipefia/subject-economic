@@ -55,6 +55,8 @@ Když $MU = 0$, celkový užitek dosahuje svého maxima. Nad tento bod spotřeba
 <Graph title="Celkový a mezní užitek" xLabel="Spotřebované množství (q)" yLabel="Užitek" xDomain={[0, 8]} yDomain={[-5, 35]}>
   <Plot expr="a * x - b * x^2" color="#0066cc" label="Celkový užitek (TU)" />
   <Plot expr="a - 2 * b * x" color="#ff0000" label="Mezní užitek (MU)" />
+  <Point x="a / (2 * b)" y="0" label="MU=0" color="#ff0000" showXLine />
+  <HLine y="0" color="#ccc" dashed />
   <Slider name="a" min={5} max={20} default={12} step={0.5} label="Počáteční MU (a)" />
   <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Míra klesání (b)" />
 </Graph>
@@ -171,6 +173,8 @@ Sklon rozpočtové přímky závisí pouze na **poměru cen** $P_1/P_2$, nikoliv
 
 <Graph title="Rozpočtové omezení" xLabel="Statek 1 (q₁)" yLabel="Statek 2 (q₂)" xDomain={[0, 30]} yDomain={[0, 25]}>
   <Plot expr="(y - p1 * x) / p2" color="#1a1a1a" label="Rozpočtová přímka" />
+  <Point x="0" y="y / p2" label="Y/P₂" color="#1a1a1a" />
+  <Point x="y / p1" y="0" label="Y/P₁" color="#1a1a1a" />
   <Slider name="y" min={100} max={1000} default={500} step={10} label="Příjem (Y)" />
   <Slider name="p1" min={5} max={50} default={20} step={1} label="Cena statku 1" />
   <Slider name="p2" min={5} max={50} default={25} step={1} label="Cena statku 2" />

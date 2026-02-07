@@ -147,6 +147,28 @@ Math expressions support: `+`, `-`, `*`, `/`, `^` (power), parentheses, common f
 </Graph>
 ```
 
+## Graph Annotations: Point / HLine / VLine / Area / Segment
+
+Additional children inside `<Graph>` for marking intersections, reference lines, shaded regions, and line segments. All coordinate props are `expr` strings.
+
+- `Point`: `x`, `y` (required, expr), `label`, `color`, `r`, `showXLine`, `showYLine`
+- `HLine`: `y` (required, expr), `color`, `dashed`, `label`
+- `VLine`: `x` (required, expr), `color`, `dashed`, `label`
+- `Area`: `above` (required, expr), `below` (expr, default "0"), `from`, `to` (required, expr), `color`, `opacity`, `label`
+- `Segment`: `x1`, `y1`, `x2`, `y2` (required, expr), `color`, `dashed`, `strokeWidth`
+
+```mdx
+<Graph title="Supply & Demand" xLabel="Q" yLabel="P" xDomain={[0, 20]} yDomain={[0, 30]}>
+  <Plot expr="a - b * x" color="#0066cc" label="Demand" />
+  <Plot expr="c + d * x" color="#ff0000" label="Supply" />
+  <Area above="a - b * x" below="c + d * x" from="0" to="(a - c) / (b + d)" color="#0066cc" opacity={0.1} />
+  <Point x="(a - c) / (b + d)" y="a - b * ((a - c) / (b + d))" label="E*" showXLine showYLine />
+  <HLine y="a - b * ((a - c) / (b + d))" color="#999" dashed label="P*" />
+  <VLine x="(a - c) / (b + d)" color="#999" dashed label="Q*" />
+  <Slider name="a" min={10} max={40} default={24} step={1} label="Demand intercept" />
+</Graph>
+```
+
 ## Interactive / Value / Toggle
 
 Reactive sandbox — sliders and toggles control computed values.
@@ -223,6 +245,38 @@ $$120 = 5P \implies P^* = 24$$
 </StepByStep>
 ```
 
+## FlowDiagram / FlowNode / FlowArrow
+
+Auto-layout flow/process diagram with animated arrows.
+
+- `FlowDiagram`: `title`, `direction` ("horizontal"|"vertical"), `animate`
+- `FlowNode`: `id` (required), `label` (required), `icon`, `color`, `highlight`. Inside `FlowDiagram`.
+- `FlowArrow`: `from`, `to` (required, node ids), `label`, `color`, `animated`. Inside `FlowDiagram`.
+
+## CycleDiagram / CycleNode
+
+Circular diagram with auto-positioned nodes and animated arrows. Hover reveals descriptions.
+
+- `CycleDiagram`: `title`, `size`, `animate`, `clockwise`
+- `CycleNode`: `label` (required), `color`, `description`. Inside `CycleDiagram`.
+
+## BarChart / Bar
+
+Animated bar chart. Supports static `value` or reactive `expr` (with `Slider`).
+
+- `BarChart`: `title`, `orientation` ("horizontal"|"vertical"), `animate`, `showValues`
+- `Bar`: `label` (required), `value` (number) OR `expr` (string), `color`. Inside `BarChart`.
+
+## Diagram / DBox / DCircle / DArrow / DLabel
+
+Low-level SVG canvas for fully custom diagrams.
+
+- `Diagram`: `title`, `width`, `height`, `animate`
+- `DBox`: `x`, `y`, `w`, `h`, `label`, `color`, `rounded`. Inside `Diagram`.
+- `DCircle`: `x`, `y`, `r`, `label`, `color`, `pulse`. Inside `Diagram`.
+- `DArrow`: `from {[x,y]}`, `to {[x,y]}`, `label`, `color`, `animated`, `curved`. Inside `Diagram`.
+- `DLabel`: `x`, `y`, `text` (required), `fontSize`, `color`, `bold`. Inside `Diagram`.
+
 ## Custom Styling with Tailwind CSS
 
 Use **Tailwind CSS utility classes** directly in MDX for custom layouts not covered by built-in components.
@@ -242,11 +296,24 @@ Use **Tailwind CSS utility classes** directly in MDX for custom layouts not cove
 | `Question`       | `Quiz`          |
 | `Option`         | `Question`      |
 | `Plot`           | `Graph`         |
+| `Point`          | `Graph`         |
+| `HLine`          | `Graph`         |
+| `VLine`          | `Graph`         |
+| `Area`           | `Graph`         |
+| `Segment`        | `Graph`         |
 | `TimelineEvent`  | `Timeline`      |
 | `ComparisonItem` | `Comparison`    |
 | `Step`           | `StepByStep`    |
 | `Value`          | `Interactive`   |
 | `Toggle`         | `Interactive`   |
+| `FlowNode`       | `FlowDiagram`   |
+| `FlowArrow`      | `FlowDiagram`   |
+| `CycleNode`      | `CycleDiagram`  |
+| `Bar`            | `BarChart`      |
+| `DBox`           | `Diagram`       |
+| `DCircle`        | `Diagram`       |
+| `DArrow`         | `Diagram`       |
+| `DLabel`         | `Diagram`       |
 
 Violating nesting rules causes a build error.
 
@@ -264,6 +331,11 @@ Violating nesting rules causes a build error.
 | `Graph`                          | `Plot` children           | `title`, `xLabel`, `yLabel`, `xDomain`, `yDomain` |
 | `Plot`                           | `expr`                    | `color`, `label`, `dashed`         |
 | `Slider`                         | `name`                    | `min`, `max`, `default`, `step`, `label` |
+| `Point`                          | `x`, `y`                  | `label`, `color`, `r`, `showXLine`, `showYLine` |
+| `HLine`                          | `y`                       | `color`, `dashed`, `label`         |
+| `VLine`                          | `x`                       | `color`, `dashed`, `label`         |
+| `Area`                           | `above`, `from`, `to`     | `below`, `color`, `opacity`, `label` |
+| `Segment`                        | `x1`, `y1`, `x2`, `y2`   | `color`, `dashed`, `strokeWidth`   |
 | `Interactive`                    | children                  | `title`                            |
 | `Value`                          | `label`, `expr`           | `decimals`, `prefix`, `suffix`     |
 | `Toggle`                         | `name`                    | `default`, `label`                 |
@@ -272,3 +344,15 @@ Violating nesting rules causes a build error.
 | `Comparison` / `ComparisonItem`  | `title`, children         | `color`                            |
 | `Definition`                     | `term`, children          | —                                  |
 | `StepByStep` / `Step`            | `title`, children         | —                                  |
+| `FlowDiagram`                    | `FlowNode` children       | `title`, `direction`, `animate`    |
+| `FlowNode`                       | `id`, `label`             | `icon`, `color`, `highlight`       |
+| `FlowArrow`                      | `from`, `to`              | `label`, `color`, `animated`       |
+| `CycleDiagram`                   | `CycleNode` children      | `title`, `size`, `animate`, `clockwise` |
+| `CycleNode`                      | `label`                   | `color`, `description`             |
+| `BarChart`                       | `Bar` children            | `title`, `orientation`, `animate`, `showValues` |
+| `Bar`                            | `label`                   | `value` or `expr`, `color`         |
+| `Diagram`                        | children                  | `title`, `width`, `height`, `animate` |
+| `DBox`                           | `x`, `y`, `w`, `h`       | `label`, `color`, `rounded`        |
+| `DCircle`                        | `x`, `y`, `r`            | `label`, `color`, `pulse`          |
+| `DArrow`                         | `from`, `to`              | `label`, `color`, `animated`, `curved` |
+| `DLabel`                         | `x`, `y`, `text`          | `fontSize`, `color`, `bold`        |

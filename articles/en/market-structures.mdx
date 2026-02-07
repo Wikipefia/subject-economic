@@ -291,6 +291,7 @@ The MR curve has the same intercept but **twice the slope** of the demand curve.
   <Plot expr="a - b * x" color="#0066cc" label="Demand (D = AR)" />
   <Plot expr="a - 2 * b * x" color="#ff0000" label="MR" dashed />
   <Plot expr="mc0 + mc1 * x" color="#22863a" label="MC" />
+  <Area above="a - b * x" below="mc0 + mc1 * x" from="0" to="(a - mc0) / (2 * b + mc1)" color="#22863a" opacity={0.08} />
   <Slider name="a" min={20} max={60} default={40} step={1} label="Demand intercept (a)" />
   <Slider name="b" min={1} max={4} default={2} step={0.1} label="Demand slope (b)" />
   <Slider name="mc0" min={0} max={15} default={5} step={1} label="MC intercept" />

@@ -196,6 +196,13 @@ The state debt has grown from **158.8 billion CZK in 1993** (after the split of 
 - **Treasury bills** (státní pokladniční poukázky) — short-term
 - **Savings bonds** for retail investors
 
+<CycleDiagram title="Business Cycle Phases">
+  <CycleNode label="Expansion" color="#22863a" description="Rising GDP, employment, and consumer confidence" />
+  <CycleNode label="Peak" color="#ff0000" description="Maximum output, inflation pressure builds" />
+  <CycleNode label="Contraction" color="#cc6600" description="Falling GDP, rising unemployment" />
+  <CycleNode label="Trough" color="#0066cc" description="Minimum output, recovery begins" />
+</CycleDiagram>
+
 <Timeline title="Czech Government Debt: Key Milestones">
   <TimelineEvent date="1993" title="After Czechoslovak Split">
     Initial state debt of 158.8 billion CZK following the dissolution of Czechoslovakia.
@@ -393,6 +400,16 @@ Higher interest rates make borrowing more expensive → investment and consumpti
 
 </Tab>
 </Tabs>
+
+<FlowDiagram title="Monetary Policy Transmission" direction="horizontal">
+  <FlowNode id="cb" label="Central Bank" icon="landmark" />
+  <FlowNode id="rate" label="Interest Rate" icon="trending-up" />
+  <FlowNode id="credit" label="Credit & Investment" icon="coin" />
+  <FlowNode id="gdp" label="GDP & Employment" icon="users" highlight />
+  <FlowArrow from="cb" to="rate" label="sets" />
+  <FlowArrow from="rate" to="credit" label="affects" />
+  <FlowArrow from="credit" to="gdp" label="drives" />
+</FlowDiagram>
 
 ### Transmission Mechanism
 
