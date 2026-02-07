@@ -31,15 +31,20 @@ Analýza tržních struktur propojuje mikroekonomickou teorii s reálnou analýz
 
 Čtyři základní tržní struktury se liší v několika klíčových dimenzích:
 
-| Charakteristika | Dokonalá konkurence | Monopolistická konkurence | Oligopol | Monopol |
-|---|---|---|---|---|
-| **Počet firem** | Velmi mnoho | Mnoho | Několik | Jedna |
-| **Typ produktu** | Homogenní (identický) | Diferencovaný (blízké substituty) | Homogenní nebo diferencovaný | Unikátní (žádné blízké substituty) |
-| **Bariéry vstupu** | Žádné | Nízké | Vysoké | Velmi vysoké |
-| **Vliv na cenu** | Žádný (příjemce ceny) | Mírný | Značný (vzájemná závislost) | Úplný (tvůrce ceny) |
-| **Křivka poptávky** | Horizontální (dokonale elastická) | Klesající (elastická) | Zalomená / závisí na modelu | Klesající (= tržní poptávka) |
-| **Dlouhodobý zisk** | Nulový ekonomický | Nulový ekonomický | Možný kladný | Možný kladný |
-| **Příklady** | Zemědělské komodity, devizový trh | Restaurace, oděvní značky | Telekomunikace, aerolinky, auto | Místní utility, patentované léky |
+<DataTable
+  caption="Přehled tržních struktur"
+  columns={["Charakteristika", "Dokonalá konkurence", "Monopolistická konkurence", "Oligopol", "Monopol"]}
+  rows={[
+    ["Počet firem", "Velmi mnoho", "Mnoho", "Několik", "Jedna"],
+    ["Typ produktu", "Homogenní", "Diferencovaný", "Homogenní nebo dif.", "Unikátní"],
+    ["Bariéry vstupu", "Žádné", "Nízké", "Vysoké", "Velmi vysoké"],
+    ["Vliv na cenu", "Žádný (příjemce ceny)", "Mírný", "Značný", "Úplný (tvůrce ceny)"],
+    ["Křivka poptávky", "Horizontální", "Klesající", "Zalomená / závisí na modelu", "Tržní poptávka"],
+    ["Dlouhodobý zisk", "Nulový", "Nulový", "Možný kladný", "Možný kladný"],
+    ["Příklady", "Zemědělství, forex", "Restaurace, značky", "Telekomunikace, aerolinky", "Utility, patenty"],
+  ]}
+  sortable
+/>
 
 ---
 
@@ -296,6 +301,10 @@ Vedoucí vyrábí dvakrát více než následovatel.
 
 ## Monopol
 
+<Definition term="Monopol">
+Tržní struktura, ve které je **jediná firma** jediným dodavatelem statku bez blízkých substitutů. Monopolista je **tvůrcem ceny** a čelí celé tržní křivce poptávky.
+</Definition>
+
 Monopol existuje, když je na trhu **jediná firma** bez blízkých substitutů.
 
 ### Zdroje monopolní síly
@@ -345,6 +354,16 @@ $$
 
 Čím nižší elasticita poptávky, tím větší přirážka (markup) nad mezními náklady.
 </Collapse>
+
+<Graph title="Monopol: Poptávka, MR a MC" xLabel="Množství (Q)" yLabel="Cena / Náklady" xDomain={[0, 15]} yDomain={[0, 50]}>
+  <Plot fn={(q, v) => v.a - v.b * q} color="#0066cc" label="Poptávka (D = AR)" />
+  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="MR" dashed />
+  <Plot fn={(q, v) => v.mc0 + v.mc1 * q} color="#22863a" label="MC" />
+  <Slider name="a" min={20} max={60} default={40} step={1} label="Průsečík poptávky (a)" />
+  <Slider name="b" min={1} max={4} default={2} step={0.1} label="Sklon poptávky (b)" />
+  <Slider name="mc0" min={0} max={15} default={5} step={1} label="Průsečík MC" />
+  <Slider name="mc1" min={0.5} max={3} default={1} step={0.1} label="Sklon MC" />
+</Graph>
 
 ### Maximalizace zisku
 

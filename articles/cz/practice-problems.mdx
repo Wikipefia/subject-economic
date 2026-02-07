@@ -100,48 +100,32 @@ Tyto otázky pokrývají model nabídky a poptávky — posuny křivek, elastici
 
 **Zadání:** Funkce poptávky je $P = 100 - 2Q_D$ a funkce nabídky je $P = 20 + 3Q_S$. Najděte rovnovážnou cenu a rovnovážné množství.
 
-<Collapse title="Podrobné řešení krok za krokem">
+<StepByStep title="Řešení krok za krokem">
+  <Step title="Podmínka rovnováhy">
 
-**Krok 1:** V rovnováze se poptávané množství rovná nabízenému množství ($Q_D = Q_S = Q^*$) a ceny se shodují:
+V rovnováze platí $Q_D = Q_S = Q^*$ a ceny se shodují:
 
-$$
-100 - 2Q = 20 + 3Q
-$$
+$$100 - 2Q = 20 + 3Q$$
 
-**Krok 2:** Řešíme rovnici pro $Q^*$:
+  </Step>
+  <Step title="Řešení pro Q*">
 
-$$
-100 - 20 = 3Q + 2Q
-$$
+$$100 - 20 = 3Q + 2Q \implies 80 = 5Q \implies Q^* = 16$$
 
-$$
-80 = 5Q
-$$
+  </Step>
+  <Step title="Dosazením najdeme P*">
 
-$$
-Q^* = \frac{80}{5} = 16
-$$
+$$P^* = 100 - 2(16) = 68$$
 
-**Krok 3:** Dosadíme $Q^* = 16$ do kterékoliv funkce pro nalezení $P^*$:
+Kontrola: $P^* = 20 + 3(16) = 68$ ✓
 
-$$
-P^* = 100 - 2 \cdot 16 = 100 - 32 = 68
-$$
+  </Step>
+  <Step title="Výsledek">
 
-**Kontrola** pomocí funkce nabídky:
+Rovnovážné množství $Q^* = 16$ jednotek, rovnovážná cena $P^* = 68$ peněžních jednotek.
 
-$$
-P^* = 20 + 3 \cdot 16 = 20 + 48 = 68 \checkmark
-$$
-
-**Krok 4 — Ekonomická interpretace:**
-- Při ceně vyšší než 68 Kč by nabízené množství převyšovalo poptávané (přebytek) → tlak na pokles ceny
-- Při ceně nižší než 68 Kč by poptávané množství převyšovalo nabízené (nedostatek) → tlak na růst ceny
-- Pouze při $P^* = 68$ a $Q^* = 16$ je trh v rovnováze
-
-**Výsledek:** Rovnovážné množství je $Q^* = 16$ jednotek a rovnovážná cena je $P^* = 68$ peněžních jednotek.
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 <Callout type="warning">
 **Častá chyba u zkoušky:** Studenti někdy zaměňují poptávkovou a nabídkovou funkci nebo zapomenou ověřit výsledek dosazením do obou rovnic. Vždy provádějte kontrolu!
@@ -178,86 +162,32 @@ Kvíz o užitku, indiferenčních křivkách a rozpočtovém omezení.
 
 **Zadání:** Spotřebitel má důchod $Y = 600$ Kč, ceny statků $P_1 = 20$ Kč a $P_2 = 30$ Kč, a funkci užitku $U = q_1 \cdot q_2$. Najděte optimální spotřební koš.
 
-<Collapse title="Podrobné řešení krok za krokem">
+<StepByStep title="Řešení krok za krokem">
+  <Step title="Rozpočtové omezení">
 
-**Krok 1:** Zapíšeme rozpočtové omezení:
+$$P_1 q_1 + P_2 q_2 = Y \implies 20q_1 + 30q_2 = 600$$
 
-$$
-P_1 q_1 + P_2 q_2 = Y
-$$
+  </Step>
+  <Step title="Podmínka optimality (MRS = P₁/P₂)">
 
-$$
-20q_1 + 30q_2 = 600
-$$
+Pro $U = q_1 \cdot q_2$: $MU_1 = q_2$, $MU_2 = q_1$
 
-**Krok 2:** Podmínka optimality vyžaduje, aby se mezní míra substituce (MRS) rovnala poměru cen:
+$$\frac{q_2}{q_1} = \frac{20}{30} = \frac{2}{3} \implies q_2 = \frac{2}{3} q_1$$
 
-$$
-MRS = \frac{MU_1}{MU_2} = \frac{P_1}{P_2}
-$$
+  </Step>
+  <Step title="Dosazení do rozpočtového omezení">
 
-Pro funkci užitku $U = q_1 \cdot q_2$ spočítáme mezní užitky:
+$$20q_1 + 30 \cdot \frac{2}{3} q_1 = 600 \implies 40q_1 = 600 \implies q_1^* = 15$$
 
-$$
-MU_1 = \frac{\partial U}{\partial q_1} = q_2, \quad MU_2 = \frac{\partial U}{\partial q_2} = q_1
-$$
+  </Step>
+  <Step title="Nalezení q₂* a celkového užitku">
 
-Dosadíme do podmínky optimality:
+$$q_2^* = \frac{2}{3} \cdot 15 = 10$$
 
-$$
-\frac{q_2}{q_1} = \frac{20}{30} = \frac{2}{3}
-$$
+**Výsledek:** Optimální koš $q_1^* = 15$, $q_2^* = 10$, užitek $U = 150$.
 
-Z toho vyjádříme:
-
-$$
-q_2 = \frac{2}{3} q_1
-$$
-
-**Krok 3:** Dosadíme do rozpočtového omezení:
-
-$$
-20q_1 + 30 \cdot \frac{2}{3} q_1 = 600
-$$
-
-$$
-20q_1 + 20q_1 = 600
-$$
-
-$$
-40q_1 = 600
-$$
-
-$$
-q_1^* = 15
-$$
-
-**Krok 4:** Najdeme $q_2^*$:
-
-$$
-q_2^* = \frac{2}{3} \cdot 15 = 10
-$$
-
-**Krok 5 — Ověření a interpretace:**
-
-Ověříme rozpočtové omezení:
-$$
-20 \cdot 15 + 30 \cdot 10 = 300 + 300 = 600 = Y \checkmark
-$$
-
-Ověříme podmínku optimality:
-$$
-\frac{MU_1}{P_1} = \frac{q_2}{P_1} = \frac{10}{20} = 0{,}5
-$$
-$$
-\frac{MU_2}{P_2} = \frac{q_1}{P_2} = \frac{15}{30} = 0{,}5
-$$
-
-Poměry jsou stejné — podmínka rovnosti vážených mezních užitků je splněna ✓
-
-**Výsledek:** Optimální koš je $q_1^* = 15$ a $q_2^* = 10$, celkový užitek $U = 15 \times 10 = 150$.
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 <Callout type="info">
 **Tip pro zkoušku:** U Cobb-Douglasovy funkce užitku $U = q_1^a \cdot q_2^b$ platí obecný vzorec: spotřebitel vydá podíl $\frac{a}{a+b}$ důchodu na první statek a $\frac{b}{a+b}$ na druhý. V našem příkladu $a = b = 1$, takže na každý statek jde přesně polovina důchodu ($300$ Kč).
@@ -300,92 +230,38 @@ Kvíz o nákladových konceptech a výrobních rozhodnutích firmy.
 
 **Zadání:** Firma má celkové náklady $TC = 100 + 5Q + 0{,}5Q^2$. Najděte FC, VC, AC, AVC, AFC a MC. Dále určete, při jakém výstupu dosahují průměrné náklady svého minima.
 
-<Collapse title="Podrobné řešení krok za krokem">
+<StepByStep title="Řešení krok za krokem">
+  <Step title="Určení fixních a variabilních nákladů">
 
-**Krok 1:** Identifikujeme fixní a variabilní náklady:
+$$FC = 100 \quad \text{(konstanta)}$$
 
-$$
-FC = 100 \quad \text{(konstanta, nezávislá na } Q\text{)}
-$$
+$$VC = 5Q + 0{,}5Q^2 \quad \text{(členy závislé na } Q\text{)}$$
 
-$$
-VC = 5Q + 0{,}5Q^2 \quad \text{(členy závislé na } Q\text{)}
-$$
+  </Step>
+  <Step title="Výpočet průměrných nákladů">
 
-**Krok 2:** Průměrné náklady (dělíme $Q$):
+$$AC = \frac{100}{Q} + 5 + 0{,}5Q, \quad AVC = 5 + 0{,}5Q, \quad AFC = \frac{100}{Q}$$
 
-$$
-AC = \frac{TC}{Q} = \frac{100}{Q} + 5 + 0{,}5Q
-$$
+  </Step>
+  <Step title="Odvození mezních nákladů">
 
-$$
-AVC = \frac{VC}{Q} = 5 + 0{,}5Q
-$$
+$$MC = \frac{dTC}{dQ} = 5 + Q$$
 
-$$
-AFC = \frac{FC}{Q} = \frac{100}{Q}
-$$
+  </Step>
+  <Step title="Číselná kontrola pro Q = 10">
 
-**Krok 3:** Mezní náklady (derivace TC podle $Q$):
+| Veličina | Hodnota |
+|---|---|
+| TC | $100 + 50 + 50 = 200$ |
+| AC | $200 / 10 = 20$ |
+| AVC | $5 + 5 = 10$ |
+| AFC | $100 / 10 = 10$ |
+| MC | $5 + 10 = 15$ |
 
-$$
-MC = \frac{dTC}{dQ} = 5 + Q
-$$
+Kontrola: $AC = AVC + AFC = 10 + 10 = 20$ ✓
 
-**Krok 4:** Minimum průměrných nákladů — kde $MC = AC$:
-
-$$
-5 + Q = \frac{100}{Q} + 5 + 0{,}5Q
-$$
-
-$$
-Q = \frac{100}{Q} + 0{,}5Q
-$$
-
-$$
-Q - 0{,}5Q = \frac{100}{Q}
-$$
-
-$$
-0{,}5Q = \frac{100}{Q}
-$$
-
-$$
-0{,}5Q^2 = 100
-$$
-
-$$
-Q^2 = 200
-$$
-
-$$
-Q_{min} = \sqrt{200} = 10\sqrt{2} \approx 14{,}14
-$$
-
-Minimální průměrné náklady:
-$$
-AC_{min} = \frac{100}{10\sqrt{2}} + 5 + 0{,}5 \cdot 10\sqrt{2} = 5\sqrt{2} + 5 + 5\sqrt{2} = 5 + 10\sqrt{2} \approx 19{,}14
-$$
-
-**Krok 5 — Číselný příklad** při $Q = 10$:
-
-| Veličina | Vzorec | Hodnota |
-|---|---|---|
-| TC | $100 + 5(10) + 0{,}5(100)$ | 200 Kč |
-| FC | 100 | 100 Kč |
-| VC | $5(10) + 0{,}5(100)$ | 100 Kč |
-| AC | $200 / 10$ | 20 Kč |
-| AVC | $100 / 10$ | 10 Kč |
-| AFC | $100 / 10$ | 10 Kč |
-| MC | $5 + 10$ | 15 Kč |
-
-Všimněte si: $AC = AVC + AFC = 10 + 10 = 20$ ✓
-
-Při $Q = 10$ je $MC = 15 < AC = 20$, což znamená, že průměrné náklady stále klesají. Minimum AC nastane až při $Q \approx 14{,}14$.
-
-**Výsledek:** Fixní náklady jsou 100 Kč, variabilní náklady $VC = 5Q + 0{,}5Q^2$, mezní náklady $MC = 5 + Q$, a minimum průměrných nákladů nastává při přibližně $Q = 14{,}14$ jednotek.
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 <Callout type="warning">
 **Klíčová pravidla pro zkoušku:**

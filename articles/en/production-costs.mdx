@@ -222,6 +222,14 @@ Notice: $MC$ first falls (from 30 to 10), then rises — the classic U-shape dri
 
 </Collapse>
 
+<Graph title="Short-Run Cost Curves" xLabel="Output (Q)" yLabel="Cost per unit" xDomain={[0, 10]} yDomain={[0, 60]}>
+  <Plot fn={(q, v) => 40 - 20 * q + 3 * q * q} color="#ff0000" label="MC" />
+  <Plot fn={(q, v) => q > 0.2 ? v.fc / q + 40 - 10 * q + q * q : 60} color="#0066cc" label="AC" />
+  <Plot fn={(q, v) => 40 - 10 * q + q * q} color="#22863a" label="AVC" dashed />
+  <Plot fn={(q, v) => q > 0.2 ? v.fc / q : 60} color="#999999" label="AFC" dashed />
+  <Slider name="fc" min={10} max={120} default={50} step={5} label="Fixed Cost (FC)" />
+</Graph>
+
 ### Relationship Between MC and AC
 
 <Callout type="error">
@@ -276,6 +284,25 @@ Before analyzing profit maximization, we need three revenue measures:
 <Callout type="info">
 In **perfect competition**, the firm is a price taker, so $P$ is constant: $MR = AR = P$. In **imperfect competition** (monopoly, oligopoly), the firm must lower price to sell more, so $MR < P$.
 </Callout>
+
+<Interactive title="Profit Calculator">
+  <Slider name="p" min={5} max={60} default={30} step={1} label="Market Price (P)" />
+  <Slider name="q" min={1} max={15} default={6} step={1} label="Output (Q)" />
+  <Slider name="fc" min={10} max={120} default={50} step={5} label="Fixed Cost (FC)" />
+  <Value label="Total Revenue (TR = P×Q)" fn={(v) => `${(v.p * v.q).toFixed(0)}`} />
+  <Value label="Total Cost (TC)" fn={(v) => `${(v.fc + 40 * v.q - 10 * v.q * v.q + v.q * v.q * v.q).toFixed(0)}`} />
+  <Value label="Economic Profit (π = TR − TC)" fn={(v) => {
+    const tc = v.fc + 40 * v.q - 10 * v.q * v.q + v.q * v.q * v.q;
+    const profit = v.p * v.q - tc;
+    return `${profit.toFixed(0)} ${profit >= 0 ? '(profit)' : '(loss)'}`;
+  }} />
+  <Value label="MC at this Q" fn={(v) => `${(40 - 20 * v.q + 3 * v.q * v.q).toFixed(1)}`} />
+  <Value label="P vs MC" fn={(v) => {
+    const mc = 40 - 20 * v.q + 3 * v.q * v.q;
+    if (Math.abs(v.p - mc) < 1) return 'P ≈ MC → optimal!';
+    return v.p > mc ? 'P > MC → produce more' : 'P < MC → produce less';
+  }} />
+</Interactive>
 
 ## Profit Maximization
 

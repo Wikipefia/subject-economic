@@ -196,6 +196,27 @@ The state debt has grown from **158.8 billion CZK in 1993** (after the split of 
 - **Treasury bills** (státní pokladniční poukázky) — short-term
 - **Savings bonds** for retail investors
 
+<Timeline title="Czech Government Debt: Key Milestones">
+  <TimelineEvent date="1993" title="After Czechoslovak Split">
+    Initial state debt of 158.8 billion CZK following the dissolution of Czechoslovakia.
+  </TimelineEvent>
+  <TimelineEvent date="2009" title="Global Financial Crisis">
+    Budget deficit reaches ~192 billion CZK as tax revenues collapse and stimulus spending increases.
+  </TimelineEvent>
+  <TimelineEvent date="2016" title="Fiscal Consolidation">
+    Near-balanced budget achieved; small surplus recorded thanks to strong economic growth.
+  </TimelineEvent>
+  <TimelineEvent date="2020" title="COVID-19 Pandemic">
+    Deficit explodes to ~367 billion CZK — Antivirus wage subsidies and emergency pandemic spending.
+  </TimelineEvent>
+  <TimelineEvent date="2021" title="Continued Recovery Spending">
+    Deficit reaches ~420 billion CZK as pandemic support programs continue.
+  </TimelineEvent>
+  <TimelineEvent date="2022" title="Energy Crisis">
+    State debt surpasses 2.4 trillion CZK (~44% of GDP). Energy crisis support measures keep deficits elevated.
+  </TimelineEvent>
+</Timeline>
+
 <Callout type="warning">
 While Czech public debt as a share of GDP (~44% in 2022) remains below the EU average, the rapid growth during 2020–2022 raised concerns about fiscal sustainability. The Maastricht criterion sets a reference value of 60% of GDP.
 </Callout>
@@ -387,6 +408,49 @@ The path from central bank action to the real economy:
 <Callout type="info">
 **Monetary neutrality**: In the long run, changes in the money supply affect only the **price level**, not real output. Money is "neutral" in the long run — it only changes nominal variables (prices, wages) without affecting real variables (output, employment). This is why central banks focus on price stability.
 </Callout>
+
+<Interactive title="Interest Rate Transmission">
+  <Slider name="repo" min={0} max={10} default={4} step={0.25} label="ČNB Repo Rate (%)" />
+  <Slider name="spread" min={1} max={5} default={2} step={0.25} label="Bank Spread (%)" />
+  <Slider name="mpc" min={0.5} max={0.95} default={0.75} step={0.05} label="Marginal Propensity to Consume" />
+  <Value label="Commercial Lending Rate" fn={(v) => `${(v.repo + v.spread).toFixed(2)}%`} />
+  <Value label="Deposit Rate (approx.)" fn={(v) => `${(v.repo - 0.5 > 0 ? v.repo - 0.5 : 0).toFixed(2)}%`} />
+  <Value label="Spending Multiplier (1/(1−MPC))" fn={(v) => `${(1 / (1 - v.mpc)).toFixed(1)}`} />
+  <Value label="Policy Stance" fn={(v) => {
+    if (v.repo < 2) return 'Expansionary — stimulating economy';
+    if (v.repo > 5) return 'Restrictive — cooling inflation';
+    return 'Neutral';
+  }} />
+</Interactive>
+
+<Comparison title="Expansionary vs. Restrictive Policy">
+  <ComparisonItem title="Expansionary">
+
+**Goal**: Stimulate the economy during recession
+
+**Fiscal**: ↑ Government spending, ↓ Taxes
+
+**Monetary**: ↓ Interest rates, ↑ Money supply
+
+**Effect**: $AD \uparrow \Rightarrow Y \uparrow, u \downarrow, P \uparrow$
+
+**Risk**: Inflation, budget deficits, crowding out
+
+  </ComparisonItem>
+  <ComparisonItem title="Restrictive">
+
+**Goal**: Cool an overheating economy
+
+**Fiscal**: ↓ Government spending, ↑ Taxes
+
+**Monetary**: ↑ Interest rates, ↓ Money supply
+
+**Effect**: $AD \downarrow \Rightarrow Y \downarrow, u \uparrow, P \downarrow$
+
+**Risk**: Unemployment, reduced growth
+
+  </ComparisonItem>
+</Comparison>
 
 ---
 

@@ -9,8 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@wikipefia/mdx-compiler": "^1.0.0",
     "@types/node": "^22",
+    "@wikipefia/mdx-compiler": "link:/Users/acex/git-fun/wikipefia/packages/mdx-compiler",
     "typescript": "^5"
   },
   "packageManager": "pnpm@10.6.2",

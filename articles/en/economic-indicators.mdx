@@ -29,6 +29,10 @@ Macroeconomics begins with measurement. Before we can analyze business cycles, d
 
 ## Gross Domestic Product (GDP)
 
+<Definition term="Gross Domestic Product (GDP)">
+The total market value of all **final goods and services** produced within a country's borders during a given time period. It is the most widely used measure of a nation's economic output.
+</Definition>
+
 **GDP** is the total market value of all **final goods and services** produced within a country's borders during a given time period (usually one year or one quarter).
 
 Key points in the definition:
@@ -65,6 +69,16 @@ $$
 $$
 
 Unlike the CPI, the GDP deflator covers **all** domestically produced goods (not just a consumer basket) and uses **current** quantity weights (Paasche-type index).
+
+<Interactive title="GDP Deflator Calculator">
+  <Slider name="nominal" min={100} max={10000} default={5500} step={100} label="Nominal GDP" />
+  <Slider name="deflator" min={50} max={200} default={110} step={1} label="GDP Deflator (base=100)" />
+  <Value label="Real GDP" fn={(v) => `${(v.nominal / v.deflator * 100).toFixed(0)}`} />
+  <Value label="Price Level Change" fn={(v) => {
+    const change = v.deflator - 100;
+    return `${change >= 0 ? '+' : ''}${change.toFixed(0)}% ${change >= 0 ? '(inflation since base year)' : '(deflation since base year)'}`;
+  }} />
+</Interactive>
 
 ---
 
@@ -185,19 +199,24 @@ $$
 
 ### Czech Republic GDP Growth
 
-| Year | Real GDP Growth (%) | Key Events |
-|---|---|---|
-| 2006 | +6.9 | Pre-crisis boom |
-| 2007 | +5.6 | Continued expansion |
-| 2008 | +2.7 | Global financial crisis begins |
-| **2009** | **−4.7** | **Great Recession — deepest post-1989 contraction** |
-| 2010 | +2.0 | Gradual recovery |
-| 2015 | +5.4 | Strong growth phase |
-| 2019 | +3.0 | Pre-pandemic peak |
-| **2020** | **−5.5** | **COVID-19 pandemic** |
-| 2021 | +3.6 | Post-pandemic rebound |
-| 2022 | +2.4 | Energy crisis, inflation pressure |
-| 2023 | −0.2 | Stagnation amid tight monetary policy |
+<DataTable
+  caption="Czech Republic Real GDP Growth"
+  columns={["Year", "Growth (%)", "Key Events"]}
+  rows={[
+    ["2006", "+6.9", "Pre-crisis boom"],
+    ["2007", "+5.6", "Continued expansion"],
+    ["2008", "+2.7", "Global financial crisis begins"],
+    ["2009", "−4.7", "Great Recession — deepest post-1989 contraction"],
+    ["2010", "+2.0", "Gradual recovery"],
+    ["2015", "+5.4", "Strong growth phase"],
+    ["2019", "+3.0", "Pre-pandemic peak"],
+    ["2020", "−5.5", "COVID-19 pandemic"],
+    ["2021", "+3.6", "Post-pandemic rebound"],
+    ["2022", "+2.4", "Energy crisis, inflation pressure"],
+    ["2023", "−0.2", "Stagnation amid tight monetary policy"],
+  ]}
+  sortable
+/>
 
 <Callout type="warning">
 The two sharpest declines in Czech GDP since independence were the **2009 financial crisis** ($-4.7\%$) and the **2020 COVID pandemic** ($-5.5\%$). Both were driven by external shocks — global financial contagion and a worldwide health emergency.

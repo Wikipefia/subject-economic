@@ -29,6 +29,10 @@ Makroekonomie začíná měřením. Než můžeme analyzovat hospodářské cykl
 
 ## Hrubý domácí produkt (HDP)
 
+<Definition term="Hrubý domácí produkt (HDP)">
+Celková tržní hodnota všech **finálních statků a služeb** vyprodukovaných na území dané země za určité časové období. Je nejpoužívanějším měřítkem ekonomického výstupu národního hospodářství.
+</Definition>
+
 **HDP** (Hrubý domácí produkt, anglicky GDP — Gross Domestic Product) je celková tržní hodnota všech **finálních statků a služeb** vyprodukovaných na území dané země za určité časové období (obvykle rok nebo čtvrtletí).
 
 Klíčové body definice:
@@ -87,6 +91,16 @@ Na rozdíl od CPI (indexu spotřebitelských cen):
 
 V praxi se oba ukazatele pohybují podobně, ale mohou se lišit, když se výrazně mění struktura spotřeby nebo relativní ceny.
 </Collapse>
+
+<Interactive title="Kalkulačka deflátoru HDP">
+  <Slider name="nominal" min={100} max={10000} default={5500} step={100} label="Nominální HDP" />
+  <Slider name="deflator" min={50} max={200} default={110} step={1} label="Deflátor HDP (základ=100)" />
+  <Value label="Reálný HDP" fn={(v) => `${(v.nominal / v.deflator * 100).toFixed(0)}`} />
+  <Value label="Změna cenové hladiny" fn={(v) => {
+    const change = v.deflator - 100;
+    return `${change >= 0 ? '+' : ''}${change.toFixed(0)}% ${change >= 0 ? '(inflace od základního roku)' : '(deflace od základního roku)'}`;
+  }} />
+</Interactive>
 
 ---
 
@@ -236,28 +250,33 @@ $$
 
 ### Vývoj HDP České republiky
 
-| Rok | Růst reálného HDP (%) | Klíčové události |
-|---|---|---|
-| 2004 | +4,9 | Vstup do EU |
-| 2005 | +6,4 | Silný růst po vstupu do EU |
-| 2006 | +6,9 | Předkrizový boom |
-| 2007 | +5,6 | Pokračující expanze |
-| 2008 | +2,7 | Začátek světové finanční krize |
-| **2009** | **−4,7** | **Velká recese — nejhlubší pokles od roku 1989** |
-| 2010 | +2,0 | Postupné oživení |
-| 2011 | +1,8 | Zpomalení |
-| 2012 | −0,8 | Domácí fiskální konsolidace |
-| 2013 | −0,5 | Pokračování recese |
-| 2014 | +2,3 | Obnovení růstu |
-| 2015 | +5,4 | Silný růst (EU fondy, uvolněná měnová politika ČNB) |
-| 2016 | +2,5 | Stabilní růst |
-| 2017 | +5,2 | Boom (měnový kurz, nízké úrokové sazby) |
-| 2018 | +3,2 | Pokračující expanze |
-| 2019 | +3,0 | Předpandemický vrchol |
-| **2020** | **−5,5** | **Pandemie COVID-19** |
-| 2021 | +3,6 | Postpandemické oživení |
-| 2022 | +2,4 | Energetická krize, inflační tlaky |
-| 2023 | −0,2 | Stagnace v důsledku restriktivní měnové politiky |
+<DataTable
+  caption="Růst reálného HDP České republiky"
+  columns={["Rok", "Růst (%)", "Klíčové události"]}
+  rows={[
+    ["2004", "+4,9", "Vstup do EU"],
+    ["2005", "+6,4", "Silný růst po vstupu do EU"],
+    ["2006", "+6,9", "Předkrizový boom"],
+    ["2007", "+5,6", "Pokračující expanze"],
+    ["2008", "+2,7", "Začátek světové finanční krize"],
+    ["2009", "−4,7", "Velká recese — nejhlubší pokles od roku 1989"],
+    ["2010", "+2,0", "Postupné oživení"],
+    ["2011", "+1,8", "Zpomalení"],
+    ["2012", "−0,8", "Domácí fiskální konsolidace"],
+    ["2013", "−0,5", "Pokračování recese"],
+    ["2014", "+2,3", "Obnovení růstu"],
+    ["2015", "+5,4", "Silný růst (EU fondy, uvolněná měnová politika ČNB)"],
+    ["2016", "+2,5", "Stabilní růst"],
+    ["2017", "+5,2", "Boom (měnový kurz, nízké úrokové sazby)"],
+    ["2018", "+3,2", "Pokračující expanze"],
+    ["2019", "+3,0", "Předpandemický vrchol"],
+    ["2020", "−5,5", "Pandemie COVID-19"],
+    ["2021", "+3,6", "Postpandemické oživení"],
+    ["2022", "+2,4", "Energetická krize, inflační tlaky"],
+    ["2023", "−0,2", "Stagnace v důsledku restriktivní měnové politiky"],
+  ]}
+  sortable
+/>
 
 <Callout type="warning">
 Dva nejprudší poklesy HDP ČR od vzniku samostatného státu (1993): **finanční krize 2009** ($-4{,}7\%$) a **pandemie COVID-19 v roce 2020** ($-5{,}5\%$). Oba byly způsobeny vnějšími šoky — globální finanční nákaza a celosvětová zdravotní krize.

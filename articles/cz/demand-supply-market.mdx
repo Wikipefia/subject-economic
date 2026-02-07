@@ -243,6 +243,19 @@ Rostoucí průběh nabídky vysvětluje zákon rostoucích mezních nákladů: s
 | Daně z výroby | Nabídka klesá (posun doleva) |
 | Přírodní podmínky (zemědělství) | Příznivé → nabídka roste |
 
+<Graph title="Nabídka a poptávka" xLabel="Množství (Q)" yLabel="Cena (P)" xDomain={[0, 20]} yDomain={[0, 30]}>
+  <Plot fn={(q, v) => v.a - v.b * q} color="#0066cc" label="Poptávka (D)" />
+  <Plot fn={(q, v) => v.c + v.d * q} color="#ff0000" label="Nabídka (S)" />
+  <Slider name="a" min={10} max={40} default={24} step={1} label="Průsečík poptávky (a)" />
+  <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Sklon poptávky (b)" />
+  <Slider name="c" min={-10} max={10} default={0} step={1} label="Průsečík nabídky (c)" />
+  <Slider name="d" min={0.5} max={3} default={1.2} step={0.1} label="Sklon nabídky (d)" />
+</Graph>
+
+<Definition term="Tržní rovnováha">
+Stav, kdy se poptávané množství rovná nabízenému množství ($Q_D = Q_S$). Při rovnovážné ceně $P^*$ neexistuje tendence ke změně — trh se **vyčistí** a každý ochotný kupující najde prodávajícího.
+</Definition>
+
 ## Tržní rovnováha
 
 **Tržní rovnováha** nastává tam, kde se poptávané množství rovná nabízenému množství. V tomto bodě neexistuje tendence ke změně ceny.
@@ -509,42 +522,51 @@ Mrtvá ztráta (deadweight loss) představuje hodnotu obchodů, které by se v n
 
 ## Početní příklad
 
-<Collapse title="Numerický příklad: Nalezení rovnováhy a účinek daně">
+<StepByStep title="Řešený příklad: Rovnováha a účinek daně">
+<Step title="Sestavení rovnic">
 
-**Zadání**:
-- Poptávka: $Q_D = 100 - 2P$
-- Nabídka: $Q_S = -20 + 3P$
+**Zadání**: Poptávka $Q_D = 100 - 2P$ a nabídka $Q_S = -20 + 3P$. Potřebujeme najít tržní rovnováhu a poté analyzovat účinek jednotkové daně.
 
-**Krok 1: Nalezení rovnováhy**
+</Step>
+<Step title="Nalezení rovnováhy (položíme QD = QS)">
 
-Položíme $Q_D = Q_S$:
+$$100 - 2P = -20 + 3P \implies 120 = 5P \implies P^* = 24$$
 
-$$100 - 2P = -20 + 3P$$
-$$120 = 5P$$
-$$P^* = 24$$
 $$Q^* = 100 - 2(24) = 52$$
 
-**Krok 2: Na výrobce je uvalena daň $t = 5$ za jednotku**
+</Step>
+<Step title="Uvalení jednotkové daně t = 5 na výrobce">
 
-Nová nabídka: $Q_S = -20 + 3(P - 5) = -35 + 3P$
+**Nová nabídka** — $Q_S = -20 + 3(P - 5) = -35 + 3P$. **Nová rovnováha** — $100 - 2P = -35 + 3P$
 
-Nová rovnováha: $100 - 2P = -35 + 3P$
+$$135 = 5P \implies P_{\text{spotřebitel}} = 27$$
 
-$$135 = 5P$$
-$$P_{\text{spotřebitel}} = 27 \quad (\text{cena, kterou platí spotřebitelé})$$
-$$P_{\text{výrobce}} = 27 - 5 = 22 \quad (\text{cena, kterou obdrží výrobci})$$
-$$Q_{\text{nové}} = 100 - 2(27) = 46$$
+</Step>
+<Step title="Výpočet všech hodnot po zavedení daně">
 
-**Výsledky**:
-- Cena pro spotřebitele vzrostla z 24 na 27 (+3): spotřebitelé nesou 3/5 daně
-- Cena pro výrobce klesla z 24 na 22 (−2): výrobci nesou 2/5 daně
-- Množství kleslo z 52 na 46
-- Daňový výnos = $5 \times 46 = 230$
-- Mrtvá ztráta = $\frac{1}{2} \times 5 \times (52 - 46) = 15$
+$$P_{\text{výrobce}} = 27 - 5 = 22, \quad Q_{\text{nové}} = 100 - 2(27) = 46$$
 
-**Proč spotřebitelé nesou více?** Protože nabídka ($E_S = 3P/Q_S$) je v rovnováze elastičtější než poptávka ($|E_D| = 2P/Q_D$). Neelastičtější strana (poptávka) by nesla více, ale zde se poměr obrací ve prospěch výrobců, kteří mají vyšší elasticitu.
+</Step>
+<Step title="Analýza výsledků">
 
-</Collapse>
+Cena pro spotřebitele: 24 → 27 (+3) — spotřebitelé nesou **3/5** daně. Cena pro výrobce: 24 → 22 (−2) — výrobci nesou **2/5** daně. Množství kleslo: 52 → 46. Daňový výnos: $5 \times 46 = 230$. Mrtvá ztráta: $\frac{1}{2} \times 5 \times 6 = 15$.
+
+</Step>
+</StepByStep>
+
+<Interactive title="Kalkulačka daňového dopadu">
+  <Slider name="a" min={50} max={200} default={100} step={5} label="Průsečík poptávky (a)" />
+  <Slider name="b" min={0.5} max={5} default={2} step={0.5} label="Sklon poptávky (b)" />
+  <Slider name="c" min={-50} max={50} default={-20} step={5} label="Průsečík nabídky (c)" />
+  <Slider name="d" min={0.5} max={5} default={3} step={0.5} label="Sklon nabídky (d)" />
+  <Slider name="t" min={0} max={20} default={5} step={0.5} label="Daň na jednotku (t)" />
+  <Value label="Rovnovážná cena (P*)" fn={(v) => ((v.a - v.c) / (v.b + v.d)).toFixed(2)} />
+  <Value label="Rovnovážné množství (Q*)" fn={(v) => (v.a - v.b * ((v.a - v.c) / (v.b + v.d))).toFixed(2)} />
+  <Value label="Cena pro spotřebitele po dani" fn={(v) => ((v.a * v.d + v.b * (v.c + v.t)) / (v.b + v.d)).toFixed(2)} />
+  <Value label="Množství po dani" fn={(v) => ((v.a - v.c - v.t) / (v.b + v.d)).toFixed(2)} />
+  <Value label="Daňový příjem" fn={(v) => (v.t * (v.a - v.c - v.t) / (v.b + v.d)).toFixed(2)} />
+  <Value label="Ztráta mrtvé váhy" fn={(v) => (0.5 * v.t * (v.t * v.b) / (v.b + v.d)).toFixed(2)} />
+</Interactive>
 
 ## Shrnutí
 

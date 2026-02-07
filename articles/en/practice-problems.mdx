@@ -96,43 +96,32 @@ These questions cover the demand and supply model — shifts, elasticity, and eq
 
 **Problem:** The demand function is $P = 100 - 2Q_D$ and the supply function is $P = 20 + 3Q_S$. Find the equilibrium price and quantity.
 
-<Collapse title="Step-by-step solution">
+<StepByStep title="Step-by-Step Solution">
+  <Step title="Set up the equilibrium condition">
 
-**Step 1:** At equilibrium, quantity demanded equals quantity supplied ($Q_D = Q_S = Q^*$) and the prices are equal:
+At equilibrium, $Q_D = Q_S = Q^*$ and prices are equal:
 
-$$
-100 - 2Q = 20 + 3Q
-$$
+$$100 - 2Q = 20 + 3Q$$
 
-**Step 2:** Solve for $Q^*$:
+  </Step>
+  <Step title="Solve for Q*">
 
-$$
-100 - 20 = 3Q + 2Q
-$$
+$$100 - 20 = 3Q + 2Q \implies 80 = 5Q \implies Q^* = 16$$
 
-$$
-80 = 5Q
-$$
+  </Step>
+  <Step title="Find P* by substituting back">
 
-$$
-Q^* = 16
-$$
+$$P^* = 100 - 2(16) = 68$$
 
-**Step 3:** Substitute $Q^* = 16$ into either function to find $P^*$:
+Verification: $P^* = 20 + 3(16) = 68$ ✓
 
-$$
-P^* = 100 - 2(16) = 100 - 32 = 68
-$$
+  </Step>
+  <Step title="Result">
 
-**Verification** using the supply function:
+Equilibrium quantity $Q^* = 16$ units, equilibrium price $P^* = 68$ monetary units.
 
-$$
-P^* = 20 + 3(16) = 20 + 48 = 68 \checkmark
-$$
-
-**Result:** The equilibrium quantity is $Q^* = 16$ units and the equilibrium price is $P^* = 68$ monetary units.
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 ---
 
@@ -165,65 +154,32 @@ Quiz on utility, indifference curves, and the budget constraint.
 
 **Problem:** A consumer has income $Y = 600$, prices $P_1 = 20$ and $P_2 = 30$, and utility function $U = q_1 \cdot q_2$. Find the optimal consumption basket.
 
-<Collapse title="Step-by-step solution">
+<StepByStep title="Step-by-Step Solution">
+  <Step title="Write the budget constraint">
 
-**Step 1:** Write the budget constraint:
+$$P_1 q_1 + P_2 q_2 = Y \implies 20q_1 + 30q_2 = 600$$
 
-$$
-P_1 q_1 + P_2 q_2 = Y
-$$
+  </Step>
+  <Step title="Apply the optimality condition (MRS = P₁/P₂)">
 
-$$
-20q_1 + 30q_2 = 600
-$$
+For $U = q_1 \cdot q_2$: $MU_1 = q_2$, $MU_2 = q_1$
 
-**Step 2:** The optimality condition requires that the marginal rate of substitution equals the price ratio:
+$$\frac{q_2}{q_1} = \frac{20}{30} = \frac{2}{3} \implies q_2 = \frac{2}{3} q_1$$
 
-$$
-MRS = \frac{MU_1}{MU_2} = \frac{P_1}{P_2}
-$$
+  </Step>
+  <Step title="Substitute into the budget constraint">
 
-For $U = q_1 \cdot q_2$:
+$$20q_1 + 30 \cdot \frac{2}{3} q_1 = 600 \implies 40q_1 = 600 \implies q_1^* = 15$$
 
-$$
-MU_1 = \frac{\partial U}{\partial q_1} = q_2, \quad MU_2 = \frac{\partial U}{\partial q_2} = q_1
-$$
+  </Step>
+  <Step title="Find q₂* and total utility">
 
-$$
-\frac{q_2}{q_1} = \frac{20}{30} = \frac{2}{3}
-$$
+$$q_2^* = \frac{2}{3} \cdot 15 = 10$$
 
-$$
-q_2 = \frac{2}{3} q_1
-$$
+**Result:** Optimal basket $q_1^* = 15$, $q_2^* = 10$, utility $U = 150$.
 
-**Step 3:** Substitute into the budget constraint:
-
-$$
-20q_1 + 30 \cdot \frac{2}{3} q_1 = 600
-$$
-
-$$
-20q_1 + 20q_1 = 600
-$$
-
-$$
-40q_1 = 600
-$$
-
-$$
-q_1^* = 15
-$$
-
-**Step 4:** Find $q_2^*$:
-
-$$
-q_2^* = \frac{2}{3} \cdot 15 = 10
-$$
-
-**Result:** The optimal basket is $q_1^* = 15$ and $q_2^* = 10$, yielding utility $U = 15 \times 10 = 150$.
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 ---
 
@@ -262,53 +218,38 @@ Quiz on cost concepts and the firm's production decisions.
 
 **Problem:** A firm has total cost $TC = 100 + 5Q + 0.5Q^2$. Find FC, VC, AC, AVC, AFC, and MC.
 
-<Collapse title="Step-by-step solution">
+<StepByStep title="Step-by-Step Solution">
+  <Step title="Identify fixed and variable costs">
 
-**Step 1:** Identify fixed and variable costs:
+$$FC = 100 \quad \text{(constant term)}$$
 
-$$
-FC = 100 \quad \text{(the constant term, independent of } Q\text{)}
-$$
+$$VC = 5Q + 0.5Q^2 \quad \text{(terms depending on } Q\text{)}$$
 
-$$
-VC = 5Q + 0.5Q^2 \quad \text{(all terms that depend on } Q\text{)}
-$$
+  </Step>
+  <Step title="Compute average costs (divide by Q)">
 
-**Step 2:** Average costs (divide by $Q$):
+$$AC = \frac{100}{Q} + 5 + 0.5Q, \quad AVC = 5 + 0.5Q, \quad AFC = \frac{100}{Q}$$
 
-$$
-AC = \frac{TC}{Q} = \frac{100}{Q} + 5 + 0.5Q
-$$
+  </Step>
+  <Step title="Derive marginal cost">
 
-$$
-AVC = \frac{VC}{Q} = 5 + 0.5Q
-$$
+$$MC = \frac{dTC}{dQ} = 5 + Q$$
 
-$$
-AFC = \frac{FC}{Q} = \frac{100}{Q}
-$$
+  </Step>
+  <Step title="Numerical check at Q = 10">
 
-**Step 3:** Marginal cost (derivative of TC with respect to $Q$):
+| Measure | Value |
+|---|---|
+| TC | $100 + 50 + 50 = 200$ |
+| AC | $200 / 10 = 20$ |
+| AVC | $5 + 5 = 10$ |
+| AFC | $100 / 10 = 10$ |
+| MC | $5 + 10 = 15$ |
 
-$$
-MC = \frac{dTC}{dQ} = 5 + Q
-$$
+Check: $AC = AVC + AFC = 10 + 10 = 20$ ✓
 
-**Numerical example** — at $Q = 10$:
-
-| Measure | Formula | Value |
-|---|---|---|
-| TC | $100 + 5(10) + 0.5(100)$ | 200 |
-| FC | 100 | 100 |
-| VC | $5(10) + 0.5(100)$ | 100 |
-| AC | $200 / 10$ | 20 |
-| AVC | $100 / 10$ | 10 |
-| AFC | $100 / 10$ | 10 |
-| MC | $5 + 10$ | 15 |
-
-Note that $AC = AVC + AFC = 10 + 10 = 20$ ✓
-
-</Collapse>
+  </Step>
+</StepByStep>
 
 ---
 

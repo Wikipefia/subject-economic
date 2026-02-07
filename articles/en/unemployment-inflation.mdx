@@ -139,6 +139,19 @@ $$
 \frac{Y - Y^*}{Y^*} \approx -2 \times (u - u^*)
 $$
 
+<Interactive title="Okun's Law Calculator">
+  <Slider name="u" min={0} max={15} default={7} step={0.1} label="Actual Unemployment (%)" />
+  <Slider name="ustar" min={2} max={8} default={5} step={0.1} label="Natural Rate u* (%)" />
+  <Slider name="ystar" min={1000} max={10000} default={5000} step={100} label="Potential GDP (Y*)" />
+  <Value label="Unemployment Gap" fn={(v) => `${(v.u - v.ustar).toFixed(1)} percentage points`} />
+  <Value label="Output Gap (% of Y*)" fn={(v) => `${(-2 * (v.u - v.ustar)).toFixed(1)}%`} />
+  <Value label="Estimated Actual GDP" fn={(v) => `${(v.ystar * (1 - 2 * (v.u - v.ustar) / 100)).toFixed(0)}`} />
+  <Value label="GDP Lost" fn={(v) => {
+    const loss = v.ystar * 2 * (v.u - v.ustar) / 100;
+    return loss > 0 ? `${loss.toFixed(0)} (below potential)` : `${(-loss).toFixed(0)} (above potential)`;
+  }} />
+</Interactive>
+
 - Reduced tax revenue and increased government spending on benefits → larger budget deficits
 
 **Social and personal costs:**
@@ -362,6 +375,19 @@ $$
 | Tradeoff | Yes — lower $u$ → higher $\pi$ | No tradeoff |
 | Position | Depends on $\pi^e$ | Fixed at $u^*$ |
 | Policy implication | Short-term stabilization possible | Only structural reforms can reduce $u^*$ |
+
+<Graph title="Short-Run Phillips Curve" xLabel="Unemployment Rate u (%)" yLabel="Inflation Rate π (%)" xDomain={[0, 12]} yDomain={[-3, 15]}>
+  <Plot fn={(u, v) => v.pie + v.beta * (v.ustar - u)} color="#ff0000" label="SRPC" />
+  <Plot fn={(u, v) => v.pie2 + v.beta * (v.ustar - u)} color="#ff0000" label="SRPC (shifted)" dashed />
+  <Slider name="pie" min={0} max={10} default={2} step={0.5} label="Expected Inflation πe" />
+  <Slider name="pie2" min={0} max={10} default={5} step={0.5} label="Higher πe (shifted)" />
+  <Slider name="beta" min={0.5} max={3} default={1.5} step={0.1} label="Slope β" />
+  <Slider name="ustar" min={2} max={8} default={5} step={0.5} label="Natural Rate u*" />
+</Graph>
+
+<Callout type="info">
+Move the **Expected Inflation πe** slider to see how the short-run Phillips curve shifts. Notice that the curve always crosses the x-axis at the same natural rate $u^*$ — this is why the long-run Phillips curve is vertical.
+</Callout>
 
 ---
 

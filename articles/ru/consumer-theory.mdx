@@ -52,6 +52,13 @@ $$
 Когда $MU = 0$, общая полезность достигает максимума. Далее потребление дополнительной единицы *снижает* общую полезность — потребитель перенасыщен.
 </Callout>
 
+<Graph title="Общая и предельная полезность" xLabel="Потреблённое количество (q)" yLabel="Полезность" xDomain={[0, 8]} yDomain={[-5, 35]}>
+  <Plot fn={(q, v) => v.a * q - v.b * q * q} color="#0066cc" label="Общая полезность (TU)" />
+  <Plot fn={(q, v) => v.a - 2 * v.b * q} color="#ff0000" label="Предельная полезность (MU)" />
+  <Slider name="a" min={5} max={20} default={12} step={0.5} label="Начальная MU (a)" />
+  <Slider name="b" min={0.5} max={3} default={1} step={0.1} label="Скорость убывания (b)" />
+</Graph>
+
 ## Модель двух товаров
 
 Потребитель распределяет доход между товаром 1 (количество $q_1$) и товаром 2 (количество $q_2$). Условие оптимального распределения:
@@ -121,6 +128,22 @@ $$
 <Callout type="info">
 Наклон бюджетной линии зависит только от **соотношения цен** $P_1/P_2$, а не от дохода. Изменение дохода сдвигает линию, но не меняет наклон.
 </Callout>
+
+<Interactive title="Бюджетное ограничение">
+  <Slider name="y" min={100} max={1000} default={500} step={10} label="Доход (Y)" />
+  <Slider name="p1" min={5} max={50} default={20} step={1} label="Цена товара 1 (P₁)" />
+  <Slider name="p2" min={5} max={50} default={25} step={1} label="Цена товара 2 (P₂)" />
+  <Value label="Макс. товара 1 (Y/P₁)" fn={(v) => `${(v.y / v.p1).toFixed(1)} units`} />
+  <Value label="Макс. товара 2 (Y/P₂)" fn={(v) => `${(v.y / v.p2).toFixed(1)} units`} />
+  <Value label="Наклон бюджетной линии (−P₁/P₂)" fn={(v) => `${(-v.p1 / v.p2).toFixed(3)}`} />
+</Interactive>
+
+<Graph title="Бюджетное ограничение" xLabel="Товар 1 (q₁)" yLabel="Товар 2 (q₂)" xDomain={[0, 30]} yDomain={[0, 25]}>
+  <Plot fn={(q1, v) => (v.y - v.p1 * q1) / v.p2} color="#1a1a1a" label="Бюджетная линия" />
+  <Slider name="y" min={100} max={1000} default={500} step={10} label="Доход (Y)" />
+  <Slider name="p1" min={5} max={50} default={20} step={1} label="Цена товара 1" />
+  <Slider name="p2" min={5} max={50} default={25} step={1} label="Цена товара 2" />
+</Graph>
 
 ## Оптимум потребителя
 
